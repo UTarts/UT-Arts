@@ -9,13 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/my-favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/my-favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/my-favicon/site.webmanifest" />
 </head>
 <body>
 
     <header id="main-header">
         <nav>
             <a href="index.html" class="logo">
-                <img src="images/Logo.utarts4.png" alt="UT Studio Logo">
+                <img src="images/UTartsLogo.webp" alt="UT Studio Logo">
             </a>
             <ul class="nav-links">
                 <li><a href="about.html">About</a></li>
@@ -33,11 +38,25 @@
 
     <main>
         <main>
-            <section class="hero">
-        
-                <div class="hero-content">
+            <section class="hero" style="position: relative; z-index: 1;">
+                <div class="hero-content" data-aos="fade-down" data-aos-duration="1000" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: fit-content; padding-top: 20px;">
                     
-                    
+                    <div class="hero-content-text-container" style="text-align: left; color: white;  border-radius: 10px;" data-aos="fade-up">
+                        
+                        <div class="hero-content-text">
+                            <p style="font-family: 'Kaushan Script', cursive; line-height: 1.0; text-transform: lowercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                                contact
+                            </p>
+                            <h2 style="font-family: 'EB Garamond', serif; line-height: 1.0; text-transform: uppercase; font-weight: 600; text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
+                                NOW
+                            </h2>
+                            <p style="margin: 0; line-height: 1.2;">
+                                <span style="font-family: 'Kaushan Script', cursive; font-weight: 300; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.666);">or just check it</span> 
+                                <span style="font-family: 'EB Garamond', serif; font-weight: 600; text-transform: uppercase; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.666);">  OUT!</span>
+                            </p>
+                        </div>
+                        
+                    </div>
                 </div>
             </section>
 
@@ -57,7 +76,7 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-image">
-                    <img src="images/portraits.service.png" alt="Portraits service">
+                    <img src="images/portraits.service.webp" alt="Portraits service">
                 </div>
                 <div class="portfolio-text">
                     <h3>Fine Art & Portraits</h3>
@@ -68,7 +87,7 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-image">
-                    <img src="images/websiteService.png" alt="websites service">
+                    <img src="images/websiteService.webp" alt="websites service">
                 </div>
                 <div class="portfolio-text">
                     <h3>Digital Experiences</h3>
@@ -79,7 +98,7 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-image">
-                    <img src="images/Pathshala.png" alt="designs service">
+                    <img src="images/Pathshala.webp" alt="designs service">
                 </div>
                 <div class="portfolio-text">
                     <h3>Visual Design</h3>
@@ -93,7 +112,9 @@
         <section class="about" data-aos="fade-up">
             <div class="about-content">
                 <h2>The Artist Behind the Art</h2>
-                <p>My journey started with a pencil in hand, driven by a passion to capture the world around me. This dedication to detail and craft now extends to the digital realm, where I build seamless web experiences and create stunning designs. At UT Arts, every project is a piece of art, meticulously crafted.</p>
+                <div class="about-artist-image">
+                <img src="images/artist.webp" alt="artist"></div>
+                <p><li><a href="about.html">Know more about UT Arts >></a></li></p>
             </div>
         </section>
         </main>
@@ -104,7 +125,7 @@
             <a href="mailto:your-utstudios2025@gmail.com" class="cta-button">Contact Me</a>
             <p><a href="PrivacyPolicy.html">Privacy Policy</a></p>
             <p></p><a href="terms.html">Terms & Conditions</a></p>
-            <p class="copyright">&copy; 2025 UT Studio. All Rights Reserved.</p>
+            <p class="copyright">&copy; 2025 UT Arts. All Rights Reserved.</p>
         </footer>
     
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

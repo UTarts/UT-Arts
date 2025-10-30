@@ -64,6 +64,9 @@ header {
 
 nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
 .logo img { height: 45px; width: auto; vertical-align: middle; }
+@media screen and (max-width: 768px) {
+    .logo img { height: 35px; }
+}
 .nav-links { list-style: none; display: flex; gap: 2rem; }
 .nav-links a { color: var(--text-color); font-weight: 600; position: relative; padding: 0.5rem 0; }
 .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; display: block; margin-top: 5px; right: 0; background: var(--primary-accent); transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
@@ -93,12 +96,44 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
     background-size: cover;
     background-attachment: fixed; /* Fixes BG for parallax effect on mobile */
     background-position: center bottom; /* Better positioning for the portrait image */
-    background-image: url('images/Hero_UTarts_phone9.png'); /* Mobile First Background */
+    background-image: url('images/mainheromob.webp'); /* Mobile First Background */
 }
-.hero-content { position: relative; z-index: 2; padding: 1rem; }
-.hero-content p { max-width: 500px; margin: 0 auto 2rem auto; font-size: 1.1rem; color: #f0f0f0; }
 
+/* Desktop/Default Styles (Larger Screens) */
+.hero-content-text p:first-child {
+  font-size: 2.5em; /* 'contact' */
+  margin-top: 0;
+        margin-bottom: -10px;
+}
+.hero-content-text h2 {
+  font-size: 5em; /* 'NOW' */
+  margin-top: 0;
+        margin-bottom: 5px;
+}
+.hero-content-text p:last-child {
+  font-size: 1.4em; /* 'or just check it OUT!' */
+}
+.hero-content-text-container {
+  padding: 20px;
+}
 
+/* Mobile Styles (Screen width 600px and below) */
+@media (max-width: 600px) {
+  .hero-content-text-container {
+      padding: 10px; /* Reduced padding for mobile */
+  }
+  .hero-content-text p:first-child {
+      font-size: 1.5em; /* Smaller 'contact' */
+      margin-bottom: -5px !important;
+  }
+  .hero-content-text h2 {
+      font-size: 3em; /* Smaller 'NOW' */
+      margin-bottom: 3px !important;
+  }
+  .hero-content-text p:last-child {
+      font-size: 0.8em; /* Smaller 'or just check it OUT!' */
+  }
+}
 
 /* --- About & Footer --- */
 .about { background-color: #484343; 
@@ -142,10 +177,26 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
 #services {
     background-color: #a0a0a0;
 }
+#services .portfolio-item {
+    background-color: #ffffff;
+    border-radius: 1px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#services .portfolio-item .portfolio-image img {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.751);
+}
 
 #services .portfolio-item .portfolio-text h3 {
     color: rgb(255, 255, 255);
 }
+
+#services .portfolio-item .portfolio-text a {
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    padding: 10px 15px;
+  }
 
 
 /* --- Media Queries --- */
@@ -160,7 +211,7 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
         align-items: flex-end; /* Move text to bottom half */
         padding-bottom: 12vh; /* Give it some space from the edge */
         background-position: center bottom; 
-        background-image: url('images/Hero_pc_UTarts4.png'); /* Desktop Background */
+        background-image: url('images/mainheropc.webp'); /* Desktop Background */
     }
 
     .pricing-table { flex-direction: row; align-items: stretch; }
@@ -244,11 +295,11 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
     gap: 8px; /* Mobile: smaller gap */
     
     /* Frosted Glass Bar */
-    background-color: rgba(0, 0, 0, 0.215);
+    background-color: rgba(0, 0, 0, 0.271);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     padding: 8px 12px; /* Mobile: smaller padding */
-    border-radius: 50px;
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
   
@@ -306,3 +357,106 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
       height: 24px;
     }
   }
+  
+  .about-artist-image {
+    max-width: 300px; 
+    margin: 20px auto; 
+}
+
+.about-artist-image img {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    border-radius: 8px;
+    display: block; 
+}
+
+  /* ========================================
+   1. COMMON HERO STYLES (for all 3 pages)
+   ======================================== */
+
+.page-hero {
+    /* Put all your shared styles here */
+    /* For example: */
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;  
+  }
+
+    .hero-content { 
+    position: relative; z-index: 2;  align-items: left; text-align: left;
+    }
+    .hero-content p {
+        max-width: 500px; margin: 0 auto 2rem auto; font-size: 1.1rem; color: #f0f0f0; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.745); 
+    }
+  /* ========================================
+   2. PAGE-SPECIFIC IMAGES (Mobile-First)
+   ======================================== */
+
+/* Default background for mobile on the "Portrait" page */
+.page-hero.portrait-page-hero {
+    background-image: url('images/portrait-banner-mobile.png');
+    background-position: center;
+  }
+  
+  /* Default background for mobile on the "Web" page */
+  .page-hero.web-page-hero {
+    background-image: url('images/banner.web.mob.webp');
+    background-position: right top;
+  }
+  
+  /* Default background for mobile on the "Design" page */
+  .page-hero.design-page-hero {
+    background-image: url('images/design-banner-mobile.png');
+    background-position: center;
+  }
+
+  .page-hero.about-page-hero {
+    background-image: url('images/banner.about.mob.webp');
+    background-position: right top;
+  }
+  
+  
+  /* ========================================
+     3. MEDIA QUERY FOR PC SCREENS
+     (Overrides the mobile images on screens 
+      768px and wider)
+     ======================================== */
+  
+  @media (min-width: 768px) {
+  
+    .hero-content { 
+        position: relative; z-index: 2; padding: 1rem;;
+    }
+    .hero-content p {
+        max-width: 500px; margin: 0 auto 2rem auto; font-size: 1.1rem; color: #f0f0f0; 
+    }
+    /* PC background for the "Portrait" page */
+    .page-hero.portrait-page-hero {
+      background-image: url('images/banner.portrait.png');
+      /* You can set a custom PC position if needed */
+      /* background-position: top; */ 
+    }
+  
+    /* PC background for the "Web" page */
+    .page-hero.web-page-hero {
+      background-image: url('images/banner.web.webp'); /* Your original image */
+      background-position: right top; /* Your original position */
+    }
+  
+    /* PC background for the "Design" page */
+    .page-hero.design-page-hero {
+      background-image: url('images/design-banner-pc.png');
+      /* background-position: left center; */
+    }
+
+    .page-hero.about-page-hero {
+      background-image: url('images/banner.about.webp');
+      background-position: top right;
+      /* background-position: left center; */
+    }
+  
+  }
+  
