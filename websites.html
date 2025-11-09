@@ -6,9 +6,8 @@
     <title>Digital Experiences - UT Arts</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
     <link rel="shortcut icon" href="/my-favicon/favicon.ico" />
@@ -17,16 +16,17 @@
 </head>
 <body>
 
-    <header id ="main-header">
+    <header id="main-header">
         <nav>
             <a href="index.html" class="logo">
-                <img src="images/UTartsLogo.webp" alt="UT Studio Logo">
+                <img src="images/UTartsLogo.webp" alt="UT Arts Logo">
             </a>
             <ul class="nav-links">
+                <li><a href="websites.html">Websites</a></li>
+                <li><a href="designs.html">Designs</a></li>
+                <li><a href="portraits.html">Portraits</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#contact details">Contact</a></li>
-                <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
-                <li><a href="#feedback form">Feedback</a></li>
+                <li><a href="contact.html" class="cta-button">CONTACT US</a></li>
             </ul>
             <div class="hamburger">
                 <div class="line"></div>
@@ -36,28 +36,23 @@
         </nav>
     </header>
 
-    <main>
+    <main class="page-frame">
+        <div class="page-content">
         <section class="page-hero web-page-hero">
             <div class="hero-content">
-                <h1 data-aos="fade-down">Building Your Digital Home</h1>
-                <p data-aos="fade-up" data-aos-delay="200">I design and develop beautiful, high-performing websites that captivate your audience and grow your business.</p>
+                <h1>Let's Get Your Business Online</h1>
+                <p>Whether you run a school, a pharmacy, a grocery shop, or a restaurant, your business deserves a professional website. I'm here to build it for you.</p>
             </div>
         </section>
 
-        <nav class="horizontal-nav">
-            <a href="index.html" class="nav-icon home-icon">
-              <img src="images/HomeIcon.png" alt="Home">
-            </a>
-            
-            <a href="portraits.html" class="nav-icon">Portraits</a>
-            <a href="websites.html" class="nav-icon active">Websites</a>
-            <a href="designs.html" class="nav-icon">Designs</a>
-          </nav>
+        <section class="price-bar">
+            <p>Project Prices start from as low as <strong>₹4,999</strong>. Get your business online today!</p>
+        </section>
 
         <section id="portfolio" class="portfolio">
-            <h2 class="section-title" data-aos="fade-up">Featured Work</h2>
+            <h2 class="section-title">Featured Work</h2>
 
-            <div class="portfolio-item" data-aos="fade-up">
+            <div class="portfolio-item">
                 <div class="portfolio-image">
                     <img src="images/gmps.webp" alt="School Website Project">
                 </div>
@@ -68,70 +63,162 @@
                 </div>
             </div>
 
-            <div class="portfolio-item" data-aos="fade-up">
+            <div class="portfolio-item">
                 <div class="portfolio-image">
-                    <img src="images/Pathshala.webp" alt="Small Business Website">
+                    <img src="images/Pathshala.webp" alt="digital library website">
                 </div>
                 <div class="portfolio-text">
                     <h3>Pathshala-The Self Study Digital Library</h3>
-                    <p>A charming and responsive static site for a local cafe, designed to showcase their menu, atmosphere, and location. Increased their online visibility and foot traffic.</p>
+                    <p>An informative and responsive static site for a Self Study Center, designed to showcase their facilities, atmosphere, and location. And an AI Powered Daily Current Affairs Section for students' interaction..</p>
                     <a href="https://pathshala.pages.dev/" class="card-link" target="_blank">View Live Site</a>
                 </div>
             </div>
 
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="images/nrjpathlab.webp" alt="Nrj Path Lab website">
+                </div>
+                <div class="portfolio-text">
+                    <h3>Nrj Path Lab - Diagnostics</h3>
+                    <p>A modern, multi-page responsive website for a local pathology lab in Pratapgarh. Features an advanced booking form, a searchable test menu, and an integrated health articles section.</p>
+                    <a href="https://nrjpathlab.pages.dev/" class="card-link" target="_blank">View Live Site</a>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-aos="fade-up">
+                <div class="portfolio-image">
+                    <img src="images/bt.supporters.webp" alt="Poitician Portfolio">
+                </div>
+                <div class="portfolio-text">
+                    <h3>Political Campaign Portfolio Site</h3>
+                    <p>A responsive static site that facilitated massive follower growth by allowing users to interact and generate customized supporter cards. Showcases essential geographical and political details.</p>
+                    <a href="https://brijeshtiwari.pages.dev/" class="card-link" target="_blank">View Live Site</a>
+                </div>
+            </div>
+
         </section>
 
-         <section id="pricing" class="pricing">
+        <section class="our-process-roadmap">
+            <h2 class="section-title">Our Web Design Process</h2>
+            <div class="roadmap-container">
+                
+                <div class="roadmap-step">
+                    <div class="roadmap-dot"></div>
+                    <div class="roadmap-content">
+                        <h3>1. Discover & Define</h3>
+                        <p>We start with a deep dive into your business, goals, and target audience. This ensures we're building the *right* site for your specific needs.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-step">
+                    <div class="roadmap-dot"></div>
+                    <div class="roadmap-content">
+                        <h3>2. Design & Prototype</h3>
+                        <p>Next, we design a professional, custom-made mockup of your website. You'll see exactly what it looks like and be able to give feedback before we write a single line of code.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-step">
+                    <div class="roadmap-dot"></div>
+                    <div class="roadmap-content">
+                        <h3>3. Develop & Build</h3>
+                        <p>This is where we bring the design to life. We build a fast, secure, and fully responsive website that looks perfect on desktops, tablets, and mobile phones.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-step">
+                    <div class="roadmap-dot"></div>
+                    <div class="roadmap-content">
+                        <h3>4. Launch & Support</h3>
+                        <p>We handle the entire launch process, from uploading to your domain to submitting your site to Google. We're here for you with full support after your site goes live.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
             <h2 class="section-title" data-aos="fade-up">Website Packages</h2>
             <div class="pricing-table" data-aos="fade-up" data-aos-delay="200">
                 <div class="price-card">
                     <h3>The Launchpad</h3>
-                    <div class="price">Starting at $XX</div>
+                    <div class="price">
+                        <p>Starting at</p>
+                        <div class="price-container">
+                            <span class="price-new">₹4,999</span>
+                            <span class="price-old">₹9,999</span>
+                        </div>
+                        <span class="discount-badge">50% OFF</span>
+                    </div>
                     <ul>
-                        <li>Single Page Website</li>
+                        <li>Single Page Static Website</li>
+                        <li>1 year Free Domain ( .utarts.in)</li>
+                        <li>1 year Free Basic Hosting</li>
+                        <li>Free SSL Certificate (HTTPS)</li>
                         <li>Mobile-First Responsive Design</li>
-                        <li>Contact Form Integration</li>
+                        <li>Secure Contact Form</li>
+                        <li>Click-to-Call/WhatsApp Button</li>
+                        <li>Social Media Links</li>
                         <li>Ideal for new ventures or events</li>
                     </ul>
-                    <a href="#" class="cta-button">Get a Quote</a>
+                    <a href="contact.html?service=website-launchpad" class="cta-button">Get Started</a>
                 </div>
                 <div class="price-card featured">
+                    <p style="color: #000000; background-color: #ffc107; padding: 4px 8px; border-radius: 12px; font-size: 14px; font-weight: 700; display: inline-block;">
+                        MOST POPULAR
+                    </p>
                     <h3>The Business</h3>
-                    <div class="price">Starting at $XX</div>
+                    <div class="price">
+                    <p>Starting at</p>
+                        <div class="price-container">
+                            <span class="price-new">₹11,999</span>
+                            <span class="price-old">₹19,999</span>
+                        </div>
+                        <span class="discount-badge">40% OFF</span>
+                    </div>
                     <ul>
+                        <li>All features from <strong>The Launchpad,</strong> plus:</li>
                         <li>Up to 5 Pages (e.g., Home, About)</li>
-                        <li>Mobile-First Responsive Design</li>
                         <li>Content Management System (CMS)</li>
+                        <li>Google Maps Integration</li>
+                        <li>Image Gallery / Portfolio</li>
+                        <li>Basic SEO Setup</li>
                         <li>The standard for small businesses</li>
                     </ul>
-                    <a href="#" class="cta-button">Get a Quote</a>
+                    <a href="contact.html?service=website-business" class="cta-button">Get Started</a>
                 </div>
                 <div class="price-card">
                     <h3>The Custom</h3>
-                    <div class="price">Let's Talk</div>
+                    <div class="price">
+                        <span class="price-new" style="font-size: 2rem;">Let's Talk</span>
+                    </div>
                     <ul>
+                        <li>All features from <strong>The Business,</strong> plus:</li>
                         <li>Unlimited Pages & Features</li>
-                        <li>E-commerce, Portals, etc.</li>
+                        <li>E-commerce / Online Store</li>
+                        <li>Payment Gateway Integration</li>
+                        <li>Progressive Web App (PWA)</li>
                         <li>Custom Backend Development</li>
+                        <li>Advanced SEO & Performance</li>
                         <li>For unique and complex ideas</li>
                     </ul>
-                    <a href="#" class="cta-button">Get a Quote</a>
+                    <a href="contact.html?service=website-custom" class="cta-button">Book a Call</a>
                 </div>
             </div>
         </section>
 
+        <p style="text-align: center; margin-top: 21px;"><a href="websites.html">Websites</a>  |  <a href="designs.html">Designs</a>  |  <a href="portraits.html">Portraits</a></p>
+
+        <footer>
+            <h3>Ready to build your digital presence?</h3>
+            <p>Let's talk about your project. We're excited to hear your ideas.</p>
+            <a href="contact.html" class="cta-button">Start Your Project</a>
+            <P>Email us at : <a href="mailto:info@utarts.in">info@utarts.in</a></P>
+            <p><a href="PrivacyPolicy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+            <p class="copyright">&copy; 2025 UT Arts. All Rights Reserved.</p>
+        </footer>
+        </div>
     </main>
-
-    <footer>
-        <h3>Ready to build your digital presence?</h3>
-        <p>Let's talk about your project. I'm excited to hear your ideas.</p>
-        <a href="mailto:your-email@example.com" class="cta-button">Start Your Project</a>
-        <p><a href="PrivacyPolicy.html">Privacy Policy</a></p>
-            <p></p><a href="terms.html">Terms & Conditions</a></p>
-        <p class="copyright">&copy; 2025 UT Arts. All Rights Reserved.</p>
-    </footer>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
 
 </body>

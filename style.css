@@ -1,30 +1,121 @@
 /* --- Global Styles & Variables --- */
 :root {
-    --bg-color: #b5b5b5; /* Darker, more modern background */
-    --text-color: #f0f0f0;
-    --primary-accent: #f39c12; /* Vibrant orange from your logo */
-    --secondary-accent: #e67e22;
-    --card-bg: rgb(65, 61, 50);
-    --border-color: rgba(255, 255, 255, 0.1);
-    --font-heading: "Kaushan Script", cursive;
-    --font-body: "EB Garamond", serif;
+  /* --- FONT VARIABLES --- */
+  --font-heading: "Orbitron", sans-serif;
+  --font-body: "Poppins", sans-serif;
+  
+  /* === Dark THEME (Default) === */
+  --color-background: #121212;      /* Original Dark Gray */
+  --color-background-section: #1a1a1a; /* Original Dark Section */
+  --color-text-primary: #ececec;   /* Light Text */
+  --color-text-secondary: #a0a0a0; /* Original Light Gray Text */
+  --color-text-heading: #ffffff;    /* White */
+  --color-card-bg: rgb(65, 61, 50); /* Original Card BG */
+  --color-border: rgba(255, 255, 255, 0.1); /* Original Border */
+  --color-header-bg: rgba(18, 18, 18, 0.8); /* Dark blurred header */
+  --color-nav-text: #f0f0f0;         /* Light nav text */
+  --color-toggle-track: #222;       /* Dark track */
+  --color-toggle-knob: #444;       /* Dark knob */
+  --color-toggle-knob-dark: #f0f0f0; /* Knob for light mode icon */
+  --color-portfolio-button: #000000; 
+  --color-homehero:#2c2b2b;
+
+  /* === BRAND COLORS (Stay the same) === */
+  --primary-accent: #f39c12; 
+  --secondary-accent: #e67e22;
+}
+
+/* === DARK THEME (When .dark-theme is active) === */
+body.light-theme {
+
+  --color-background: #ffffff;      /* Pure White */
+  --color-background-section:#e4e4e4; /* Light Gray */
+  --color-text-primary: #121212;   /* Black */
+  --color-text-secondary: #363636; /* Dark Gray */
+  --color-text-heading: #000000;    /* Pure Black */
+  --color-card-bg: #ffffff;         /* White */
+  --color-border: #dddddd;          /* Light Gray */
+  --color-header-bg: rgba(255, 255, 255, 0.8); /* Light blurred header */
+  --color-nav-text: #121212;         /* Dark nav text */
+  --color-toggle-track: #e0e0e0;     /* Light gray track */
+  --color-toggle-knob: #ffffff;     /* White knob */
+  --color-toggle-knob-dark: #333; /* Knob for dark mode icon */
+  --color-portfolio-button: #ffffff; 
+  --color-homehero:#eeeeee;
+}
+
+/* --- New Frame Layout --- */
+.page-frame {
+  position: fixed;
+  
+  /* Starts just after the 60px header */
+  top: 50px; 
+  
+  /* Fills the rest of the screen */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* This creates the fixed "reverse curve" effect */
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  
+  /* This is the key: content scrolls *inside* this fixed frame */
+  overflow-y: auto; 
+  
+  /* Sits behind the header */
+  z-index: 500; 
+  
+  /* Per your request, the frame itself is transparent */
+  background-color: transparent;
+}
+
+.page-content {
+  /* Per your request, 0px padding */
+  padding: 0px; 
+  
+    margin: 0 auto;
+}
+
+/* New style for the gradient "CONTACT US" button */
+.nav-links .cta-button {
+  color: var(--color-nav-text); /* Uses the theme-aware nav color */
+  font-weight: 500;
+  position: relative;
+  padding: 0.3rem; /* Give it a little more space */
+  border: 2px solid var(--primary-accent); /* Simple border */
+  border-radius: 8px;
+}
+
+.nav-links .cta-button:hover {
+  color: var(--color-nav-text); /* Keep color on hover */
+  background-color: rgba(243, 156, 18, 0.1); /* Slight hover effect */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-    font-family: var(--font-body);
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.7;
-    overflow-x: hidden;
+  font-family: var(--font-body);
+  font-weight: 400;
+  /* This dark color is the "empty" space */
+  background-color: var(--color-background);
+  color: var(--text-color);
+  line-height: 1.7;
+  /* We disable scrolling on the body, as the content scrolls inside its own frame */
+  overflow: hidden;
 }
 
 /* --- Typography --- */
-h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; letter-spacing: 1px; }
+h1, h2, h3, h4 {
+  font-family: var(--font-heading); 
+  font-weight: 700; /* Sets a strong weight for Orbitron */
+  letter-spacing: 1px;
+  color: var(--color-text-heading);
+}
+
 h1 { font-size: clamp(2.5rem, 10vw, 4.5rem); margin-bottom: 1rem; line-height: 1.1; }
 h2 { font-size: clamp(2rem, 8vw, 3rem); }
-p { margin-bottom: 1.5rem; color: #a0a0a0; max-width: 65ch; }
+p { margin-bottom: 1.5rem; color: var(--color-text-secondary); max-width: 65ch; }
 a { color: var(--primary-accent); text-decoration: none; transition: color 0.3s ease; }
 a:hover { color: var(--text-color); }
 
@@ -34,189 +125,262 @@ section { padding: 5rem 1.5rem; text-align: center; position: relative; overflow
 
 /* --- Header & Nav --- */
 header {
-    position: fixed;
-    width: 100%;
-    padding: 1rem 1.5rem;
-    z-index: 1000;
-    text-shadow: #121212;
-    /* background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color); */
+  position: fixed;
+  width: 100%;
+  /* Transparent background */
+  background-color: transparent;
+  padding: 0; /* Padding will be on the 'nav' element */
+  z-index: 1000;
+  text-shadow: #121212;
 }
 
 #main-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: white;           /* Example text color */
-    
-    /* This is the magic for the animation */
-    transition: transform 0.3s ease;
-    transform: translateY(0);
-    z-index: 1000;
-  }
-  
-  /* This class will be added by JavaScript to hide the header */
-  #main-header.header-hidden {
-    transform: translateY(-100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;           /* Example text color */
+  transform: translateY(0);
+  z-index: 1000;
 }
 
-nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-.logo img { height: 45px; width: auto; vertical-align: middle; }
+
+nav { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  max-width: 1400px; 
+  margin: 0 auto;
+  /* Set the height and padding for the nav bar */
+  height: 50px;
+  padding: 1px 20px;
+}
+
+.logo img { 
+  height: 40px; /* Was 45px */
+  width: auto; 
+  vertical-align: middle; 
+}
+
 @media screen and (max-width: 768px) {
-    .logo img { height: 35px; }
+  .logo img { height: 35px; }
 }
 .nav-links { list-style: none; display: flex; gap: 2rem; }
-.nav-links a { color: var(--text-color); font-weight: 600; position: relative; padding: 0.5rem 0; }
-.nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; display: block; margin-top: 5px; right: 0; background: var(--primary-accent); transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+.nav-links a { color: var(--color-nav-text); font-weight: 400; position: relative; padding: 0.5rem 0; }
 .nav-links a:hover::after { width: 100%; left: 0; }
 .nav-links a.active { color: var(--primary-accent); }
 
 /* Target the anchor tags within the list items of your navigation */
 .nav-links li a {
-    color: rgb(255, 255, 255); /* Example text color */
-    font-size: 16px; 
-    text-shadow: 1px 1px 1px rgba(43, 43, 43, 0.7);
+  color: var(--color-nav-text);
+  font-size: 16px; 
+  text-shadow: none;
 }
 
 /* --- Mobile Navigation --- */
 .hamburger { display: none; cursor: pointer; z-index: 11; }
-.hamburger .line { width: 25px; height: 3px; background-color: var(--text-color); margin: 5px; transition: all 0.3s ease; }
+.hamburger .line { width: 25px; height: 3px; background-color: var(--color-nav-text); margin: 5px; transition: all 0.3s ease; }
 
 /* --- Hero Section (Homepage) --- */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center; /* Center vertically by default */
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    color: white;
-    background-size: cover;
-    background-attachment: fixed; /* Fixes BG for parallax effect on mobile */
-    background-position: center bottom; /* Better positioning for the portrait image */
-    background-image: url('images/mainheromob.webp'); /* Mobile First Background */
+/* --- New Homepage Hero --- */
+.hero.homepage-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem;
+  background-color: var(--color-homehero); /* Your requested solid color */
+  overflow: hidden; /* Prevent AOS animations from overflowing */
 }
 
-/* Desktop/Default Styles (Larger Screens) */
-.hero-content-text p:first-child {
-  font-size: 2.5em; /* 'contact' */
-  margin-top: 0;
-        margin-bottom: -10px;
-}
-.hero-content-text h2 {
-  font-size: 5em; /* 'NOW' */
-  margin-top: 0;
-        margin-bottom: 5px;
-}
-.hero-content-text p:last-child {
-  font-size: 1.4em; /* 'or just check it OUT!' */
-}
-.hero-content-text-container {
-  padding: 20px;
+.hero.homepage-hero .hero-container {
+  display: flex;
+  /* Mobile-first: Video on top, text below */
+  flex-direction: column; 
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
 }
 
-/* Mobile Styles (Screen width 600px and below) */
-@media (max-width: 600px) {
-  .hero-content-text-container {
-      padding: 10px; /* Reduced padding for mobile */
+/* Video Content (Top on Mobile) */
+.hero.homepage-hero .hero-video-content {
+  width: 100%;
+  max-width: 500px; /* Constrain video size on mobile */
+  margin: 0 auto; /* Center it */
+  order: 1; /* Video comes first */
+}
+
+.hero.homepage-hero .hero-video-content video {
+  width: 100%;
+  height: auto;
+}
+
+/* Text Content (Bottom on Mobile) */
+.hero.homepage-hero .hero-text-content {
+  text-align: center; /* Center text on mobile */
+  order: 2; /* Text comes second */
+}
+
+.hero.homepage-hero .hero-text-content h1 {
+  /* You can adjust font sizes as needed */
+  font-size: clamp(1.4rem, 7vw, 3rem); /* <-- CHANGED */
+  color: var(--color-text-heading);
+  line-height: 1.2;
+}
+
+.hero.homepage-hero .hero-text-content p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  max-width: 50ch;
+  margin: 1rem auto 2rem auto; /* Center the paragraph */
+}
+
+.hero.homepage-hero .hero-text-content .cta-button {
+  background-color: var(--primary-accent);
+  color: #121212;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: var(--font-body);
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.hero.homepage-hero .hero-text-content .cta-button:hover {
+  background-color: var(--secondary-accent);
+  transform: translateY(-2px);
+  color: #000;
+}
+
+.hero-content h1 {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+      font-size: 2rem;
   }
-  .hero-content-text p:first-child {
-      font-size: 1.5em; /* Smaller 'contact' */
-      margin-bottom: -5px !important;
-  }
-  .hero-content-text h2 {
-      font-size: 3em; /* Smaller 'NOW' */
-      margin-bottom: 3px !important;
-  }
-  .hero-content-text p:last-child {
-      font-size: 0.8em; /* Smaller 'or just check it OUT!' */
+  .hero-content p {
+      font-size: 2px;
   }
 }
 
 /* --- About & Footer --- */
-.about { background-color: #484343; 
-        background-blend-mode: multiply; }
+.about { background-color: var(--color-background-section); 
+      background-blend-mode: multiply; }
 .about-content { max-width: 700px; margin: 0 auto; }
-footer { background: linear-gradient(45deg, #1f1f1f, #121212); padding: 5rem 1.5rem 2rem 1.5rem; text-align: center; }
-footer h3 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-color); }
+footer { background-color: var(--color-background); border-top: 1px solid var(--color-border); padding: 5rem 1.5rem 2rem 1.5rem; text-align: center; }
+footer h3 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-text-heading); }
 footer p { color: #a0a0a0; max-width: 500px; margin: 1rem auto 2rem auto; }
 footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
 
 /* --- Inner Page Hero --- */
 .page-hero { min-height: 60vh; display: flex; align-items: center; justify-content: center; background-color: #1a1a1a; padding-top: 5rem; text-align: center; background: linear-gradient(45deg, rgba(30,30,30,0.9), rgba(18,18,18,0.9)), url('https://images.unsplash.com/photo-1512418490876-f92215a51089?q=80&w=2070') no-repeat center center/cover; }
 
-/* --- Gallery for other pages --- */
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); grid-auto-flow: dense; gap: 1rem; max-width: 1200px; margin: 0 auto; }
-.gallery-item { overflow: hidden; border-radius: 10px; }
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease, filter 0.4s ease; }
-.gallery-item:hover img { transform: scale(1.1); filter: brightness(1.1); }
-
 /* --- Pricing Section --- */
-.pricing { background: var(--bg-color); }
+.pricing {background: var(--color-background-section);}
 .pricing-table { display: flex; flex-direction: column; gap: 2rem; max-width: 1200px; margin: 0 auto; align-items: center; }
-.price-card { background: var(--card-bg); padding: 2.5rem; border-radius: 15px; border: 1px solid var(--border-color); flex: 1; width: 100%; max-width: 380px; transition: transform 0.3s ease, border-color 0.3s ease; }
+.price-card { background: var(--color-card-bg); padding: 2.5rem; border-radius: 15px; border: 1px solid var(--color-border); flex: 1; width: 100%; max-width: 380px; transition: transform 0.3s ease, border-color 0.3s ease; }
 .price-card:hover { transform: translateY(-5px); border-color: var(--primary-accent); }
 .price-card.featured { border-color: var(--primary-accent); transform: scale(1.05); }
-.price-card h3 { color: var(--primary-accent); }
-.price-card .price { font-size: 2.5rem; font-weight: 700; margin: 1rem 0; color: var(--text-color); }
+.price-card h3 {font-family: 'EB Garamond', serif; color: var(--primary-accent); }
+.price-card .price { font-size: 2.5rem; font-weight: 700; margin: 1rem 0; color: var(--color-text-heading); }
 .price-card ul { list-style: none; text-align: left; margin-bottom: 2rem; }
-.price-card ul li { padding: 0.75rem 0; border-bottom: 1px solid var(--border-color); color: #a0a0a0; }
+.price-card ul li { padding: 0.75rem 0; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary); }
 .price-card ul li::before { content: '✓'; color: var(--primary-accent); margin-right: 10px; }
+.price-card a {color: #000000; background-color: #ffc107; padding: 4px 8px; border-radius: 3px; font-size: 14px; font-weight: 700; display: inline-block;}
 
 /* --- Portfolio Section (Websites Page) --- */
-.portfolio { background: #1a1a1a; }
-.portfolio-item { display: flex; flex-direction: column; text-align: left; max-width: 1000px; margin: 0 auto 5rem auto; gap: 2rem; align-items: center; }
+.portfolio { background: var(--color-background-section); }
+.portfolio-item { display: flex; flex-direction: column; text-align: left; max-width: 1000px; margin: 0 auto 5rem auto; gap: 2rem; align-items: center; background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 1px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.575);}
 .portfolio-image { flex: 1; }
-.portfolio-image img { width: 100%; border-radius: 15px; transition: transform 0.3s ease; }
+.portfolio-image img { width: 100%; border-radius: 7px; transition: transform 0.3s ease;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.751);
+ }
 .portfolio-image img:hover { transform: scale(1.02); }
 .portfolio-text { flex: 1; }
-.portfolio-text h3 { color: var(--primary-accent); margin-bottom: 1rem; }
+.portfolio-text h3 { color: var(--color-text-heading); margin-bottom: 1rem; }
+.portfolio-text a { color: var(--color-background); background-color: var(--color-text-heading); padding: 10px 15px; border-radius: 1px; font-size: 14px; font-weight: 700; display: inline-block; }
 
-#services {
-    background-color: #a0a0a0;
-}
-#services .portfolio-item {
-    background-color: #ffffff;
-    border-radius: 1px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-#services .portfolio-item .portfolio-image img {
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.751);
-}
 
-#services .portfolio-item .portfolio-text h3 {
-    color: rgb(255, 255, 255);
-}
 
-#services .portfolio-item .portfolio-text a {
-    color: rgb(255, 255, 255);
-    background-color: #000000;
-    padding: 10px 15px;
-  }
 
 
 /* --- Media Queries --- */
 @media screen and (max-width: 768px) {
-    .nav-links { position: fixed; right: -100%; top: 0; height: 100vh; width: 60%; background: rgba(18, 18, 18, 0.9); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1); gap: 4rem; }
-    .nav-links.nav-active { right: 0; }
-    .hamburger { display: block; }
+  .nav-links { position: fixed; right: -100%; top: 0; height: 100vh; width: 60%; background: var(--color-header-bg); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1); gap: 4rem; }
+  .nav-links.nav-active { right: 0; }
+  .hamburger { display: block; }
+  .hero.homepage-hero {
+    min-height: auto;     /* This removes the 100% screen height */
+    padding-top: 4rem;    /* Sets a new top padding */
+    padding-bottom: 2rem; /* Sets a new bottom padding */
+  }
 }
 
 @media (min-width: 768px) {
-    .hero {
-        align-items: flex-end; /* Move text to bottom half */
-        padding-bottom: 12vh; /* Give it some space from the edge */
-        background-position: center bottom; 
-        background-image: url('images/mainheropc.webp'); /* Desktop Background */
-    }
+  .hero {
+      align-items: flex-end; /* Move text to bottom half */
+      padding-bottom: 12vh; /* Give it some space from the edge */
+      background-position: center bottom; 
+      background-image: url('images/mainheropc.webp'); /* Desktop Background */
+  }
 
-    .pricing-table { flex-direction: row; align-items: stretch; }
-    .portfolio-item { flex-direction: row; }
-    .portfolio-item:nth-child(even) { flex-direction: row-reverse; }
+  .pricing-table { flex-direction: row; align-items: stretch;justify-content: center; }
+  .portfolio-item { flex-direction: row; }
+  .portfolio-item:nth-child(even) { flex-direction: row-reverse; }
+
+  /* Add this INSIDE your @media (min-width: 768px) { ... } block */
+
+  .hero.homepage-hero {
+    /* Re-align items for PC */
+    align-items: center; 
+  }
+
+  .hero.homepage-hero .hero-container {
+    /* PC layout: side-by-side */
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  /* Text on the Left */
+  .hero.homepage-hero .hero-text-content {
+    flex: 1; /* Take up 1 part of the space */
+    max-width: 50%;
+    order: 1; /* Text comes first */
+    text-align: left; /* Align text left on PC */
+  }
+
+  .hero.homepage-hero .hero-text-content p {
+    margin-left: 0; /* Reset mobile margin */
+    margin-right: 0; /* Reset mobile margin */
+  }
+  
+
+  /* Video on the Right */
+  .hero.homepage-hero .hero-video-content {
+    flex: 1; /* Take up 1 part of the space */
+    max-width: 50%;
+    order: 2; /* Video comes second */
+    margin: 0; /* Reset mobile margin */
+  }
+
+  /* ---
+    This part finds the old .hero rule inside the media query 
+    and overrides its background-image.
+    --- */
+  .hero {
+      /* ... your existing .hero styles are here ... */
+      
+      /* ADD THIS LINE to override the PC background image */
+      background-image: none;
+  }
 }
 
 @keyframes zoom-in { 0% { background-size: 100% 100%; } 100% { background-size: 110% 110%; } }
@@ -226,13 +390,13 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
 
 /* --- REDESIGN: Step 2c - Hamburger Animation --- */
 .hamburger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 6px);
+  transform: rotate(45deg) translate(5px, 6px);
 }
 .hamburger.active .line:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 .hamburger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -6px);
+  transform: rotate(-45deg) translate(5px, -6px);
 }
 
 /* --- REDESIGN: Step 3 - Overlapping Layout --- */
@@ -240,223 +404,1184 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
 /* Add this inside your existing @media (min-width: 768px) query */
 
 .portfolio-item {
-    position: relative; /* Create a new stacking context */
+  position: relative; /* Create a new stacking context */
 }
 
 .portfolio-item .portfolio-image {
-    flex: 1.2; /* Make image slightly bigger */
-    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  flex: 1.2; /* Make image slightly bigger */
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .portfolio-item .portfolio-text {
-    flex: 1;
-    z-index: 2; /* Ensure text is on top */
-    background: rgba(30, 30, 30, 0.7); /* Give text a slight bg */
-    backdrop-filter: blur(10px);
-    padding: 2rem;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
+  flex: 1;
+  z-index: 2; /* Ensure text is on top */
+  background: rgba(34, 34, 34, 0.581); /* Give text a slight bg */
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
 }
 
 .portfolio-item .portfolio-image img {
-    /* Keep existing styles */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  /* Keep existing styles */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 /* The "Magic": Overlap the image */
 .portfolio-item:nth-child(even) .portfolio-image {
-    @media (min-width: 768px) {transform: scale(1.25);}
-    margin-right: -80px; /* Pulls the image over the text box */
+  @media (min-width: 768px) {transform: scale(1.25);}
+  margin-right: -80px; /* Pulls the image over the text box */
 }
 .portfolio-item:nth-child(odd) .portfolio-image {
-    @media (min-width: 768px) {transform: scale(1.25);}
-    margin-left: -80px; /* Pulls image the other way */
+  @media (min-width: 768px) {transform: scale(1.25);}
+  margin-left: -80px; /* Pulls image the other way */
 }
 
 .portfolio-item:hover .portfolio-image {
-    @media (min-width: 768px) {transform: scale(1.1);}
+  @media (min-width: 768px) {transform: scale(1.1);}
 }
 
-/* --- Mobile First Styles (Default) --- */
-/* This controls the look on phones */
 
-.horizontal-nav {
-    /* Positioning */
-    position: fixed;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-  
-    /* Layout & Sizing */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px; /* Mobile: smaller gap */
-    
-    /* Frosted Glass Bar */
-    background-color: rgba(0, 0, 0, 0.271);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    padding: 8px 12px; /* Mobile: smaller padding */
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Style for text links */
-  .nav-icon {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px; /* Mobile: smaller font */
-    padding: 6px 8px; /* Mobile: smaller button padding */
-    border-radius: 20px;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  /* Style for the home icon link */
-  .home-icon img {
-    width: 20px; /* Mobile: smaller icon */
-    height: 20px;
-    display: block; /* Removes extra space */
-  }
-  
-  /* HOVER state (mouse is over it) */
-  .nav-icon:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    color: rgb(255, 132, 0);
-    transform: scale(1.05);
-  }
-  
-  /* ACTIVE state (this page is open) */
-  /* This mirrors the hover state */
-  .nav-icon.active {
-    background-color: rgba(255, 255, 255, 0.3);
-    color: rgb(255, 89, 0);
-    transform: scale(1.05);
-  }
-  
-  
-  /* --- PC/Desktop Styles --- */
-  /* These rules apply ONLY to screens 768px wide or wider */
-  
-  @media (min-width: 768px) {
-  
-    .horizontal-nav {
-      gap: 15px; /* PC: larger gap */
-      padding: 12px 20px; /* PC: larger padding */
-    }
-  
-    .nav-icon {
-      font-size: 16px; /* PC: larger font */
-      padding: 10px 16px; /* PC: larger button padding */
-    }
-  
-    .home-icon img {
-      width: 24px; /* PC: larger icon */
-      height: 24px;
-    }
-  }
-  
-  .about-artist-image {
-    max-width: 300px; 
-    margin: 20px auto; 
+.about-artist-image {
+  max-width: 300px; 
+  margin: 20px auto; 
 }
 
 .about-artist-image img {
-    width: 100%;
-    height: auto;
-    box-shadow: none;
-    border-radius: 8px;
-    display: block; 
+  width: 100%;
+  height: auto;
+  box-shadow: none;
+  border-radius: 8px;
+  display: block; 
 }
 
-  /* ========================================
-   1. COMMON HERO STYLES (for all 3 pages)
-   ======================================== */
+/* ========================================
+ 1. COMMON HERO STYLES (for all 3 pages)
+ ======================================== */
 
 .page-hero {
-    /* Put all your shared styles here */
-    /* For example: */
-    padding: 100px 20px;
-    color: white;
-    text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;  
-  }
+  /* Put all your shared styles here */
+  /* For example: */
+  padding: 100px 20px;
+  color: white;
+  text-align: left;
+  justify-content: flex-start;
+  background-size: cover;
+  background-repeat: no-repeat;  
+}
 
-    .hero-content { 
-    position: relative; z-index: 2;  align-items: left; text-align: left;
+.hero-content { 
+  position: relative; 
+  z-index: 2;  
+  align-items: left; 
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+  .hero-content h1 {
+        font-size: 2rem;
     }
-    .hero-content p {
-        max-width: 500px; margin: 0 auto 2rem auto; font-size: 1.1rem; color: #f0f0f0; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.745); 
+  .hero-content p {
+      max-width: 500px; margin: 0 auto 2rem auto; font-size: 0.8rem; color: #f0f0f0; text-shadow: 1px 1px 2px rgb(0, 0, 0); 
+  }
+  @media (max-width: 768px) {
+    
+    .before-after-section .content-container h2{
+      font-size: 1.3rem;
     }
-  /* ========================================
-   2. PAGE-SPECIFIC IMAGES (Mobile-First)
-   ======================================== */
+  }
+/* ========================================
+ 2. PAGE-SPECIFIC IMAGES (Mobile-First)
+ ======================================== */
 
 /* Default background for mobile on the "Portrait" page */
 .page-hero.portrait-page-hero {
-    background-image: url('images/portrait-banner-mobile.png');
-    background-position: center;
+  background-image: url('images/banner.portrait.mob.webp');
+  background-position: center;
+}
+
+/* Default background for mobile on the "Web" page */
+.page-hero.web-page-hero {
+  background-image: url('images/banner.web.mob.webp');
+  background-position: right top;
+}
+
+/* Default background for mobile on the "Design" page */
+.page-hero.design-page-hero {
+  background-image: url('images/banner.design.mob.webp');
+  background-position: center;
+}
+
+.page-hero.about-page-hero {
+  background-image: url('images/banner.about.mob.webp');
+  background-position: right top;
+}
+
+
+/* ========================================
+   3. MEDIA QUERY FOR PC SCREENS
+   (Overrides the mobile images on screens 
+    768px and wider)
+   ======================================== */
+
+@media (min-width: 768px) {
+
+  .hero-content { 
+    position: relative; 
+    z-index: 2; 
+    padding: 1rem;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+  .hero-content p {
+      max-width: 500px; margin: 0 auto 2rem auto; font-size: 1.1rem; color: #f0f0f0; 
   }
-  
-  /* Default background for mobile on the "Web" page */
+  /* PC background for the "Portrait" page */
+  .page-hero.portrait-page-hero {
+    background-image: url('images/banner.portrait.webp');
+    /* You can set a custom PC position if needed */
+    /* background-position: top; */ 
+  }
+
+  /* PC background for the "Web" page */
   .page-hero.web-page-hero {
-    background-image: url('images/banner.web.mob.webp');
-    background-position: right top;
+    background-image: url('images/banner.web.webp'); /* Your original image */
+    background-position: right top; /* Your original position */
   }
-  
-  /* Default background for mobile on the "Design" page */
+
+  /* PC background for the "Design" page */
   .page-hero.design-page-hero {
-    background-image: url('images/design-banner-mobile.png');
-    background-position: center;
+    background-image: url('images/banner.design.webp');
+    /* background-position: left center; */
   }
 
   .page-hero.about-page-hero {
-    background-image: url('images/banner.about.mob.webp');
-    background-position: right top;
+    background-image: url('images/banner.about.webp');
+    background-position: top right;
+    /* background-position: left center; */
   }
-  
-  
-  /* ========================================
-     3. MEDIA QUERY FOR PC SCREENS
-     (Overrides the mobile images on screens 
-      768px and wider)
-     ======================================== */
-  
-  @media (min-width: 768px) {
-  
-    .hero-content { 
-        position: relative; z-index: 2; padding: 1rem;;
-    }
-    .hero-content p {
-        max-width: 500px; margin: 0 auto 2rem auto; font-size: 1.1rem; color: #f0f0f0; 
-    }
-    /* PC background for the "Portrait" page */
-    .page-hero.portrait-page-hero {
-      background-image: url('images/banner.portrait.png');
-      /* You can set a custom PC position if needed */
-      /* background-position: top; */ 
-    }
-  
-    /* PC background for the "Web" page */
-    .page-hero.web-page-hero {
-      background-image: url('images/banner.web.webp'); /* Your original image */
-      background-position: right top; /* Your original position */
-    }
-  
-    /* PC background for the "Design" page */
-    .page-hero.design-page-hero {
-      background-image: url('images/design-banner-pc.png');
-      /* background-position: left center; */
-    }
 
-    .page-hero.about-page-hero {
-      background-image: url('images/banner.about.webp');
-      background-position: top right;
-      /* background-position: left center; */
-    }
-  
+}
+
+/* --- Price Bar --- */
+.price-bar {
+  background-color: var(--primary-accent);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  /* Override the default 5rem section padding */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.price-bar p {
+  color: #000000; /* Force black text for high contrast */
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .price-bar p {
+      font-size: 0.9rem;
   }
+}
+
+/* --- Section & General Styles --- */
+.before-after-section {
+/* Requested black background */
+background-color: #ffffff; 
+color: #000000; /* White text for high contrast */
+padding: 40px 25px;
+font-family: sans-serif; /* Use a clean, modern font */
+}
+
+.content-container {
+max-width: 1000px;
+margin: 0 auto;
+background-color: #6c6767;
+padding-bottom: 1px;
+padding-top: 25px;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 50px;
+font-size: 1.5em;
+font-weight: 700;
+}
+
+.media-label {
+text-align: center;
+margin-bottom: 15px;
+font-size: 1.3em;
+font-weight: 300;
+font-family: Eb Garamond, serif;
+}
+
+/* --- Aspect Ratio Core Styles (The "Padding Hack") --- */
+.aspect-ratio-box {
+position: relative;
+width: 100%;
+height: 0;
+overflow: hidden;
+}
+
+/* --- ADDED: Curved corners for the video container's inner box --- */
+.video-container .aspect-ratio-box {
+border-radius: 12px; /* You can adjust the radius as needed */
+}
+
+.aspect-ratio-box > * {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+/* Ensure image/video fits without stretching */
+object-fit: cover; 
+display: block;
+}
+
+/* 1. Square (1:1) for the Image */
+.aspect-ratio-1-1 {
+padding-bottom: 100%; /* 100% of the width creates a perfect square */
+}
+
+/* 2. Vertical (9:16) for the YouTube Shorts Video */
+.aspect-ratio-9-16 {
+/* 16 / 9 = 1.7777... * 100% = 177.77% */
+padding-bottom: 167.77%; 
+/* The margin is KEPT here for PC/Desktop spacing */
+margin-bottom: 40px; 
+}
+
+/* --- Desktop Layout (PC Screens) --- */
+@media (min-width: 768px) {
+.media-wrapper {
+    display: grid;
+    /* Define columns: 1fr for the image and a proportionate column for the video */
+    grid-template-columns: 1fr 0.5625fr; /* 1fr and (9/16)fr */
+    gap: 40px;
+    align-items: flex-start; /* Aligns content to the top */
+    justify-content: center;
+    max-width: 850px; /* Constrain the size of the paired elements */
+    margin: 0 auto;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.8em;
+    font-weight: 700;
+}
+}
+
+
+/* --- Mobile Layout (Stacked) --- */
+@media (max-width: 767px) {
+/* --- MODIFIED: Ensure margin-bottom is 40px for both image and video containers --- */
+.image-container, .video-container {
+    /* Center and add space below the element */
+    margin: 0 auto 40px auto; 
+    max-width: 90%; 
+}
+
+.video-container {
+    /* On mobile, make the vertical video container a little narrower 
+       than the square image for better visual balance */
+    max-width: 60%; 
+}
+}
+
+/* --- Add this to your stylesheet --- */
+
+/* Style for the 'View all' button */
+.toggle-features {
+background: none;
+border: none;
+color: #ffffff; /* Your accent color */
+font-family: Eb Garamond, serif;
+font-size: 13px;
+cursor: pointer;
+padding: 10px 0 0 0;
+margin-top: 5px;
+
+/* ADD THESE LINES */
+display: block;
+margin-bottom: 25px; 
+}
+
+.toggle-features:hover {
+text-decoration: underline;
+}
+/* --- Mobile-First Styles (Default) --- */
+
+/* Hide the 6th item and onwards by default */
+.price-card:not(.expanded) ul li:nth-child(n+6) {
+display: none;
+}
+
+/* --- Desktop Styles --- */
+@media (min-width: 769px) {
+
+/* On desktop, always show all features */
+.price-card ul li {
+    display: list-item !important;
+}
+
+/* On desktop, hide the 'View all' button */
+.toggle-features {
+    display: none;
+}
+}
+
+/* 1. Set the container for positioning */
+.dropdown {
+position: relative; 
+display: inline-block; /* Helps contain the dropdown */
+}
+
+/* 2. Style the dropdown menu and HIDE it by default */
+.dropdown-menu {
+/* *** THIS IS THE CRITICAL LINE TO HIDE THE MENU *** */
+/* It takes the menu out of the normal document flow and hides it */
+display: none; 
+
+position: absolute;
+top: 100%; /* Positions the menu right below the parent link */
+left: 0;
+
+/* Styling */
+list-style: none; /* Removes bullet points */
+padding: 0;
+margin: 0;
+background-color: #000000; 
+min-width: 160px; 
+z-index: 1000; 
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* 3. SHOW the menu when the mouse hovers over the parent dropdown item */
+/* *** THIS IS THE CRITICAL LINE TO SHOW THE MENU ON HOVER *** */
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
+/* 4. Style the links inside the menu */
+.dropdown-menu li a {
+color: rgb(255, 255, 255); 
+padding: 12px 16px;
+text-decoration: none;
+display: block; 
+}
+
+.dropdown-menu li a:hover {
+background-color: #363535; 
+}
+/* General Dropdown Setup */
+.dropdown {
+position: relative; 
+}
+.dropdown-menu {
+display: none;
+/* ... positioning and styling ... */
+}
+
+/* 1. Desktop Hover Logic (Only applies to large screens) */
+@media screen and (min-width: 768px) {
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show menu on hover */
+}
+}
+
+/* 2. Mobile Click Logic (Applies to all screens via JS toggle) */
+.dropdown.open .dropdown-menu {
+display: block; /* Show menu when the 'open' class is present */
+}
+
+/* --- Theme Toggle Switch --- */
+
+/* 1. Positioning Container */
+.theme-toggle-container {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 99;
+}
+
+/* 2. Hide the actual checkbox */
+.theme-toggle-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* 3. The "Track" */
+.theme-toggle-switch {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 30px;
+  background-color: var(--color-toggle-track);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid var(--color-border);
+}
+
+/* 4. The sliding "Knob" */
+.slider-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-toggle-knob);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
   
+  /* Center the icon inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* 5. The Icons */
+.slider-knob svg {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* --- DEFAULT (DARK MODE / UNCHECKED) --- */
+.sun-icon {
+  stroke: #f39c12; /* Sun color */
+  opacity: 0; /* HIDDEN */
+  transform: scale(0);
+}
+
+.moon-icon {
+  stroke: var(--color-text-secondary); /* Moon color */
+  opacity: 1; /* VISIBLE */
+  transform: scale(1);
+}
+
+/* --- "ON" (LIGHT MODE / CHECKED) --- */
+/* This selector is now CORRECT */
+
+/* 1. Move the knob to the right */
+.theme-toggle-checkbox:checked + .slider-knob {
+  transform: translateX(30px);
+  background-color: var(--color-toggle-knob); /* Uses light mode knob color */
+}
+
+/* 2. Swap the icons */
+.theme-toggle-checkbox:checked + .slider-knob .sun-icon {
+  opacity: 1; /* VISIBLE */
+  transform: scale(1);
+}
+
+.theme-toggle-checkbox:checked + .slider-knob .moon-icon {
+  opacity: 0; /* HIDDEN */
+  transform: scale(0);
+}
+
+/* --- New Contact Page Styles --- */
+.page-hero.contact-page-hero {
+  /* You can customize this! */
+  background-image: url('images/contact.jpg');
+  min-height: 50vh;
+}
+
+.content-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  
+  /* Make the section background independent of the form card */
+  background-color: var(--color-background-section);
+}
+
+/* Make the form a "card" */
+.contact-form {
+  background-color: var(--color-background); /* Swaps with theme */
+  padding: 2.5rem;
+  border-radius: 15px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/* Style inputs to pop */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background-color: var(--color-background-section);
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Style for disabled dropdown */
+.form-group select:disabled {
+  background-color: var(--color-background);
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.2);
+}
+
+/* CTA Button */
+.contact-form .cta-button {
+  background-color: var(--primary-accent);
+  color: #121212;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: var(--font-body);
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-form .cta-button:hover {
+  background-color: var(--secondary-accent);
+  transform: translateY(-2px);
+  color: #000;
+}
+
+/* --- New About Page Styles --- */
+
+/* 1. Mission Section */
+.about-mission {
+  background-color: var(--color-background-section);
+}
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.mission-content p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* 2. Our Process Section */
+.our-process {
+  background-color: var(--color-homehero);
+}
+.process-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.step-card {
+  background-color: var(--color-background-section);
+  padding: 2.5rem;
+  border-radius: 15px;
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+.step-number {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-accent);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+.step-card h3 {
+  color: var(--color-text-heading);
+  margin-bottom: 1rem;
+}
+.step-card p {
+  color: var(--color-text-secondary);
+  max-width: 100%; /* Override default p max-width */
+  margin-bottom: 0;
+}
+
+/* 3. Meet the Founder Section */
+.meet-founder {
+  background-color: var(--color-background-section);
+}
+.founder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.founder-image img {
+  width: 100%;
+  max-width: 185px;
+  height: auto;
+  border-radius: 50%; /* Make the image circular */
+  border: 5px solid var(--color-border);
+}
+.founder-bio {
+  flex: 2;
+}
+.founder-bio h3 {
+  color: var(--color-text-heading);
+  font-size: 2rem;
+}
+.founder-bio p {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+}
+.founder-bio .cta-button {
+  display: inline-block;
+  background-color: var(--primary-accent);
+  color: #121212;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* --- Media Queries for Desktop --- */
+@media (min-width: 768px) {
+  .process-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .founder-content {
+    flex-direction: row;
+    text-align: left;
+    gap: 4rem;
+  }
+  .founder-image {
+    flex: 1;
+  }
+  .founder-image img {
+    max-width: 100%;
+  }
+}
+
+/* --- Testimonials Section --- */
+.testimonials {
+  /* Use the main background color, not the section color */
+  background-color: var(--color-homehero);
+}
+
+.testimonial-slider-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  /* Set a min-height so the section doesn't jump as slides change */
+  min-height: 250px; 
+}
+
+.testimonial-slide {
+  /* Slides are hidden by default */
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* The active slide is visible */
+.testimonial-slide.active {
+  display: block;
+  opacity: 1;
+  position: relative; /* Use relative to set the container height */
+}
+
+.testimonial-slide .quote {
+  font-size: 1.25rem;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.testimonial-slide .author {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-slide .role {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--primary-accent);
+  margin-bottom: 0;
+}
+
+/* Dots Navigation */
+.testimonial-dots {
+  text-align: center;
+  padding: 2rem 0 0 0;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: var(--color-border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: var(--primary-accent);
+  transform: scale(1.2);
+}
+
+/* --- New Testimonial Image Style (Rectangular Banner) --- */
+.testimonial-image {
+  /* This is your "larger or smaller" control */
+  max-width: 500px; 
+
+  width: 100%; /* Make it responsive */
+  margin: 0 auto 1.5rem auto; /* Centers it and adds space below */
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: auto; /* Maintains aspect ratio automatically */
+  object-fit: contain; /* Ensures the whole image is visible and "never crops" */
+  border-radius: 10px; /* A slight curve for a professional look */
+}
+
+@media (max-width: 768px) {
+  .testimonial-slide .quote {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .testimonial-slide .author {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+/* --- New Discount Price Styling --- */
+.price-card .price {
+  /* Remove fixed font size to be more flexible */
+  margin: 1rem 0;
+  color: var(--color-text-heading);
+}
+
+.price-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+}
+
+.price-new {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+}
+
+.price-old {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  text-decoration: line-through;
+}
+
+.discount-badge {
+  display: inline-block;
+  background-color: var(--primary-accent);
+  color: #000000;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* --- Roadmap Process Section --- */
+.our-process-roadmap {
+  /* Use the main bg to contrast with the light-gray portfolio section */
+  background-color: var(--color-background);
+}
+
+.roadmap-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* This is the vertical "road" line */
+.roadmap-container::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  bottom: 10px;
+  width: 4px;
+  background-color: var(--color-border);
+  border-radius: 2px;
+}
+
+.roadmap-step {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 50px; /* Leave space for the dot and line */
+}
+
+/* This is the "dot" on the road */
+.roadmap-dot {
+  position: absolute;
+  left: 0;
+  top: 5px; /* Aligns with the first line of text */
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-accent);
+  border-radius: 50%;
+  border: 4px solid var(--color-background);
+  z-index: 1; /* Sits on top of the gray line */
+}
+
+.roadmap-content h3 {
+  color: var(--color-text-heading);
+  margin-bottom: 0.5rem;
+}
+
+.roadmap-content p {
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+  max-width: 100%;
+}
+
+/* Responsive styles for Mobile */
+@media (max-width: 768px) {
+  /* Hide the vertical line on mobile */
+  .roadmap-container::before {
+    display: none;
+  }
+
+  .roadmap-step {
+    padding-left: 0; /* Remove the side padding */
+    text-align: center; /* Center all text */
+  }
+
+  /* Make the dot sit on top, centered */
+  .roadmap-dot {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin: 0 auto 1rem auto; /* Center the dot */
+  }
+}
+
+/* --- Scrolling Marquee Gallery --- */
+.scrolling-gallery {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  /* Remove horizontal padding to let marquee hit edges */
+  padding-left: 0;
+  padding-right: 0;
+  background-color: var(--color-background-section);
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.marquee-content {
+  display: flex;
+  /* This is the animation */
+  animation: scroll 30s linear infinite;
+  animation-direction: alternate;
+}
+
+.marquee[data-direction="right"] .marquee-content {
+  /* This makes it scroll the other way */
+  animation-name: scroll-reverse;
+}
+
+.marquee-content img {
+  height: 250px; /* Set a fixed height */
+  width: auto;
+  margin: 0 10px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+/* --- Mobile size for marquee --- */
+@media (max-width: 768px) {
+  .marquee-content img {
+    /* This is your mobile size control.
+      Change 150px to 120px or 180px to whatever looks best.
+    */
+    height: 150px;
+  }
+  .marquee-content {
+    /* Speeds up the animation from 30s to 20s on mobile */
+    animation-duration: 15s;
+  }
+}
+.marquee-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Define the scrolling animations */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes scroll-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* --- Portrait Page: Originals Gallery --- */
+.originals-gallery {
+  background-color: var(--color-background-section);
+}
+.art-grid {
+  display: grid;
+  /* Creates 1-3 columns based on screen size */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.art-card {
+  position: relative;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 1zfpx;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.art-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+.art-card img {
+  width: 100%;
+  height: 300px; /* Fixed height for a uniform grid */
+  object-fit: cover;
+  display: block;
+}
+.art-card h3 {
+  color: var(--color-text-heading);
+  padding: 1rem 1.25rem;
+  font-size: 1.25rem;
+  text-align: left;
+}
+.art-card .sold-out {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(18, 18, 18, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+/* --- Portrait Page: Commissions Gallery --- */
+.commissions-gallery {
+  background-color: var(--color-background);
+}
+.commission-grid {
+  display: grid;
+  /* 2 columns on mobile, as requested */
+  grid-template-columns: 1fr 1fr; 
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.commission-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.commission-grid img:hover {
+  transform: scale(1.05);
+}
+/* 3 columns on desktop */
+@media (min-width: 768px) {
+  .commission-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* --- Advanced Portrait Lightbox --- */
+.lightbox {
+  display: none; 
+  position: fixed;
+  z-index: 2000;
+  padding-top: 2rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+.lightbox-main-image {
+  margin: 1rem auto;
+  width: auto;
+  max-width: 90%;
+  max-height: 65vh;
+}
+.lightbox-content {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Never crops! */
+}
+#lightbox-caption {
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  font-family: var(--font-body);
+}
+#portrait-lightbox .lightbox-close {
+  position: absolute;
+  top: 48px;
+  right: 32px;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10001;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s;
+}
+#portrait-lightbox .lightbox-close:hover {
+  color: #ff5252;
+}
+.lightbox-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.lightbox-thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.lightbox-thumb:hover,
+.lightbox-thumb.active {
+  opacity: 1;
+}
+#lightbox-cta {
+  display: inline-block;
+  background-color: var(--primary-accent);
+  color: #121212;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* --- Lightbox Responsive Image Sizing --- */
+@media (min-width: 768px) {
+  #portrait-lightbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #portrait-lightbox .lightbox-main-image {
+    max-width: 80vw;
+    max-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #lightbox-img-main {
+    max-width: 80vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+    border-radius: 8px;
+  }
+}
+#portrait-lightbox {
+  display: none; /* Hide by default */
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+}

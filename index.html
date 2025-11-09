@@ -6,27 +6,30 @@
     <title>UT Arts - Art, Web, and Design</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
     <link rel="shortcut icon" href="/my-favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/my-favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="UT Arts" />
     <link rel="manifest" href="/my-favicon/site.webmanifest" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header id="main-header">
         <nav>
             <a href="index.html" class="logo">
-                <img src="images/UTartsLogo.webp" alt="UT Studio Logo">
+                <img src="images/UTartsLogo.webp" alt="UT Arts Logo">
             </a>
             <ul class="nav-links">
+                <li><a href="websites.html">Websites</a></li>
+                <li><a href="designs.html">Designs</a></li>
+                <li><a href="portraits.html">Portraits</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#contact details">Contact</a></li>
-                <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
-                <li><a href="#feedback form">Feedback</a></li>
+                <li><a href="contact.html" class="cta-button">CONTACT US</a></li>
             </ul>
             <div class="hamburger">
                 <div class="line"></div>
@@ -36,56 +39,45 @@
         </nav>
     </header>
 
-    <main>
+    <main class="page-frame">
+        
+        <div class="page-content">
+
         <main>
-            <section class="hero" style="position: relative; z-index: 1;">
-                <div class="hero-content" data-aos="fade-down" data-aos-duration="1000" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: fit-content; padding-top: 20px;">
+            <section class="hero homepage-hero">
+                <div class="theme-toggle-container">
+                    <label class="theme-toggle-switch" for="theme-toggle-checkbox">
+                        <input type="checkbox" id="theme-toggle-checkbox" class="theme-toggle-checkbox">
+                        <span class="slider-knob">
+                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </span>
+                    </label>
+                </div>
+                <div class="hero-container">
                     
-                    <div class="hero-content-text-container" style="text-align: left; color: white;  border-radius: 10px;" data-aos="fade-up">
-                        
-                        <div class="hero-content-text">
-                            <p style="font-family: 'Kaushan Script', cursive; line-height: 1.0; text-transform: lowercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
-                                contact
-                            </p>
-                            <h2 style="font-family: 'EB Garamond', serif; line-height: 1.0; text-transform: uppercase; font-weight: 600; text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);">
-                                NOW
-                            </h2>
-                            <p style="margin: 0; line-height: 1.2;">
-                                <span style="font-family: 'Kaushan Script', cursive; font-weight: 300; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.666);">or just check it</span> 
-                                <span style="font-family: 'EB Garamond', serif; font-weight: 600; text-transform: uppercase; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.666);">  OUT!</span>
-                            </p>
-                        </div>
-                        
+                    <div class="hero-text-content">
+                        <h1>Your Business Needs to Be Online.<br>We Take You There.</h1>
+                        <p>At UT Arts, we craft custom websites and graphics that attract customers and grow your brand. <br> <span style="font-size: 0.8rem;">We also offer unique, hand-drawn portraits.</span></p>
+                        <a href="contact.html?service=website-custom" class="cta-button">Get a Free Quote</a>
                     </div>
+            
+                    <div class="hero-video-content">
+                        <video id="hero-video" autoplay loop muted playsinline poster="images/video-poster.webp">
+                            <source id="hero-video-source" src="images/herogif.webm" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+            
                 </div>
             </section>
 
-            <nav class="horizontal-nav">
-                <a href="index.html" class="nav-icon home-icon active">
-                  <img src="images/HomeIcon.png" alt="Home">
-                </a>
-                
-                <a href="portraits.html" class="nav-icon">Portraits</a>
-                <a href="websites.html" class="nav-icon">Websites</a>
-                <a href="designs.html" class="nav-icon">Designs</a>
-            </nav>
-        
 
         <section id="services" class="portfolio">
-            <h2 class="section-title" data-aos="fade-up">My Services</h2>
+            <h2 class="section-title">Our Services</h2>
 
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="portfolio-image">
-                    <img src="images/portraits.service.webp" alt="Portraits service">
-                </div>
-                <div class="portfolio-text">
-                    <h3>Fine Art & Portraits</h3>
-                    <p>Capturing soul on paper with graphite and charcoal. Timeless, hand-drawn portraits that tell your story.</p>
-                    <a href="portraits.html" class="card-link">View Gallery</a>
-                </div>
-            </div>
 
-            <div class="portfolio-item" data-aos="fade-up">
+            <div class="portfolio-item">
                 <div class="portfolio-image">
                     <img src="images/websiteService.webp" alt="websites service">
                 </div>
@@ -96,9 +88,9 @@
                 </div>
             </div>
 
-            <div class="portfolio-item" data-aos="fade-up">
+            <div class="portfolio-item">
                 <div class="portfolio-image">
-                    <img src="images/Pathshala.webp" alt="designs service">
+                    <img src="images/designs.service.webp" alt="designs service">
                 </div>
                 <div class="portfolio-text">
                     <h3>Visual Design</h3>
@@ -107,30 +99,81 @@
                 </div>
             </div>
 
-        </section>
-        
-        <section class="about" data-aos="fade-up">
-            <div class="about-content">
-                <h2>The Artist Behind the Art</h2>
-                <div class="about-artist-image">
-                <img src="images/artist.webp" alt="artist"></div>
-                <p><li><a href="about.html">Know more about UT Arts >></a></li></p>
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    <img src="images/portraits.service.webp" alt="Portraits service">
+                </div>
+                <div class="portfolio-text">
+                    <h3>Fine Art & Portraits</h3>
+                    <p>Capturing soul on paper with graphite and charcoal. Timeless, hand-drawn portraits that tell your story.</p>
+                    <a href="portraits.html" class="card-link">View Gallery</a>
+                </div>
             </div>
         </section>
-        </main>
 
+        <section class="testimonials">
+            <h2 class="section-title">What Our Clients Say</h2>
+            
+            <div class="testimonial-slider-container">
+                
+                <div class="testimonial-slide active">
+                    <div class="testimonial-image">
+                        <img src="images/test.webp" alt="Testimonial from Govind Madhav Public School">
+                    </div>
+                    <p class="quote">"We needed a complete portal for our school. UT Arts delivered a secure, fast, and easy-to-use application that our students and teachers love. The project was handled professionally from start to finish."</p>
+                    <h4 class="author">Govind Madhav Public School</h4>
+                    <p>Narayan Ji Tiwari</p>
+                    <p class="role">Website Project</p>
+                </div>
+
+                <div class="testimonial-slide">
+                    <div class="testimonial-image">
+                        <img src="images/test1.webp" alt="Testimonial from A. K. Sharma">
+                    </div>
+                    <p class="quote">"I was amazed by the portrait I commissioned. The attention to detail was incredible. It captured the person's spirit perfectly. I highly recommend their art services."</p>
+                    <h4 class="author">A. K. Sharma</h4>
+                    <p class="role">Fine Art Portrait</p>
+                </div>
+
+                <div class="testimonial-slide">
+                    <div class="testimonial-image">
+                        <img src="images/test2.webp" alt="Testimonial from Nrj PathLab">
+                    </div>
+                    <p class="quote">"UT Arts designed our new website, and the feedback has been amazing. It's clean, professional, and perfectly represents our brand. A fantastic partner to work with."</p>
+                    <h4 class="author">Nrj Path Lab</h4>
+                    <p>Neeraj Kumar Pandey</p>
+                    <p class="role">Website Project</p>
+                </div>
+
+                </div>
+            
+            <div class="testimonial-dots"></div>
+
+        </section>
+        
+        <section class="about">
+            <div class="about-content">
+                <h2>About UT Arts</h2>
+                <p>We're a creative studio dedicated to helping small businesses stand out. We build professional websites and compelling visual designs that get results.</p>
+                <a href="about.html" class="cta-button">Our Mission & Process</a>
+            </div>
+        </section>
+
+        <p style="text-align: center; width: 100%; margin-top: 21px;"><a href="websites.html">Websites</a>  |  <a href="designs.html">Designs</a>  |  <a href="portraits.html">Portraits</a></p>
+        
         <footer>
             <h3>Ready to create something beautiful?</h3>
-            <p>Let's talk about your project. I'm excited to hear your ideas.</p>
-            <a href="mailto:your-utstudios2025@gmail.com" class="cta-button">Contact Me</a>
-            <p><a href="PrivacyPolicy.html">Privacy Policy</a></p>
-            <p></p><a href="terms.html">Terms & Conditions</a></p>
+            <p>Let's talk about your project. We're excited to hear your ideas.</p>
+            <a href="contact.html" class="cta-button">Start Your Project</a>
+            <P>Email us at : <a href="mailto:info@utarts.in">info@utarts.in</a></P>
+            <p><a href="PrivacyPolicy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
             <p class="copyright">&copy; 2025 UT Arts. All Rights Reserved.</p>
         </footer>
+
+        </div>
+    </main>
     
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="script.js"></script>
 
     </body>
-
 </html>

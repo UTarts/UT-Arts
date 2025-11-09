@@ -6,9 +6,8 @@
     <title>Fine Art & Portraits - UT Arts</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
     <link rel="shortcut icon" href="/my-favicon/favicon.ico" />
@@ -20,13 +19,14 @@
     <header id="main-header">
         <nav>
             <a href="index.html" class="logo">
-                <img src="images/UTartsLogo.webp" alt="UT Studio Logo">
+                <img src="images/UTartsLogo.webp" alt="UT Arts Logo">
             </a>
             <ul class="nav-links">
+                <li><a href="websites.html">Websites</a></li>
+                <li><a href="designs.html">Designs</a></li>
+                <li><a href="portraits.html">Portraits</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#contact details">Contact</a></li>
-                <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
-                <li><a href="#feedback form">Feedback</a></li>
+                <li><a href="contact.html" class="cta-button">CONTACT US</a></li>
             </ul>
             <div class="hamburger">
                 <div class="line"></div>
@@ -36,88 +36,170 @@
         </nav>
     </header>
 
-    <main>
+    <main class="page-frame">
+        <div class="page-content">
         <section class="page-hero portrait-page-hero">
             <div class="hero-content">
-                <h1 data-aos="fade-down">Capturing Soul on Paper</h1>
-                <p data-aos="fade-up" data-aos-delay="200">Timeless, hand-drawn portraits in graphite and charcoal that preserve a moment, a feeling, a memory.</p>
+                <h1>Capturing Soul on Paper</h1>
+                <p>Timeless, hand-drawn portraits in graphite and charcoal that preserve a moment, a feeling, a memory.</p>
             </div>
         </section>
 
-        <nav class="horizontal-nav">
-            <a href="index.html" class="nav-icon home-icon">
-              <img src="images/HomeIcon.png" alt="Home">
-            </a>
-            
-            <a href="portraits.html" class="nav-icon active">Portraits</a>
-            <a href="websites.html" class="nav-icon">Websites</a>
-            <a href="designs.html" class="nav-icon">Designs</a>
-        </nav>
+        <section class="originals-gallery">
+            <h2 class="section-title">Originals for Sale</h2>
+            <div class="art-grid">
+        
+                <div class="art-card" 
+                     data-title="The Colourful Rain"
+                     data-img-full="images/original1.webp" 
+                     data-img-room="images/original11.png">
+        
+                    <img src="images/original1.webp" alt="Colourful Rain painting">
+                    <h3>The Colourful Rain</h3>
+                </div>
+        
+                <div class="art-card" 
+                     data-title="The Sand"
+                     data-img-full="images/original2.webp" 
+                     data-img-room="images/original21.webp">
+        
+                    <img src="images/Original2.webp" alt="The Sand painting">
+                    <span class="sold-out">Sold Out</span>
+                    <h3>the sand</h3>
+                </div>
+        
+                </div>
+        </section>
 
+        <section class="commissions-gallery">
+            <h2 class="section-title">Past Commissions</h2>
+            <div class="commission-grid">
+                <img src="images/portrait01.webp" alt="Graphite portrait sketch" data-caption="Commissioned sketch, A4 Graphite">
+                <img src="images/Portrait02.webp" alt="Charcoal portrait sketch" data-caption="Commissioned sketch, A3 Charcoal">
+                <img src="images/Portrait04.webp" alt="Graphite portrait sketch" data-caption="Commissioned sketch, A4 Graphite">
+                <img src="images/Portrait05.webp" alt="Charcoal portrait sketch" data-caption="Commissioned sketch, A3 Charcoal">
+                </div>
+        </section>
 
-        <section id="gallery" class="gallery">
-            <h2 class="section-title" data-aos="fade-up">My Artworks</h2>
-            <div class="gallery-grid" data-aos="fade-up" data-aos-delay="200">
-                <div class="gallery-item"><img src="images/Portrait00.webp" alt="Portrait Sketch 1"></div>
-                <div class="gallery-item"><img src="images/Portrait02.webp" alt="Portrait Sketch 2"></div>
-                <div class="gallery-item"><img src="images/portrait01.webp" alt="Portrait Sketch 3"></div>
-                <div class="gallery-item"><img src="images/Portrait04.webp" alt="Portrait Sketch 4"></div>
-                <div class="gallery-item"><img src="images/Portrait05.webp" alt="Portrait Sketch 5"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1945" alt="Portrait Sketch 6"></div>
+        <section class="price-bar">
+            <p>Commissioned Portraits start from as low as <strong>₹1,999</strong>!</p>
+        </section>
+
+        <section class="before-after-section">
+            <div class="content-container">
+                <h2>From Photo To Portrait</h2>
+                
+                <div class="media-wrapper">
+                    <div class="image-container" >
+                        <div class="aspect-ratio-box aspect-ratio-1-1">
+                            <img src="images/before.after.webp" alt="Before and After Portrait Comparison">
+                        </div>
+                    </div>
+        
+                    <div class="video-container">
+                        <h3 class="media-label">Watch the Process</h3>
+                        <div class="aspect-ratio-box aspect-ratio-9-16">
+                            <iframe 
+                                src="https://www.youtube.com/embed/N604W0WGTpc" 
+                                title="Portrait Process Video" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
 
         <section id="pricing" class="pricing">
             <h2 class="section-title" data-aos="fade-up">Commission a Portrait</h2>
             <div class="pricing-table" data-aos="fade-up" data-aos-delay="200">
                 <div class="price-card">
                     <h3>The Headshot</h3>
-                    <div class="price">Starting at $XX</div>
+                    <div class="price">
+                        <div class="price-container">
+                            <span class="price-new">₹1,999</span>
+                            <span class="price-old">₹2,999</span>
+                        </div>
+                        <span class="discount-badge">33% OFF</span>
+                    </div>
                     <ul>
                         <li>Graphite or Charcoal</li>
                         <li>A4 Size (8.3" x 11.7")</li>
                         <li>Head and Shoulders</li>
                         <li>Perfect for Gifts & Avatars</li>
                     </ul>
-                    <a href="#" class="cta-button">Inquire Now</a>
+                    <a href="contact.html?service=portrait-headshot" class="cta-button">Get a Quote</a>
                 </div>
                 <div class="price-card featured">
                     <h3>The Classic</h3>
-                    <div class="price">Starting at $XX</div>
+                    <div class="price">
+                        <div class="price-container">
+                            <span class="price-new">₹3,999</span>
+                            <span class="price-old">₹5,999</span>
+                        </div>
+                        <span class="discount-badge">33% OFF</span>
+                    </div>
                     <ul>
                         <li>Graphite or Charcoal</li>
                         <li>A3 Size (11.7" x 16.5")</li>
                         <li>Half Body Portrait</li>
                         <li>Most Popular Choice</li>
                     </ul>
-                    <a href="#" class="cta-button">Inquire Now</a>
+                    <a href="contact.html?service=portrait-classic" class="cta-button">Get a Quote</a>
                 </div>
                 <div class="price-card">
                     <h3>The Heirloom</h3>
-                    <div class="price">Starting at $XX</div>
+                    <div class="price">
+                        <div class="price-container">
+                            <span class="price-new">₹7,999</span>
+                            <span class="price-old">₹9,999</span>
+                        </div>
+                        <span class="discount-badge">20% OFF</span>
+                    </div>
                     <ul>
                         <li>Detailed Mixed Media</li>
                         <li>A2+ Custom Size</li>
                         <li>Full Body / Couple / Family</li>
                         <li>A True Centerpiece</li>
                     </ul>
-                    <a href="#" class="cta-button">Inquire Now</a>
+                    <a href="contact.html?service=portrait-heirloom" class="cta-button">Get a Quote</a>
                 </div>
             </div>
         </section>
 
-    </main>
+        <div id="portrait-lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+        
+            <div class="lightbox-main-image">
+                <img class="lightbox-content" id="lightbox-img-main" alt="Full size artwork">
+            </div>
+        
+            <div id="lightbox-caption"></div>
+        
+            <div class="lightbox-thumbs">
+                <img class="lightbox-thumb" id="lightbox-thumb-1" alt="Full view">
+                <img class="lightbox-thumb" id="lightbox-thumb-2" alt="In-room view">
+            </div>
+        
+            <a id="lightbox-cta" href="contact.html?service=portrait" class="cta-button">Contact for Pricing</a>
+        </div>
+
+        <p style="text-align: center; margin-top: 21px;"><a href="websites.html">Websites</a>  |  <a href="designs.html">Designs</a>  |  <a href="portraits.html">Portraits</a></p>
 
     <footer>
         <h3>Ready to create something beautiful?</h3>
-        <p>Let's talk about your project. I'm excited to hear your ideas.</p>
-        <a href="mailto:your-email@example.com" class="cta-button">Contact Me</a>
-        <p><a href="PrivacyPolicy.html">Privacy Policy</a></p>
-            <p></p><a href="terms.html">Terms & Conditions</a></p>
+        <p>Let's talk about your project. We're excited to hear your ideas.</p>
+        <a href="contact.html" class="cta-button">Get in Touch</a>
+        <P>Email us at : <a href="mailto:info@utarts.in">info@utarts.in</a></P>
+        <p><a href="PrivacyPolicy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
         <p class="copyright">&copy; 2025 UT Arts. All Rights Reserved.</p>
     </footer>
+    </div>
+    </main>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
