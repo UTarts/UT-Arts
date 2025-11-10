@@ -1585,3 +1585,22 @@ display: block; /* Show menu when the 'open' class is present */
   align-items: center;
   justify-content: center;
 }
+
+/* --- Footer Social Media Links --- */
+.social-links {
+  text-align: center; /* Aligned in center (as requested) */
+  margin: 2rem 0; /* Adds space above and below */
+}
+
+.social-links a {
+  font-size: 1.3rem; /* Controls "small icons" size */
+  color: var(--color-text-secondary); /* Use the subtle text color */
+  display: inline-block; /* Puts them in one line */
+  margin: 0 1rem; /* Space between each icon */
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary-accent); /* Change to accent color on hover */
+  transform: translateY(-3px); /* Slight hover effect */
+}
