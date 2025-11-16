@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // --- Dropdown Menu Logic ---
     const dropdownLink = document.getElementById('pricing-dropdown-link');
-    if (dropdownLink) { // This "if" check is good
+    if (dropdownLink) {
         const dropdownLi = dropdownLink.parentElement; 
 
         dropdownLink.addEventListener('click', function(event) {
@@ -65,11 +65,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const heroVideo = document.getElementById('hero-video');
     const heroVideoSource = document.getElementById('hero-video-source');
     
-    const darkVideoFile = 'images/herogif.webm';
-    const lightVideoFile = 'images/herogif-light.webm';
+    const darkVideoFile = 'images/hero.dark.webm';
+    const lightVideoFile = 'images/hero.light.webm';
     
     function setVideoTheme(theme) {
-        if (heroVideo && heroVideoSource) { // This "if" check is good
+        if (heroVideo && heroVideoSource) {
             if (theme === 'light') {
                 heroVideoSource.setAttribute('src', lightVideoFile);
             } else {
@@ -86,21 +86,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (savedTheme === 'light') {
         body.classList.add('light-theme');
-        // <-- FIX: Check if themeToggle exists before changing it -->
         if (themeToggle) {
             themeToggle.checked = true;
         }
         setVideoTheme('light'); 
     } else {
         body.classList.remove('light-theme');
-        // <-- FIX: Check if themeToggle exists before changing it -->
         if (themeToggle) {
             themeToggle.checked = false;
         }
         setVideoTheme('dark'); 
     }
 
-    // <-- FIX: Check if themeToggle exists before adding a listener -->
     if (themeToggle) {
         themeToggle.addEventListener('change', () => {
             if (themeToggle.checked) {
@@ -123,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const dotsContainer = document.querySelector(".testimonial-dots");
         let slideInterval; 
 
-        if (slides.length > 0) { // This "if" check is good
+        if (slides.length > 0) {
             
             for (let i = 0; i < slides.length; i++) {
                 const dot = document.createElement("span");
@@ -202,89 +199,4 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error("Testimonial slider error: ", e);
     }
     
-    // --- Portrait Lightbox ---
-    const lightbox = document.getElementById('portrait-lightbox');
-    
-    // <-- FIX: Check if lightbox exists before running its code -->
-    if (lightbox) {
-        const lightboxImgMain = document.getElementById('lightbox-img-main');
-        const lightboxCaption = document.getElementById('lightbox-caption');
-        const lightboxThumb1 = document.getElementById('lightbox-thumb-1');
-        const lightboxThumb2 = document.getElementById('lightbox-thumb-2');
-        const lightboxClose = lightbox.querySelector('.lightbox-close');
-        const lightboxCTA = document.getElementById('lightbox-cta');
-        
-        // Helper to open lightbox for originals
-        function openOriginalLightbox(card) {
-            const imgFull = card.getAttribute('data-img-full');
-            const imgRoom = card.getAttribute('data-img-room');
-            const title = card.getAttribute('data-title') || '';
-            lightboxImgMain.src = imgFull;
-            lightboxCaption.textContent = title;
-            lightboxThumb1.src = imgFull;
-            lightboxThumb2.src = imgRoom;
-            lightboxThumb1.classList.add('active');
-            lightboxThumb2.classList.remove('active');
-            lightbox.style.display = 'block';
-        
-            const isSoldOut = !!card.querySelector('.sold-out');
-            if (lightboxCTA) {
-                lightboxCTA.style.display = isSoldOut ? 'none' : 'inline-block';
-            }
-        
-            lightboxThumb1.onclick = () => {
-                lightboxImgMain.src = imgFull;
-                lightboxThumb1.classList.add('active');
-                lightboxThumb2.classList.remove('active');
-            };
-            lightboxThumb2.onclick = () => {
-                lightboxImgMain.src = imgRoom;
-                lightboxThumb2.classList.add('active');
-                lightboxThumb1.classList.remove('active');
-            };
-        }
-        
-        // Helper to open lightbox for commissions
-        function openCommissionLightbox(img) {
-            lightboxImgMain.src = img.src;
-            lightboxCaption.textContent = img.getAttribute('data-caption') || img.alt || '';
-            lightboxThumb1.style.display = 'none';
-            lightboxThumb2.style.display = 'none';
-            lightbox.style.display = 'block';
-        
-            if (lightboxCTA) {
-                lightboxCTA.style.display = 'none';
-            }
-        }
-        
-        // Click listeners for originals
-        document.querySelectorAll('.art-card').forEach(card => {
-            card.addEventListener('click', function () {
-                openOriginalLightbox(card);
-                lightboxThumb1.style.display = '';
-                lightboxThumb2.style.display = '';
-            });
-        });
-        
-        // Click listeners for commissions
-        document.querySelectorAll('.commission-grid img').forEach(img => {
-            img.addEventListener('click', function () {
-                openCommissionLightbox(img);
-            });
-        });
-        
-        // Close lightbox
-        if (lightboxClose) {
-            lightboxClose.addEventListener('click', function () {
-                lightbox.style.display = 'none';
-            });
-        }
-        // Optional: close on background click
-        lightbox.addEventListener('click', function (e) {
-            if (e.target === lightbox) {
-                lightbox.style.display = 'none';
-            }
-        });
-    } // <-- FIX: This closes the 'if (lightbox)' check
-
 });

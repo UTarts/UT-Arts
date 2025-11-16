@@ -10,7 +10,7 @@
   --color-text-primary: #ececec;   /* Light Text */
   --color-text-secondary: #a0a0a0; /* Original Light Gray Text */
   --color-text-heading: #ffffff;    /* White */
-  --color-card-bg: rgb(65, 61, 50); /* Original Card BG */
+  --color-card-bg: rgb(34, 29, 23); /* Original Card BG */
   --color-border: rgba(255, 255, 255, 0.1); /* Original Border */
   --color-header-bg: rgba(18, 18, 18, 0.8); /* Dark blurred header */
   --color-nav-text: #f0f0f0;         /* Light nav text */
@@ -18,7 +18,7 @@
   --color-toggle-knob: #444;       /* Dark knob */
   --color-toggle-knob-dark: #f0f0f0; /* Knob for light mode icon */
   --color-portfolio-button: #000000; 
-  --color-homehero:#2c2b2b;
+  --color-homehero:#2d2d2d;
 
   /* === BRAND COLORS (Stay the same) === */
   --primary-accent: #f39c12; 
@@ -27,7 +27,6 @@
 
 /* === DARK THEME (When .dark-theme is active) === */
 body.light-theme {
-
   --color-background: #ffffff;      /* Pure White */
   --color-background-section:#e4e4e4; /* Light Gray */
   --color-text-primary: #121212;   /* Black */
@@ -47,49 +46,34 @@ body.light-theme {
 /* --- New Frame Layout --- */
 .page-frame {
   position: fixed;
-  
-  /* Starts just after the 60px header */
   top: 50px; 
-  
-  /* Fills the rest of the screen */
   left: 0;
   right: 0;
   bottom: 0;
-  
-  /* This creates the fixed "reverse curve" effect */
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  
-  /* This is the key: content scrolls *inside* this fixed frame */
   overflow-y: auto; 
-  
-  /* Sits behind the header */
   z-index: 500; 
-  
-  /* Per your request, the frame itself is transparent */
   background-color: transparent;
 }
 
 .page-content {
-  /* Per your request, 0px padding */
   padding: 0px; 
-  
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
-/* New style for the gradient "CONTACT US" button */
 .nav-links .cta-button {
-  color: var(--color-nav-text); /* Uses the theme-aware nav color */
+  color: var(--color-nav-text);
   font-weight: 500;
   position: relative;
-  padding: 0.3rem; /* Give it a little more space */
-  border: 2px solid var(--primary-accent); /* Simple border */
+  padding: 0.3rem;
+  border: 2px solid var(--primary-accent);
   border-radius: 8px;
 }
 
 .nav-links .cta-button:hover {
-  color: var(--color-nav-text); /* Keep color on hover */
-  background-color: rgba(243, 156, 18, 0.1); /* Slight hover effect */
+  color: var(--color-nav-text);
+  background-color: rgba(243, 156, 18, 0.1);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -97,18 +81,16 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
   font-weight: 400;
-  /* This dark color is the "empty" space */
   background-color: var(--color-background);
   color: var(--text-color);
   line-height: 1.7;
-  /* We disable scrolling on the body, as the content scrolls inside its own frame */
   overflow: hidden;
 }
 
 /* --- Typography --- */
 h1, h2, h3, h4 {
   font-family: var(--font-heading); 
-  font-weight: 700; /* Sets a strong weight for Orbitron */
+  font-weight: 700;
   letter-spacing: 1px;
   color: var(--color-text-heading);
 }
@@ -127,9 +109,8 @@ section { padding: 5rem 1.5rem; text-align: center; position: relative; overflow
 header {
   position: fixed;
   width: 100%;
-  /* Transparent background */
   background-color: transparent;
-  padding: 0; /* Padding will be on the 'nav' element */
+  padding: 0;
   z-index: 1000;
   text-shadow: #121212;
 }
@@ -139,11 +120,10 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  color: white;           /* Example text color */
+  color: white;
   transform: translateY(0);
   z-index: 1000;
 }
-
 
 nav { 
   display: flex; 
@@ -151,13 +131,12 @@ nav {
   align-items: center; 
   max-width: 1400px; 
   margin: 0 auto;
-  /* Set the height and padding for the nav bar */
   height: 50px;
   padding: 1px 20px;
 }
 
 .logo img { 
-  height: 40px; /* Was 45px */
+  height: 40px;
   width: auto; 
   vertical-align: middle; 
 }
@@ -170,7 +149,6 @@ nav {
 .nav-links a:hover::after { width: 100%; left: 0; }
 .nav-links a.active { color: var(--primary-accent); }
 
-/* Target the anchor tags within the list items of your navigation */
 .nav-links li a {
   color: var(--color-nav-text);
   font-size: 16px; 
@@ -182,32 +160,29 @@ nav {
 .hamburger .line { width: 25px; height: 3px; background-color: var(--color-nav-text); margin: 5px; transition: all 0.3s ease; }
 
 /* --- Hero Section (Homepage) --- */
-/* --- New Homepage Hero --- */
 .hero.homepage-hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5rem 1.5rem;
-  background-color: var(--color-homehero); /* Your requested solid color */
-  overflow: hidden; /* Prevent AOS animations from overflowing */
+  background-color: var(--color-homehero);
+  overflow: hidden;
 }
 
 .hero.homepage-hero .hero-container {
   display: flex;
-  /* Mobile-first: Video on top, text below */
   flex-direction: column; 
   gap: 2rem;
   max-width: 1200px;
   width: 100%;
 }
 
-/* Video Content (Top on Mobile) */
 .hero.homepage-hero .hero-video-content {
   width: 100%;
-  max-width: 500px; /* Constrain video size on mobile */
-  margin: 0 auto; /* Center it */
-  order: 1; /* Video comes first */
+  max-width: 500px;
+  margin: 0 auto;
+  order: 1;
 }
 
 .hero.homepage-hero .hero-video-content video {
@@ -215,15 +190,13 @@ nav {
   height: auto;
 }
 
-/* Text Content (Bottom on Mobile) */
 .hero.homepage-hero .hero-text-content {
-  text-align: center; /* Center text on mobile */
-  order: 2; /* Text comes second */
+  text-align: center;
+  order: 2;
 }
 
 .hero.homepage-hero .hero-text-content h1 {
-  /* You can adjust font sizes as needed */
-  font-size: clamp(1.4rem, 7vw, 3rem); /* <-- CHANGED */
+  font-size: clamp(1.4rem, 7vw, 3rem);
   color: var(--color-text-heading);
   line-height: 1.2;
 }
@@ -232,7 +205,7 @@ nav {
   font-size: 1rem;
   color: var(--color-text-secondary);
   max-width: 50ch;
-  margin: 1rem auto 2rem auto; /* Center the paragraph */
+  margin: 1rem auto 2rem auto;
 }
 
 .hero.homepage-hero .hero-text-content .cta-button {
@@ -304,11 +277,7 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
 .portfolio-image img:hover { transform: scale(1.02); }
 .portfolio-text { flex: 1; }
 .portfolio-text h3 { color: var(--color-text-heading); margin-bottom: 1rem; }
-.portfolio-text a { color: var(--color-background); background-color: var(--color-text-heading); padding: 10px 15px; border-radius: 1px; font-size: 14px; font-weight: 700; display: inline-block; }
-
-
-
-
+.portfolio-text a { background-color: var(--color-portfolio-button); color: var(--color-text-heading); padding: 10px 15px; border-radius: 1px; font-size: 14px; font-weight: 700; display: inline-block; }
 
 /* --- Media Queries --- */
 @media screen and (max-width: 768px) {
@@ -316,79 +285,61 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
   .nav-links.nav-active { right: 0; }
   .hamburger { display: block; }
   .hero.homepage-hero {
-    min-height: auto;     /* This removes the 100% screen height */
-    padding-top: 4rem;    /* Sets a new top padding */
-    padding-bottom: 2rem; /* Sets a new bottom padding */
+    min-height: auto;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
   }
 }
 
 @media (min-width: 768px) {
   .hero {
-      align-items: flex-end; /* Move text to bottom half */
-      padding-bottom: 12vh; /* Give it some space from the edge */
+      align-items: flex-end;
+      padding-bottom: 12vh;
       background-position: center bottom; 
-      background-image: url('images/mainheropc.webp'); /* Desktop Background */
+      background-image: url('images/mainheropc.webp');
   }
 
   .pricing-table { flex-direction: row; align-items: stretch;justify-content: center; }
   .portfolio-item { flex-direction: row; }
   .portfolio-item:nth-child(even) { flex-direction: row-reverse; }
 
-  /* Add this INSIDE your @media (min-width: 768px) { ... } block */
-
   .hero.homepage-hero {
-    /* Re-align items for PC */
     align-items: center; 
   }
 
   .hero.homepage-hero .hero-container {
-    /* PC layout: side-by-side */
     flex-direction: row; 
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
   }
 
-  /* Text on the Left */
   .hero.homepage-hero .hero-text-content {
-    flex: 1; /* Take up 1 part of the space */
+    flex: 1;
     max-width: 50%;
-    order: 1; /* Text comes first */
-    text-align: left; /* Align text left on PC */
+    order: 1;
+    text-align: left;
   }
 
   .hero.homepage-hero .hero-text-content p {
-    margin-left: 0; /* Reset mobile margin */
-    margin-right: 0; /* Reset mobile margin */
+    margin-left: 0;
+    margin-right: 0;
   }
   
-
-  /* Video on the Right */
   .hero.homepage-hero .hero-video-content {
-    flex: 1; /* Take up 1 part of the space */
+    flex: 1;
     max-width: 50%;
-    order: 2; /* Video comes second */
-    margin: 0; /* Reset mobile margin */
+    order: 2;
+    margin: 0;
   }
 
-  /* ---
-    This part finds the old .hero rule inside the media query 
-    and overrides its background-image.
-    --- */
   .hero {
-      /* ... your existing .hero styles are here ... */
-      
-      /* ADD THIS LINE to override the PC background image */
       background-image: none;
   }
 }
 
 @keyframes zoom-in { 0% { background-size: 100% 100%; } 100% { background-size: 110% 110%; } }
 
-
-/* --- END: Step 1 --- */
-
-/* --- REDESIGN: Step 2c - Hamburger Animation --- */
 .hamburger.active .line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 6px);
 }
@@ -399,23 +350,19 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
   transform: rotate(-45deg) translate(5px, -6px);
 }
 
-/* --- REDESIGN: Step 3 - Overlapping Layout --- */
-
-/* Add this inside your existing @media (min-width: 768px) query */
-
 .portfolio-item {
-  position: relative; /* Create a new stacking context */
+  position: relative;
 }
 
 .portfolio-item .portfolio-image {
-  flex: 1.2; /* Make image slightly bigger */
+  flex: 1.2;
   transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .portfolio-item .portfolio-text {
   flex: 1;
-  z-index: 2; /* Ensure text is on top */
-  background: rgba(34, 34, 34, 0.581); /* Give text a slight bg */
+  z-index: 2;
+  background: rgba(71, 71, 71, 0.69);
   backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 10px;
@@ -423,18 +370,16 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
 }
 
 .portfolio-item .portfolio-image img {
-  /* Keep existing styles */
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-/* The "Magic": Overlap the image */
 .portfolio-item:nth-child(even) .portfolio-image {
   @media (min-width: 768px) {transform: scale(1.25);}
-  margin-right: -80px; /* Pulls the image over the text box */
+  margin-right: -80px;
 }
 .portfolio-item:nth-child(odd) .portfolio-image {
   @media (min-width: 768px) {transform: scale(1.25);}
-  margin-left: -80px; /* Pulls image the other way */
+  margin-left: -80px;
 }
 
 .portfolio-item:hover .portfolio-image {
@@ -460,8 +405,6 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
  ======================================== */
 
 .page-hero {
-  /* Put all your shared styles here */
-  /* For example: */
   padding: 100px 20px;
   color: white;
   text-align: left;
@@ -495,19 +438,13 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
  2. PAGE-SPECIFIC IMAGES (Mobile-First)
  ======================================== */
 
-/* Default background for mobile on the "Portrait" page */
-.page-hero.portrait-page-hero {
-  background-image: url('images/banner.portrait.mob.webp');
-  background-position: center;
-}
+/* --- DELETED portrait-page-hero --- */
 
-/* Default background for mobile on the "Web" page */
 .page-hero.web-page-hero {
   background-image: url('images/banner.web.mob.webp');
   background-position: right top;
 }
 
-/* Default background for mobile on the "Design" page */
 .page-hero.design-page-hero {
   background-image: url('images/banner.design.mob.webp');
   background-position: center;
@@ -518,11 +455,8 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
   background-position: right top;
 }
 
-
 /* ========================================
    3. MEDIA QUERY FOR PC SCREENS
-   (Overrides the mobile images on screens 
-    768px and wider)
    ======================================== */
 
 @media (min-width: 768px) {
@@ -537,29 +471,21 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
   .hero-content p {
       max-width: 500px; margin: 0 auto 2rem auto; font-size: 1.1rem; color: #f0f0f0; 
   }
-  /* PC background for the "Portrait" page */
-  .page-hero.portrait-page-hero {
-    background-image: url('images/banner.portrait.webp');
-    /* You can set a custom PC position if needed */
-    /* background-position: top; */ 
-  }
 
-  /* PC background for the "Web" page */
+  /* --- DELETED portrait-page-hero --- */
+
   .page-hero.web-page-hero {
-    background-image: url('images/banner.web.webp'); /* Your original image */
-    background-position: right top; /* Your original position */
+    background-image: url('images/banner.web.webp');
+    background-position: right top;
   }
 
-  /* PC background for the "Design" page */
   .page-hero.design-page-hero {
     background-image: url('images/banner.design.webp');
-    /* background-position: left center; */
   }
 
   .page-hero.about-page-hero {
     background-image: url('images/banner.about.webp');
     background-position: top right;
-    /* background-position: left center; */
   }
 
 }
@@ -569,12 +495,11 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
   background-color: var(--primary-accent);
   padding: 1rem 1.5rem;
   text-align: center;
-  /* Override the default 5rem section padding */
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 .price-bar p {
-  color: #000000; /* Force black text for high contrast */
+  color: #000000;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 1.1rem;
@@ -590,11 +515,10 @@ footer .copyright { margin-top: 4rem; font-size: 0.8rem; color: #555; }
 
 /* --- Section & General Styles --- */
 .before-after-section {
-/* Requested black background */
 background-color: #ffffff; 
-color: #000000; /* White text for high contrast */
+color: #000000;
 padding: 40px 25px;
-font-family: sans-serif; /* Use a clean, modern font */
+font-family: sans-serif;
 }
 
 .content-container {
@@ -620,7 +544,6 @@ font-weight: 300;
 font-family: Eb Garamond, serif;
 }
 
-/* --- Aspect Ratio Core Styles (The "Padding Hack") --- */
 .aspect-ratio-box {
 position: relative;
 width: 100%;
@@ -628,9 +551,8 @@ height: 0;
 overflow: hidden;
 }
 
-/* --- ADDED: Curved corners for the video container's inner box --- */
 .video-container .aspect-ratio-box {
-border-radius: 12px; /* You can adjust the radius as needed */
+border-radius: 12px;
 }
 
 .aspect-ratio-box > * {
@@ -639,34 +561,27 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-/* Ensure image/video fits without stretching */
 object-fit: cover; 
 display: block;
 }
 
-/* 1. Square (1:1) for the Image */
 .aspect-ratio-1-1 {
-padding-bottom: 100%; /* 100% of the width creates a perfect square */
+padding-bottom: 100%;
 }
 
-/* 2. Vertical (9:16) for the YouTube Shorts Video */
 .aspect-ratio-9-16 {
-/* 16 / 9 = 1.7777... * 100% = 177.77% */
 padding-bottom: 167.77%; 
-/* The margin is KEPT here for PC/Desktop spacing */
 margin-bottom: 40px; 
 }
 
-/* --- Desktop Layout (PC Screens) --- */
 @media (min-width: 768px) {
 .media-wrapper {
     display: grid;
-    /* Define columns: 1fr for the image and a proportionate column for the video */
-    grid-template-columns: 1fr 0.5625fr; /* 1fr and (9/16)fr */
+    grid-template-columns: 1fr 0.5625fr;
     gap: 40px;
-    align-items: flex-start; /* Aligns content to the top */
+    align-items: flex-start;
     justify-content: center;
-    max-width: 850px; /* Constrain the size of the paired elements */
+    max-width: 850px;
     margin: 0 auto;
 }
 .section-title {
@@ -677,37 +592,26 @@ margin-bottom: 40px;
 }
 }
 
-
-/* --- Mobile Layout (Stacked) --- */
 @media (max-width: 767px) {
-/* --- MODIFIED: Ensure margin-bottom is 40px for both image and video containers --- */
 .image-container, .video-container {
-    /* Center and add space below the element */
     margin: 0 auto 40px auto; 
     max-width: 90%; 
 }
 
 .video-container {
-    /* On mobile, make the vertical video container a little narrower 
-       than the square image for better visual balance */
     max-width: 60%; 
 }
 }
 
-/* --- Add this to your stylesheet --- */
-
-/* Style for the 'View all' button */
 .toggle-features {
 background: none;
 border: none;
-color: #ffffff; /* Your accent color */
+color: #ffffff;
 font-family: Eb Garamond, serif;
 font-size: 13px;
 cursor: pointer;
 padding: 10px 0 0 0;
 margin-top: 5px;
-
-/* ADD THESE LINES */
 display: block;
 margin-bottom: 25px; 
 }
@@ -715,45 +619,31 @@ margin-bottom: 25px;
 .toggle-features:hover {
 text-decoration: underline;
 }
-/* --- Mobile-First Styles (Default) --- */
 
-/* Hide the 6th item and onwards by default */
 .price-card:not(.expanded) ul li:nth-child(n+6) {
 display: none;
 }
 
-/* --- Desktop Styles --- */
 @media (min-width: 769px) {
-
-/* On desktop, always show all features */
 .price-card ul li {
     display: list-item !important;
 }
-
-/* On desktop, hide the 'View all' button */
 .toggle-features {
     display: none;
 }
 }
 
-/* 1. Set the container for positioning */
 .dropdown {
 position: relative; 
-display: inline-block; /* Helps contain the dropdown */
+display: inline-block;
 }
 
-/* 2. Style the dropdown menu and HIDE it by default */
 .dropdown-menu {
-/* *** THIS IS THE CRITICAL LINE TO HIDE THE MENU *** */
-/* It takes the menu out of the normal document flow and hides it */
 display: none; 
-
 position: absolute;
-top: 100%; /* Positions the menu right below the parent link */
+top: 100%;
 left: 0;
-
-/* Styling */
-list-style: none; /* Removes bullet points */
+list-style: none;
 padding: 0;
 margin: 0;
 background-color: #000000; 
@@ -762,13 +652,10 @@ z-index: 1000;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-/* 3. SHOW the menu when the mouse hovers over the parent dropdown item */
-/* *** THIS IS THE CRITICAL LINE TO SHOW THE MENU ON HOVER *** */
 .dropdown:hover .dropdown-menu {
 display: block;
 }
 
-/* 4. Style the links inside the menu */
 .dropdown-menu li a {
 color: rgb(255, 255, 255); 
 padding: 12px 16px;
@@ -779,30 +666,24 @@ display: block;
 .dropdown-menu li a:hover {
 background-color: #363535; 
 }
-/* General Dropdown Setup */
 .dropdown {
 position: relative; 
 }
 .dropdown-menu {
 display: none;
-/* ... positioning and styling ... */
 }
 
-/* 1. Desktop Hover Logic (Only applies to large screens) */
 @media screen and (min-width: 768px) {
 .dropdown:hover .dropdown-menu {
-    display: block; /* Show menu on hover */
+    display: block;
 }
 }
 
-/* 2. Mobile Click Logic (Applies to all screens via JS toggle) */
 .dropdown.open .dropdown-menu {
-display: block; /* Show menu when the 'open' class is present */
+display: block;
 }
 
 /* --- Theme Toggle Switch --- */
-
-/* 1. Positioning Container */
 .theme-toggle-container {
   position: absolute;
   top: 25px;
@@ -810,7 +691,6 @@ display: block; /* Show menu when the 'open' class is present */
   z-index: 99;
 }
 
-/* 2. Hide the actual checkbox */
 .theme-toggle-checkbox {
   opacity: 0;
   width: 0;
@@ -818,7 +698,6 @@ display: block; /* Show menu when the 'open' class is present */
   position: absolute;
 }
 
-/* 3. The "Track" */
 .theme-toggle-switch {
   position: relative;
   display: block;
@@ -831,7 +710,6 @@ display: block; /* Show menu when the 'open' class is present */
   border: 1px solid var(--color-border);
 }
 
-/* 4. The sliding "Knob" */
 .slider-knob {
   position: absolute;
   top: 2px;
@@ -842,15 +720,12 @@ display: block; /* Show menu when the 'open' class is present */
   border-radius: 50%;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, background-color 0.3s ease;
-  
-  /* Center the icon inside */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-/* 5. The Icons */
 .slider-knob svg {
   width: 16px;
   height: 16px;
@@ -858,42 +733,35 @@ display: block; /* Show menu when the 'open' class is present */
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* --- DEFAULT (DARK MODE / UNCHECKED) --- */
 .sun-icon {
-  stroke: #f39c12; /* Sun color */
-  opacity: 0; /* HIDDEN */
+  stroke: #f39c12;
+  opacity: 0;
   transform: scale(0);
 }
 
 .moon-icon {
-  stroke: var(--color-text-secondary); /* Moon color */
-  opacity: 1; /* VISIBLE */
+  stroke: var(--color-text-secondary);
+  opacity: 1;
   transform: scale(1);
 }
 
-/* --- "ON" (LIGHT MODE / CHECKED) --- */
-/* This selector is now CORRECT */
-
-/* 1. Move the knob to the right */
 .theme-toggle-checkbox:checked + .slider-knob {
   transform: translateX(30px);
-  background-color: var(--color-toggle-knob); /* Uses light mode knob color */
+  background-color: var(--color-toggle-knob);
 }
 
-/* 2. Swap the icons */
 .theme-toggle-checkbox:checked + .slider-knob .sun-icon {
-  opacity: 1; /* VISIBLE */
+  opacity: 1;
   transform: scale(1);
 }
 
 .theme-toggle-checkbox:checked + .slider-knob .moon-icon {
-  opacity: 0; /* HIDDEN */
+  opacity: 0;
   transform: scale(0);
 }
 
 /* --- New Contact Page Styles --- */
 .page-hero.contact-page-hero {
-  /* You can customize this! */
   background-image: url('images/contact.jpg');
   min-height: 50vh;
 }
@@ -903,14 +771,11 @@ display: block; /* Show menu when the 'open' class is present */
   padding-bottom: 5rem;
   max-width: 800px;
   margin: 0 auto;
-  
-  /* Make the section background independent of the form card */
   background-color: var(--color-background-section);
 }
 
-/* Make the form a "card" */
 .contact-form {
-  background-color: var(--color-background); /* Swaps with theme */
+  background-color: var(--color-background);
   padding: 2.5rem;
   border-radius: 15px;
   border: 1px solid var(--color-border);
@@ -933,7 +798,6 @@ display: block; /* Show menu when the 'open' class is present */
   text-align: left;
 }
 
-/* Style inputs to pop */
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -947,7 +811,6 @@ display: block; /* Show menu when the 'open' class is present */
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Style for disabled dropdown */
 .form-group select:disabled {
   background-color: var(--color-background);
   color: var(--color-text-secondary);
@@ -963,7 +826,6 @@ display: block; /* Show menu when the 'open' class is present */
   box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.2);
 }
 
-/* CTA Button */
 .contact-form .cta-button {
   background-color: var(--primary-accent);
   color: #121212;
@@ -987,8 +849,6 @@ display: block; /* Show menu when the 'open' class is present */
 }
 
 /* --- New About Page Styles --- */
-
-/* 1. Mission Section */
 .about-mission {
   background-color: var(--color-background-section);
 }
@@ -1003,7 +863,6 @@ display: block; /* Show menu when the 'open' class is present */
   margin-bottom: 1.5rem;
 }
 
-/* 2. Our Process Section */
 .our-process {
   background-color: var(--color-homehero);
 }
@@ -1035,11 +894,10 @@ display: block; /* Show menu when the 'open' class is present */
 }
 .step-card p {
   color: var(--color-text-secondary);
-  max-width: 100%; /* Override default p max-width */
+  max-width: 100%;
   margin-bottom: 0;
 }
 
-/* 3. Meet the Founder Section */
 .meet-founder {
   background-color: var(--color-background-section);
 }
@@ -1056,7 +914,7 @@ display: block; /* Show menu when the 'open' class is present */
   width: 100%;
   max-width: 185px;
   height: auto;
-  border-radius: 50%; /* Make the image circular */
+  border-radius: 50%;
   border: 5px solid var(--color-border);
 }
 .founder-bio {
@@ -1079,7 +937,6 @@ display: block; /* Show menu when the 'open' class is present */
   font-size: 0.9rem;
 }
 
-/* --- Media Queries for Desktop --- */
 @media (min-width: 768px) {
   .process-steps {
     grid-template-columns: repeat(3, 1fr);
@@ -1099,7 +956,6 @@ display: block; /* Show menu when the 'open' class is present */
 
 /* --- Testimonials Section --- */
 .testimonials {
-  /* Use the main background color, not the section color */
   background-color: var(--color-homehero);
 }
 
@@ -1108,12 +964,10 @@ display: block; /* Show menu when the 'open' class is present */
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  /* Set a min-height so the section doesn't jump as slides change */
   min-height: 250px; 
 }
 
 .testimonial-slide {
-  /* Slides are hidden by default */
   display: none;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -1122,11 +976,10 @@ display: block; /* Show menu when the 'open' class is present */
   padding: 0 1rem;
 }
 
-/* The active slide is visible */
 .testimonial-slide.active {
   display: block;
   opacity: 1;
-  position: relative; /* Use relative to set the container height */
+  position: relative;
 }
 
 .testimonial-slide .quote {
@@ -1154,7 +1007,6 @@ display: block; /* Show menu when the 'open' class is present */
   margin-bottom: 0;
 }
 
-/* Dots Navigation */
 .testimonial-dots {
   text-align: center;
   padding: 2rem 0 0 0;
@@ -1176,20 +1028,17 @@ display: block; /* Show menu when the 'open' class is present */
   transform: scale(1.2);
 }
 
-/* --- New Testimonial Image Style (Rectangular Banner) --- */
 .testimonial-image {
-  /* This is your "larger or smaller" control */
   max-width: 500px; 
-
-  width: 100%; /* Make it responsive */
-  margin: 0 auto 1.5rem auto; /* Centers it and adds space below */
+  width: 100%;
+  margin: 0 auto 1.5rem auto;
 }
 
 .testimonial-image img {
   width: 100%;
-  height: auto; /* Maintains aspect ratio automatically */
-  object-fit: contain; /* Ensures the whole image is visible and "never crops" */
-  border-radius: 10px; /* A slight curve for a professional look */
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 @media (max-width: 768px) {
@@ -1202,9 +1051,9 @@ display: block; /* Show menu when the 'open' class is present */
     font-weight: 600;
   }
 }
+
 /* --- New Discount Price Styling --- */
 .price-card .price {
-  /* Remove fixed font size to be more flexible */
   margin: 1rem 0;
   color: var(--color-text-heading);
 }
@@ -1243,7 +1092,6 @@ display: block; /* Show menu when the 'open' class is present */
 
 /* --- Roadmap Process Section --- */
 .our-process-roadmap {
-  /* Use the main bg to contrast with the light-gray portfolio section */
   background-color: var(--color-background);
 }
 
@@ -1253,7 +1101,6 @@ display: block; /* Show menu when the 'open' class is present */
   margin: 0 auto;
 }
 
-/* This is the vertical "road" line */
 .roadmap-container::before {
   content: '';
   position: absolute;
@@ -1268,20 +1115,19 @@ display: block; /* Show menu when the 'open' class is present */
 .roadmap-step {
   position: relative;
   margin-bottom: 2.5rem;
-  padding-left: 50px; /* Leave space for the dot and line */
+  padding-left: 50px;
 }
 
-/* This is the "dot" on the road */
 .roadmap-dot {
   position: absolute;
   left: 0;
-  top: 5px; /* Aligns with the first line of text */
+  top: 5px;
   width: 30px;
   height: 30px;
   background-color: var(--primary-accent);
   border-radius: 50%;
   border: 4px solid var(--color-background);
-  z-index: 1; /* Sits on top of the gray line */
+  z-index: 1;
 }
 
 .roadmap-content h3 {
@@ -1295,24 +1141,19 @@ display: block; /* Show menu when the 'open' class is present */
   max-width: 100%;
 }
 
-/* Responsive styles for Mobile */
 @media (max-width: 768px) {
-  /* Hide the vertical line on mobile */
   .roadmap-container::before {
     display: none;
   }
-
   .roadmap-step {
-    padding-left: 0; /* Remove the side padding */
-    text-align: center; /* Center all text */
+    padding-left: 0;
+    text-align: center;
   }
-
-  /* Make the dot sit on top, centered */
   .roadmap-dot {
     position: relative;
     left: auto;
     top: auto;
-    margin: 0 auto 1rem auto; /* Center the dot */
+    margin: 0 auto 1rem auto;
   }
 }
 
@@ -1320,7 +1161,6 @@ display: block; /* Show menu when the 'open' class is present */
 .scrolling-gallery {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  /* Remove horizontal padding to let marquee hit edges */
   padding-left: 0;
   padding-right: 0;
   background-color: var(--color-background-section);
@@ -1334,18 +1174,16 @@ display: block; /* Show menu when the 'open' class is present */
 
 .marquee-content {
   display: flex;
-  /* This is the animation */
   animation: scroll 30s linear infinite;
   animation-direction: alternate;
 }
 
 .marquee[data-direction="right"] .marquee-content {
-  /* This makes it scroll the other way */
   animation-name: scroll-reverse;
 }
 
 .marquee-content img {
-  height: 250px; /* Set a fixed height */
+  height: 250px;
   width: auto;
   margin: 0 10px;
   border-radius: 10px;
@@ -1353,16 +1191,11 @@ display: block; /* Show menu when the 'open' class is present */
   transition: transform 0.3s ease;
   cursor: pointer;
 }
-/* --- Mobile size for marquee --- */
 @media (max-width: 768px) {
   .marquee-content img {
-    /* This is your mobile size control.
-      Change 150px to 120px or 180px to whatever looks best.
-    */
     height: 150px;
   }
   .marquee-content {
-    /* Speeds up the animation from 30s to 20s on mobile */
     animation-duration: 15s;
   }
 }
@@ -1370,7 +1203,6 @@ display: block; /* Show menu when the 'open' class is present */
   transform: scale(1.05);
 }
 
-/* Define the scrolling animations */
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -1380,227 +1212,39 @@ display: block; /* Show menu when the 'open' class is present */
   100% { transform: translateX(0); }
 }
 
-/* --- Portrait Page: Originals Gallery --- */
-.originals-gallery {
-  background-color: var(--color-background-section);
-}
-.art-grid {
-  display: grid;
-  /* Creates 1-3 columns based on screen size */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.art-card {
-  position: relative;
-  background-color: var(--color-background);
-  border: 1px solid var(--color-border);
-  border-radius: 1zfpx;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.art-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-.art-card img {
-  width: 100%;
-  height: 300px; /* Fixed height for a uniform grid */
-  object-fit: cover;
-  display: block;
-}
-.art-card h3 {
-  color: var(--color-text-heading);
-  padding: 1rem 1.25rem;
-  font-size: 1.25rem;
-  text-align: left;
-}
-.art-card .sold-out {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background-color: rgba(18, 18, 18, 0.8);
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.9rem;
-  z-index: 2;
-}
-
-/* --- Portrait Page: Commissions Gallery --- */
-.commissions-gallery {
-  background-color: var(--color-background);
-}
-.commission-grid {
-  display: grid;
-  /* 2 columns on mobile, as requested */
-  grid-template-columns: 1fr 1fr; 
-  gap: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.commission-grid img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid var(--color-border);
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.commission-grid img:hover {
-  transform: scale(1.05);
-}
-/* 3 columns on desktop */
-@media (min-width: 768px) {
-  .commission-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-  }
-}
-
-/* --- Advanced Portrait Lightbox --- */
-.lightbox {
-  display: none; 
-  position: fixed;
-  z-index: 2000;
-  padding-top: 2rem;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(10px);
-  text-align: center;
-}
-.lightbox-main-image {
-  margin: 1rem auto;
-  width: auto;
-  max-width: 90%;
-  max-height: 65vh;
-}
-.lightbox-content {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* Never crops! */
-}
-#lightbox-caption {
-  margin: 0 auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  font-family: var(--font-body);
-}
-#portrait-lightbox .lightbox-close {
-  position: absolute;
-  top: 48px;
-  right: 32px;
-  font-size: 2.5rem;
-  color: #fff;
-  cursor: pointer;
-  z-index: 10001;
-  background: none;
-  border: none;
-  padding: 0;
-  line-height: 1;
-  transition: color 0.2s;
-}
-#portrait-lightbox .lightbox-close:hover {
-  color: #ff5252;
-}
-.lightbox-thumbs {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-.lightbox-thumb {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-.lightbox-thumb:hover,
-.lightbox-thumb.active {
-  opacity: 1;
-}
-#lightbox-cta {
-  display: inline-block;
-  background-color: var(--primary-accent);
-  color: #121212;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  margin-top: 1.5rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-/* --- Lightbox Responsive Image Sizing --- */
-@media (min-width: 768px) {
-  #portrait-lightbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #portrait-lightbox .lightbox-main-image {
-    max-width: 80vw;
-    max-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #lightbox-img-main {
-    max-width: 80vw;
-    max-height: 80vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    box-shadow: 0 4px 32px rgba(0,0,0,0.3);
-    border-radius: 8px;
-  }
-}
-#portrait-lightbox {
-  display: none; /* Hide by default */
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999;
-  background: rgba(0,0,0,0.8);
-  align-items: center;
-  justify-content: center;
-}
+/* --- DELETED ALL PORTRAIT & LIGHTBOX STYLES --- */
 
 /* --- Footer Social Media Links --- */
 .social-links {
-  text-align: center; /* Aligned in center (as requested) */
-  margin: 2rem 0; /* Adds space above and below */
+  text-align: center;
+  margin: 2rem 0;
 }
 
 .social-links a {
-  font-size: 1.3rem; /* Controls "small icons" size */
-  color: var(--color-text-secondary); /* Use the subtle text color */
-  display: inline-block; /* Puts them in one line */
-  margin: 0 1rem; /* Space between each icon */
+  font-size: 1.3rem;
+  color: var(--color-text-secondary);
+  display: inline-block;
+  margin: 0 1rem;
   transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-  color: var(--primary-accent); /* Change to accent color on hover */
-  transform: translateY(-3px); /* Slight hover effect */
+  color: var(--primary-accent);
+  transform: translateY(-3px);
+}
+/* --- Mobile-Only Marquee Rules --- */
+.desktop-marquee {
+  display: none; /* Hide on mobile by default */
+}
+.mobile-marquee {
+  display: block; /* Show on mobile by default */
+}
+
+@media (min-width: 768px) {
+  .desktop-marquee {
+    display: block; /* Show on desktop */
+  }
+  .mobile-marquee {
+    display: none; /* Hide on desktop */
+  }
 }

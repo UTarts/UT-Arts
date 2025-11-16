@@ -6,14 +6,10 @@
   </url>
   <url>
     <loc>https://utarts.in/websites.html</loc>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://utarts.in/designs.html</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://utarts.in/portraits.html</loc>
+    <loc>httpsg://utarts.in/designs.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
