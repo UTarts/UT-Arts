@@ -16,7 +16,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
@@ -39,6 +39,8 @@
           ]
         }
     </script>
+    <link rel="preload" as="image" href="images/banner.web.webp" media="(min-width: 768px)">
+    <link rel="preload" as="image" href="images/banner.web.mob.webp" media="(max-width: 767px)">
 </head>
 <body>
 
@@ -86,7 +88,7 @@
 
             <div class="portfolio-item">
                 <div class="portfolio-image">
-                    <img src="images/gmps.webp" alt="School Website Project">
+                    <img src="images/gmps.webp" alt="School Website Project" loading="lazy" decoding="async">
                 </div>
                 <div class="portfolio-text">
                     <h3>Govind Madhav Public School</h3>
@@ -97,7 +99,7 @@
 
             <div class="portfolio-item">
                 <div class="portfolio-image">
-                    <img src="images/Pathshala.webp" alt="digital library website">
+                    <img src="images/Pathshala.webp" alt="digital library website" loading="lazy" decoding="async">
                 </div>
                 <div class="portfolio-text">
                     <h3>Pathshala-The Self Study Digital Library</h3>
@@ -108,7 +110,7 @@
 
             <div class="portfolio-item">
                 <div class="portfolio-image">
-                    <img src="images/nrjpathlab.webp" alt="Nrj Path Lab website">
+                    <img src="images/nrjpathlab.webp" alt="Nrj Path Lab website" loading="lazy" decoding="async">
                 </div>
                 <div class="portfolio-text">
                     <h3>Nrj Path Lab - Diagnostics</h3>
@@ -119,7 +121,7 @@
 
             <div class="portfolio-item" data-aos="fade-up">
                 <div class="portfolio-image">
-                    <img src="images/bt.supporters.webp" alt="Poitician Portfolio">
+                    <img src="images/bt.supporters.webp" alt="Poitician Portfolio" loading="lazy" decoding="async">
                 </div>
                 <div class="portfolio-text">
                     <h3>Political Campaign Portfolio Site</h3>

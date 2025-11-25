@@ -70,12 +70,17 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function setVideoTheme(theme) {
         if (heroVideo && heroVideoSource) {
-            if (theme === 'light') {
-                heroVideoSource.setAttribute('src', lightVideoFile);
-            } else {
-                heroVideoSource.setAttribute('src', darkVideoFile);
+            // Determine which file we WANT to show
+            const newSrc = (theme === 'light') ? lightVideoFile : darkVideoFile;
+            
+            // Get the file that is CURRENTLY set
+            const currentSrc = heroVideoSource.getAttribute('src');
+
+            // ONLY change and reload if they are different
+            if (currentSrc !== newSrc) {
+                heroVideoSource.setAttribute('src', newSrc);
+                heroVideo.load();
             }
-            heroVideo.load();
         }
     }
 
