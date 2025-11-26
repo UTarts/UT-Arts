@@ -1552,7 +1552,7 @@ display: block;
 
 /* --- 1. THE MANIFESTO (Mission) --- */
 .about-mission {
-  background-color: var(--color-background);
+  background-color: black;
   padding: 6rem 1.5rem;
   text-align: center;
 }
@@ -1575,7 +1575,7 @@ display: block;
   font-family: var(--font-heading);
   font-size: 1.8rem; /* Big on mobile */
   line-height: 1.4;
-  color: var(--font-heading);
+  color: white;
   margin-bottom: 1.5rem;
 }
 
