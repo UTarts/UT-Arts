@@ -203,5 +203,24 @@ document.addEventListener('DOMContentLoaded', function () {
     } catch (e) {
         console.error("Testimonial slider error: ", e);
     }
-    
+    // --- FOUNDER IMAGE COLOR BLEED (Mobile Scroll) ---
+    const founderImage = document.querySelector('.scroll-reveal-img');
+
+    if (founderImage) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('color-active');
+                } else {
+                  
+                entry.target.classList.remove('color-active');
+                }
+            });
+        }, {
+            threshold: 1 
+        });
+
+        observer.observe(founderImage);
+    }
 });
