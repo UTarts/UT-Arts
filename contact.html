@@ -1,31 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Contact UT Arts | Start Your Web Project Today</title>
     <meta name="description" content="Ready to start your project? Contact UT Arts today for a free quote on website design or brand graphics. Let's build your digital presence.">
-    <!-- Google tag (gtag.js) -->
+    
+    <meta name="google-site-verification" content="GZ6Izp-Qbnmy47BiaAsfTNoGqKaL2X046-CAG6CJ-go" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-90LQKXD1DG"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-90LQKXD1DG');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-90LQKXD1DG');
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.utarts.in/contact.html">
+    <meta property="og:title" content="Contact UT Arts | Start Your Web Project Today">
+    <meta property="og:image" content="https://utarts.in/images/UTartsLogo.webp">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: "#F59E0B", secondary: "#6366F1", accent: "#4F46E5" },
+                    fontFamily: { 
+                        display: ["Orbitron", "sans-serif"], 
+                        body: ["Poppins", "sans-serif"],
+                        premium: ["Cinzel", "serif"] 
+                    }
+                }
+            }
+        };
+    </script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Special Glass Form Style for Contact Page */
+        .glass-form {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 1);
+            box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.15);
+        }
+    </style>
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "UT Arts",
-          "url": "https://utarts.in/",
-          "logo": "https://utarts.in/images/UTartsLogo.webp",
+          "name": "UT Arts Digital Solutions",
+          "alternateName": "UT Arts",
+          "url": "https://www.utarts.in/",
+          "logo": "https://www.utarts.in/images/UTArt_Logo.webp",
+          "description": "A premier digital transformation agency providing enterprise-grade web development, app development, and brand design solutions.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "New Delhi",
+            "addressRegion": "Delhi",
+            "addressCountry": "IN"
+          },
           "sameAs": [
             "https://www.linkedin.com/company/utarts",
             "https://www.instagram.com/utarts.in/",
@@ -33,151 +78,304 @@
             "https://www.youtube.com/@utarts_official"
           ]
         }
-    </script>
-    </head>
-<body>
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "UT Arts Digital Solutions",
+          "alternateName": "UT Arts",
+          "url": "https://www.utarts.in/"
+        }
+        </script>
+</head>
+<body class="bg-[#F8FAFC] text-slate-900 font-body antialiased flex flex-col min-h-screen">
 
-    <div class="site-container">
-        
-        <header id="main-header">
-            <nav>
-                <a href="index.html" class="logo">
-                    <img src="images/UTartsLogo.webp" alt="UT Arts Logo">
-                </a>
-                <label class="theme-toggle-switch" for="theme-toggle-checkbox">
-                    <input type="checkbox" id="theme-toggle-checkbox" class="theme-toggle-checkbox">
-                    <span class="slider-knob">
-                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                    </span>
-                </label>
-                <ul class="nav-links">
-                    <li><a href="websites.html">Websites</a></li>
-                    <li><a href="designs.html">Designs</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="cta-button">CONTACT US</a></li>
-                </ul>
-                <div class="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+    <header class="glass-navbar sticky top-0 z-50 px-5 py-0 lg:py-3 w-full border-b border-slate-200/50 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full overflow-hidden border border-slate-200 shadow-sm bg-white flex items-center justify-center">
+                    <img src="images/UTArt_Logo.webp" onerror="this.src='images/UTartsLogo.webp'" alt="UT Arts Logo" class="w-full h-full object-cover">
                 </div>
-            </nav>
-        </header>
-    
-        <main class="page-frame">
-            <div class="page-content">
-
-                
-                
-                <section class="page-hero contact-page-hero">
-                    <div class="hero-content">
-                       <h1>Let's Start a <br><span style="color: var(--primary-accent);">Conversation.</span></h1>
-                       <p>Ready to build something iconic? We are here to help.</p>
-                   </div>
-               </section>
-       
-               <section class="contact-wrapper">
-                   
-                   <div class="contact-grid">
-                       
-                       <a href="mailto:info@utarts.in" class="contact-card">
-                           <div class="icon-box"><i class="fas fa-envelope"></i></div>
-                           <div class="card-info">
-                               <h3>Email Us</h3>
-                               <p>info@utarts.in</p>
-                           </div>
-                       </a>
-       
-                       <a href="tel:+918960860302" class="contact-card">
-                           <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
-                           <div class="card-info">
-                               <h3>Call Us</h3>
-                               <p>+91 89608 60302</p>
-                           </div>
-                       </a>
-       
-                       <div class="contact-card">
-                           <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
-                           <div class="card-info">
-                               
-                               <p>New Delhi, India</p>
-                           </div>
-                       </div>
-       
-                   </div>
-       
-                   <div class="form-container">
-                       <div class="form-header">
-                           <h2>Send a Message</h2>
-                           <p>Tell us about your project.</p>
-                       </div>
-       
-                       <form action="https://formsubmit.co/info@utarts.in" method="POST" class="premium-form">
-                           
-                           <input type="hidden" name="_captcha" value="false">
-                           <input type="hidden" name="_template" value="table">
-                           <input type="hidden" name="_subject" value="New Lead from UT Arts Website!">
-       
-                           <div class="input-group">
-                               <input type="text" name="name" id="name" required placeholder=" ">
-                               <label for="name">Your Name</label>
-                           </div>
-       
-                           <div class="form-row">
-                               <div class="input-group">
-                                   <input type="email" name="email" id="email" required placeholder=" ">
-                                   <label for="email">Email Address</label>
-                               </div>
-                               <div class="input-group">
-                                   <input type="tel" name="phone" id="phone" placeholder=" ">
-                                   <label for="phone">Phone Number</label>
-                               </div>
-                           </div>
-       
-                           <div class="input-group">
-                               <select name="service" id="service">
-                                   <option value="" disabled selected></option>
-                                   <option value="Website Development">Website Development</option>
-                                   <option value="Visual Design">Visual Design</option>
-                                   <option value="Brand Strategy">Brand Strategy</option>
-                                   <option value="Other">Other</option>
-                               </select>
-                               <label for="service">Interested Service</label>
-                           </div>
-       
-                           <div class="input-group">
-                               <textarea name="message" id="message" rows="4" required placeholder=" "></textarea>
-                               <label for="message">Project Details</label>
-                           </div>
-       
-                           <button type="submit" class="submit-btn">
-                               Send Message <i class="fas fa-paper-plane"></i>
-                           </button>
-       
-                       </form>
-                   </div>
-       
-               </section>
+                <span class="font-display font-bold text-lg tracking-tighter">UT Arts</span>
+            </a>
             
-                <p style="text-align: center; margin-top: 21px;"><a href="websites.html">Websites</a>  |  <a href="designs.html">Designs</a></p>
-            <footer>
-                <P>Email us at : <a href="mailto:info@utarts.in">info@utarts.in</a></P>
-                <p><a href="privacypolicy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/company/utarts" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/utarts.in/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.pinterest.com/utarts_official/" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                <a href="https://www.youtube.com/@utarts_official" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
-            <p class="copyright">
-                &copy; 2025 UT Arts. All Rights Reserved. <br> 
-                <span style="font-size: 0.8rem; opacity: 0.7;">Registered Entity (MSME) | Reg. No: UDYAM-DL-11-0141228</span><br>
-                <a href="https://utkarshtripathi.utarts.in/" target="_blank" style="color: var(--color-text-secondary); text-decoration: none; margin-top: 5px; display: inline-block;">Fine Art by Utkarsh Tripathi</a>
-            </p>
-            </footer>
+            <nav class="hidden lg:flex items-center gap-8 font-body text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-secondary transition-colors">Home</a>
+                <a href="solutions.html" class="hover:text-secondary transition-colors">Solutions</a>
+                <a href="designs.html" class="hover:text-secondary transition-colors">Portfolio</a>
+                <a href="about.html" class="hover:text-secondary transition-colors">Company</a>
+            </nav>
 
-        </main>
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="hidden lg:inline-block bg-slate-900 text-white px-6 py-2.5 rounded-full text-xs font-bold font-display uppercase tracking-wider shadow-lg hover:bg-slate-800 transition-colors">
+                    Consult
+                </a>
+                <button id="menu-toggle" class="lg:hidden text-slate-900 p-2 focus:outline-none hover:text-secondary transition-colors">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-xl z-[60] flex flex-col items-center justify-center hidden">
+        <button id="menu-close" class="absolute top-6 right-6 text-slate-900 p-2 hover:text-red-500 transition-colors">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <nav class="flex flex-col gap-8 text-center font-display text-2xl font-bold uppercase tracking-widest">
+            <a href="index.html" class="hover:text-secondary transition">Home</a>
+            <a href="solutions.html" class="hover:text-secondary transition">Solutions</a>
+            <a href="designs.html" class="hover:text-secondary transition">Portfolio</a>
+            <a href="about.html" class="hover:text-secondary transition">Company</a>
+            <a href="contact.html" class="text-accent mt-4">Contact Us</a>
+        </nav>
+    </div>
+
+    <nav class="mobile-bottom-nav custom-gradient-pill lg:hidden">
+        <div class="mobile-nav-items">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home text-lg mb-1"></i>
+                <span>Home</span>
+            </a>
+            <a href="solutions.html" class="nav-item">
+                <i class="fas fa-laptop-code text-lg mb-1"></i>
+                <span>Solutions</span>
+            </a>
+            <a href="designs.html" class="nav-item">
+                <i class="fas fa-palette text-lg mb-1"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="about.html" class="nav-item">
+                <i class="fas fa-building text-lg mb-1"></i>
+                <span>Company</span>
+            </a>
+            <a href="contact.html" class="nav-item active">
+                <i class="fas fa-paper-plane text-lg mb-1"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        
+        <section class="px-6 pt-20 pb-16 bg-gradient-to-br from-[#fdfbf7] to-[#f4f0e6] relative overflow-hidden text-center border-b border-slate-200/60">
+            <div class="max-w-4xl mx-auto relative z-10 reveal reveal-up">
+                <span class="text-primary font-display font-bold text-xs tracking-[0.3em] uppercase mb-4 block">Connect With Us</span>
+                <h1 class="font-display font-black text-4xl md:text-6xl mb-6 text-slate-900 leading-tight">
+                    Let's Build Your <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">Digital Future</span>.
+                </h1>
+                <p class="text-slate-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                    We're ready to transform your business. Reach out to our team of experts today for a free quote or consultation.
+                </p>
+            </div>
+            
+            <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -ml-32 -mb-32 pointer-events-none"></div>
+        </section>
+
+        <section class="px-6 py-20 relative">
+            <div class="absolute top-1/4 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl -z-10 pointer-events-none hidden lg:block"></div>
+
+            <div class="grid lg:grid-cols-5 gap-12 items-start max-w-7xl mx-auto">
+                
+                <div class="lg:col-span-2 space-y-6">
+                    
+                    <div class="bg-white/60 backdrop-blur-md p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow reveal reveal-left" style="transition-delay: 100ms;">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100 flex items-center justify-center shadow-sm">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-lg text-slate-800">Head Office</h3>
+                                <p class="text-[10px] text-primary font-bold uppercase tracking-widest">New Delhi</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-500 text-sm leading-relaxed pl-16">
+                            Delhi, India
+                        </p>
+                    </div>
+
+                    <div class="bg-white/60 backdrop-blur-md p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow reveal reveal-left" style="transition-delay: 200ms;">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100 flex items-center justify-center shadow-sm">
+                                <i class="fas fa-building text-secondary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-lg text-slate-800">Regional Office</h3>
+                                <p class="text-[10px] text-secondary font-bold uppercase tracking-widest">Pratapgarh</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-500 text-sm leading-relaxed pl-16">
+                            Uttar Pradesh, India
+                        </p>
+                    </div>
+
+                    <div class="bg-white/60 backdrop-blur-md p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow reveal reveal-left" style="transition-delay: 300ms;">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center shadow-sm">
+                                <i class="fas fa-headset text-white text-xl"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-slate-800">Quick Contact</h3>
+                        </div>
+                        <div class="space-y-3 pl-1">
+                            <a href="tel:+918595881108" class="flex items-center gap-4 text-slate-600 hover:text-secondary transition-colors group p-2 hover:bg-white rounded-xl">
+                                <i class="fas fa-phone-alt text-slate-400 group-hover:text-secondary group-hover:scale-110 transition-transform"></i>
+                                <span class="font-medium text-sm">+91 8595881108</span>
+                            </a>
+                            <a href="mailto:info@utarts.in" class="flex items-center gap-4 text-slate-600 hover:text-primary transition-colors group p-2 hover:bg-white rounded-xl">
+                                <i class="fas fa-envelope text-slate-400 group-hover:text-primary group-hover:scale-110 transition-transform"></i>
+                                <span class="font-medium text-sm">info@utarts.in</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lg:col-span-3">
+                    <div class="glass-form rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden reveal reveal-right">
+                        
+                        <h2 class="font-display text-2xl md:text-3xl font-bold mb-2 text-slate-900">Send an Inquiry</h2>
+                        <p class="text-slate-500 text-sm mb-8">Tell us about your project requirements.</p>
+                        
+                        <form action="https://formsubmit.co/info@utarts.in" method="POST" class="space-y-6">
+                            
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_subject" value="New Lead from UT Arts Website!">
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2" for="name">Full Name *</label>
+                                    <input type="text" name="name" id="name" required class="w-full px-5 py-4 rounded-2xl bg-slate-50/50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all shadow-sm" placeholder="Alex Thompson"/>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2" for="phone">Phone Number *</label>
+                                    <input type="tel" name="phone" id="phone" required class="w-full px-5 py-4 rounded-2xl bg-slate-50/50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all shadow-sm" placeholder="+91 00000 00067"/>
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2" for="email">Email Address *</label>
+                                    <input type="email" name="email" id="email" required class="w-full px-5 py-4 rounded-2xl bg-slate-50/50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all shadow-sm" placeholder="alex@example.com"/>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2" for="service">Service Type</label>
+                                    <div class="relative">
+                                        <select name="service" id="service" class="w-full px-5 py-4 rounded-2xl bg-slate-50/50 border border-slate-200 text-slate-900 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all appearance-none shadow-sm cursor-pointer">
+                                            <option value="" disabled selected>Select a service...</option>
+                                            <option value="Website Development">Website Development</option>
+                                            <option value="App Development">App Development</option>
+                                            <option value="Visual Design">Visual Design / Branding</option>
+                                            <option value="School ERP">School Automation (ERP)</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-slate-500">
+                                            <i class="fas fa-chevron-down text-sm"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2" for="message">Project Details *</label>
+                                <textarea name="message" id="message" rows="4" required class="w-full px-5 py-4 rounded-2xl bg-slate-50/50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all shadow-sm resize-none" placeholder="Tell us about your goals, timeline, and any specific requirements..."></textarea>
+                            </div>
+
+                            <div class="pt-4">
+                                <button type="submit" class="glow-button w-full bg-gradient-to-r from-secondary to-accent text-white font-black font-display uppercase tracking-widest py-5 rounded-full transition-transform active:scale-95 shadow-xl flex items-center justify-center gap-3">
+                                    Send Message <i class="fas fa-paper-plane text-sm"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <section class="px-6 py-24 bg-slate-900 text-white rounded-t-[3rem] mt-10 reveal">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-display text-4xl md:text-5xl font-black mb-6 uppercase tracking-tight">Ready to Lead?</h2>
+                <p class="text-slate-400 mb-12 max-w-md mx-auto text-sm md:text-base leading-relaxed font-light">
+                    Join industry leaders who have already transformed their legacy systems into digital powerhouses with UT Arts.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-20">
+                    <a href="contact.html" class="bg-white text-slate-900 font-black py-4 px-10 rounded-2xl text-base uppercase tracking-widest font-display shadow-2xl hover:bg-gray-100 hover:scale-105 transition-all">
+                        Book Strategy Call
+                    </a>
+                    <a href="solutions.html" class="border border-slate-700 text-white font-black py-4 px-10 rounded-2xl text-base uppercase tracking-widest font-display hover:border-slate-500 transition-colors">
+                        View Pricing
+                    </a>
+                </div>
+
+                <div class="pt-12 border-t border-slate-800 grid md:grid-cols-3 gap-8 text-left">
+                    <div>
+                        <div class="w-11 h-11 items-center justify-center transform scale-150 ml-2">
+                            <img src="images/UTartsLogo.webp" alt="UT Arts Logo" class="w-full h-full object-contain">
+                        </div>
+                        
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="font-display font-bold text-xl tracking-wide text-white">UT Arts Digital Solutions</span>
+                        </div>
+                        <p class="text-slate-500 text-xs leading-relaxed mb-4">Enterprise-grade technology for schools and modern businesses.</p>
+                        <div class="flex gap-4">
+                            <a href="https://www.linkedin.com/company/utarts" class="text-slate-500 hover:text-secondary transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                            <a href="https://www.instagram.com/utarts.in/" class="text-slate-500 hover:text-secondary transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                            <a href="https://www.youtube.com/@utarts_official" class="text-slate-500 hover:text-secondary transition-colors"><i class="fab fa-youtube text-xl"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-white font-display font-bold text-sm uppercase mb-4 tracking-wider">Contact</h4>
+                        <ul class="text-slate-500 text-xs space-y-3">
+                            <li><strong class="text-slate-400">Head Office:</strong> New Delhi, India</li>
+                            <li><strong class="text-slate-400">Regional:</strong> Pratapgarh, UP</li>
+                            <li>info@utarts.in</li>
+                            <li>+91 8595881108</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-display font-bold text-sm uppercase mb-4 tracking-wider">Legal</h4>
+                        <ul class="text-slate-500 text-xs space-y-3">
+                            <li><a href="privacypolicy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                            <li><a href="terms.html" class="hover:text-white transition">Terms & Conditions</a></li>
+                            <li class="pt-4 text-[10px] text-slate-600">Registered Entity (MSME)<br>Reg. No: UDYAM-DL-11-0141228</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-slate-600 text-[10px] font-bold uppercase tracking-widest">© 2026 UT Arts Digital Solutions. All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="h-16 lg:h-0 w-full"></div> 
+        </section>
+
+    </main>
+
     <script src="script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const plan = urlParams.get('plan');
+            const service = urlParams.get('service');
+            const selectDropdown = document.getElementById('service');
+            
+            if (plan) {
+                // If they came from Pricing table
+                if (plan === 'launchpad' || plan === 'business') selectDropdown.value = 'Website Development';
+                else if (plan === 'custom') selectDropdown.value = 'Other';
+            } else if (service) {
+                // If they came from specific service buttons
+                if (service === 'school-automation') selectDropdown.value = 'School ERP';
+                else if (service === 'design') selectDropdown.value = 'Visual Design';
+            }
+        });
+    </script>
 </body>
 </html>

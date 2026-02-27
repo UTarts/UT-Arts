@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>About Our Digital Studio | The UT Arts Process</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>About Our Digital Studio | UT Arts</title>
     <meta name="description" content="Learn about UT Arts, your creative partner in Delhi. We are a digital studio focused on a clear process to deliver high-quality websites and brand designs.">
-    <!-- Google tag (gtag.js) -->
+    
+    <meta name="google-site-verification" content="GZ6Izp-Qbnmy47BiaAsfTNoGqKaL2X046-CAG6CJ-go" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-90LQKXD1DG"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-90LQKXD1DG');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-90LQKXD1DG');
     </script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.utarts.in/about.html">
+    <meta property="og:title" content="About Our Digital Studio | UT Arts">
+    <meta property="og:image" content="https://utarts.in/images/UTartsLogo.webp">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
     <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/my-favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/my-favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/my-favicon/site.webmanifest" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: "#F59E0B", secondary: "#6366F1", accent: "#4F46E5" },
+                    fontFamily: { 
+                        display: ["Orbitron", "sans-serif"], 
+                        body: ["Poppins", "sans-serif"],
+                        premium: ["Cinzel", "serif"] 
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "UT Arts",
-          "url": "https://utarts.in/",
-          "logo": "https://utarts.in/images/UTartsLogo.webp",
+          "name": "UT Arts Digital Solutions",
+          "alternateName": "UT Arts",
+          "url": "https://www.utarts.in/",
+          "logo": "https://www.utarts.in/images/UTArt_Logo.webp",
+          "description": "A premier digital transformation agency providing enterprise-grade web development, app development, and brand design solutions.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "New Delhi",
+            "addressRegion": "Delhi",
+            "addressCountry": "IN"
+          },
           "sameAs": [
             "https://www.linkedin.com/company/utarts",
             "https://www.instagram.com/utarts.in/",
@@ -41,153 +68,293 @@
             "https://www.youtube.com/@utarts_official"
           ]
         }
-    </script>
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "UT Arts Digital Solutions",
+          "alternateName": "UT Arts",
+          "url": "https://www.utarts.in/"
+        }
+        </script>
 </head>
-<body>
+<body class="bg-[#F8FAFC] text-slate-900 font-body antialiased flex flex-col min-h-screen">
 
-    <header id="main-header">
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="images/UTartsLogo.webp" alt="UT Arts Logo">
+    <header class="glass-navbar sticky top-0 z-50 px-5 py-0 lg:py-3 w-full border-b border-slate-200/50 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full overflow-hidden border border-slate-200 shadow-sm bg-white flex items-center justify-center">
+                    <img src="images/UTArt_Logo.webp" onerror="this.src='images/UTartsLogo.webp'" alt="UT Arts Logo" class="w-full h-full object-cover">
+                </div>
+                <span class="font-display font-bold text-lg tracking-tighter">UT Arts</span>
             </a>
-            <label class="theme-toggle-switch" for="theme-toggle-checkbox">
-                <input type="checkbox" id="theme-toggle-checkbox" class="theme-toggle-checkbox">
-                <span class="slider-knob">
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                </span>
-            </label>
-            <ul class="nav-links">
-                <li><a href="websites.html">Websites</a></li>
-                <li><a href="designs.html">Designs</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="contact.html" class="cta-button">CONTACT US</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+            
+            <nav class="hidden lg:flex items-center gap-8 font-body text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-secondary transition-colors">Home</a>
+                <a href="solutions.html" class="hover:text-secondary transition-colors">Solutions</a>
+                <a href="designs.html" class="hover:text-secondary transition-colors">Portfolio</a>
+                <a href="about.html" class="text-secondary font-bold">Company</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="hidden lg:inline-block bg-slate-900 text-white px-6 py-2.5 rounded-full text-xs font-bold font-display uppercase tracking-wider shadow-lg hover:bg-slate-800 transition-colors">
+                    Consult
+                </a>
+                <button id="menu-toggle" class="lg:hidden text-slate-900 p-2 focus:outline-none hover:text-secondary transition-colors">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <main class="page-frame">
-        <div class="page-content">
+    <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-xl z-[60] flex flex-col items-center justify-center hidden">
+        <button id="menu-close" class="absolute top-6 right-6 text-slate-900 p-2 hover:text-red-500 transition-colors">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <nav class="flex flex-col gap-8 text-center font-display text-2xl font-bold uppercase tracking-widest">
+            <a href="index.html" class="hover:text-secondary transition">Home</a>
+            <a href="solutions.html" class="hover:text-secondary transition">Solutions</a>
+            <a href="designs.html" class="hover:text-secondary transition">Portfolio</a>
+            <a href="about.html" class="text-secondary transition">Company</a>
+            <a href="contact.html" class="text-accent mt-4">Contact Us</a>
+        </nav>
+    </div>
+
+    <nav class="mobile-bottom-nav custom-gradient-pill lg:hidden">
+        <div class="mobile-nav-items">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home text-lg mb-1"></i>
+                <span>Home</span>
+            </a>
+            <a href="solutions.html" class="nav-item">
+                <i class="fas fa-laptop-code text-lg mb-1"></i>
+                <span>Solutions</span>
+            </a>
+            <a href="designs.html" class="nav-item">
+                <i class="fas fa-palette text-lg mb-1"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="about.html" class="nav-item active">
+                <i class="fas fa-building text-lg mb-1"></i>
+                <span>Company</span>
+            </a>
+            <a href="contact.html" class="nav-item">
+                <i class="fas fa-paper-plane text-lg mb-1"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
         
-        <section class="page-hero about-page-hero">
-            <div class="hero-content">
-               <h1>More Than Just <br><span style="color: var(--primary-accent);">Pixels.</span></h1>
-               <p>We are the bridge between your vision and your customer's reality.</p>
-           </div>
-       </section>
-     
-       <section class="about-mission">
-           <div class="mission-content">
-               <i class="fas fa-quote-left quote-icon"></i>
-               <h2 class="mission-statement">
-                   We believe that <span class="highlight">great design</span> is not a luxury.<br>
-                   It is a <span class="highlight">necessity</span>.
-               </h2>
-               <p class="mission-subtext">
-                   We don't just write code; we craft digital experiences that have a soul. Your success is our only metric.
-               </p>
-           </div>
-       </section>
+        <section class="px-6 pt-20 pb-16 bg-gradient-to-br from-[#fdfbf7] to-[#f4f0e6] relative overflow-hidden text-center border-b border-slate-200/60">
+            <div class="max-w-4xl mx-auto relative z-10 reveal reveal-up">
+                <span class="text-primary font-display font-bold text-xs tracking-[0.3em] uppercase mb-4 block">Our Mission</span>
+                <h1 class="font-display font-black text-4xl md:text-6xl lg:text-7xl mb-6 text-slate-900 leading-tight">
+                    Empowering <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">India</span> <br>with Enterprise Tech.
+                </h1>
+                <p class="text-slate-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-12">
+                    At UT Arts, we bridge the gap between imagination and execution. We don't just write code; we craft digital experiences that have a soul. Your success is our only metric.
+                </p>
 
-       <section class="our-process">
-           <h2 class="section-title">How We Work</h2>
-           <div class="process-timeline">
-               
-               <div class="timeline-step">
-                   <div class="timeline-marker">1</div>
-                   <div class="timeline-content">
-                       <h3>Discover</h3>
-                       <p>We don't guess. We dig deep into your goals and audience to find the perfect strategy.</p>
-                   </div>
-               </div>
-
-               <div class="timeline-step">
-                   <div class="timeline-marker">2</div>
-                   <div class="timeline-content">
-                       <h3>Craft</h3>
-                       <p>We build with precision. Every pixel and line of code is placed with purpose.</p>
-                   </div>
-               </div>
-
-               <div class="timeline-step">
-                   <div class="timeline-marker">3</div>
-                   <div class="timeline-content">
-                       <h3>Launch</h3>
-                       <p>We deliver a polished product and stand by your side as you grow.</p>
-                   </div>
-               </div>
-
-           </div>
-       </section>
-
-       <section class="meet-founder">
-           <div class="founder-container">
-               <div class="founder-card">
-                <div class="founder-visual">
-                    <img src="images/founder.webp" alt="Utkarsh Tripathi" loading="lazy" class="scroll-reveal-img">
-                    <div class="founder-overlay"></div>
+                <div class="grid grid-cols-2 gap-4 max-w-lg mx-auto">
+                    <div class="bg-white/80 backdrop-blur-md p-6 rounded-3xl border border-slate-200 shadow-lg shadow-slate-200/50">
+                        <span class="block text-4xl md:text-5xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent mb-1 stat-counter" data-target="20">0</span>
+                        <span class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-500">Projects Delivered</span>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-md p-6 rounded-3xl border border-slate-200 shadow-lg shadow-slate-200/50">
+                        <span class="block text-4xl md:text-5xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 mb-1 stat-counter" data-target="15">0</span>
+                        <span class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-500">Happy Clients</span>
+                    </div>
                 </div>
-                   <div class="founder-text">
-                    <h3>Utkarsh Tripathi</h3>
-                    <span class="founder-role">Creative Director</span>
-                    
-                    <p>"I founded UT Arts to blend traditional art with modern tech. Let's build something iconic."</p>
-                    
-                    <a href="https://www.linkedin.com/in/utkarsh-tripathi-utarts/" target="_blank" class="linkedin-btn">
-                        <i class="fab fa-linkedin"></i> Connect
-                    </a>
+            </div>
+            
+            <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -ml-32 -mb-32 pointer-events-none"></div>
+        </section>
+
+        <section class="px-6 pb-24 pt-10 bg-white relative">
+            <div class="max-w-4xl mx-auto mt-16 relative reveal reveal-up">
                 
-                    <div class="founder-personal-links">
-                        <div class="link-group">
-                            <span>Direct Contact</span>
-                            <a href="mailto:utkarshtripathi@utarts.in" class="email-link">utkarshtripathi@utarts.in</a>
-                        </div>
+                <div class="bg-slate-50 rounded-[3rem] p-8 md:p-16 shadow-2xl border border-slate-200 relative mt-20">
+                    
+                    <div class="absolute -top-20 md:-top-24 left-1/2 -translate-x-1/2 w-40 h-40 md:w-48 md:h-48 rounded-full border-8 border-white shadow-2xl overflow-hidden bg-slate-200 z-20">
+                        <img src="images/founder1.webp" alt="Utkarsh Tripathi" class="w-full h-full object-cover object-top" loading="lazy">
+                    </div>
+                    
+                    <div class="pt-20 md:pt-24 text-center relative z-10">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-[0.2em] font-display mb-4 border border-primary/20">Founder | Head (Tech & Operations)</span>
+                        <h2 class="font-display font-bold text-3xl md:text-4xl text-slate-900 mb-6">Utkarsh Tripathi</h2>
                         
-                        <div class="link-group">
-                            <a href="https://utkarshtripathi.utarts.in" target="_blank" class="art-link">
-                                View My Fine Art Portfolio &rarr;
+                        <div class="text-slate-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-10 space-y-4">
+                            <p class="italic text-lg font-medium text-slate-800">
+                                "I founded UT Arts to blend traditional art with modern tech. Let's build something iconic."
+                            </p>
+                            <p>
+                                With extensive experience in the digital landscape, Utkarsh leads the vision at UT Arts. His expertise lies seamlessly at the intersection of aesthetic design and complex system architecture.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <a href="https://www.linkedin.com/in/utkarsh-tripathi-utarts/" target="_blank" class="flex items-center justify-center w-full sm:w-auto gap-2 bg-[#0A66C2] text-white px-8 py-4 rounded-2xl font-bold text-sm hover:shadow-lg hover:shadow-[#0A66C2]/30 hover:-translate-y-1 transition-all">
+                                <i class="fab fa-linkedin text-lg"></i> Connect on LinkedIn
+                            </a>
+                            <a href="https://utkarshtripathi.utarts.in/" target="_blank" class="flex items-center justify-center w-full sm:w-auto gap-2 border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-2xl font-bold text-sm hover:border-primary hover:text-primary hover:bg-orange-50 transition-all">
+                                <i class="fas fa-palette text-lg"></i> View Fine Art Portfolio
                             </a>
                         </div>
                     </div>
                 </div>
-               </div>
-           </div>
-           
-           <div class="business-details">
-               <p><strong>Legal Name:</strong> UT Arts<br> &bull; <strong>Reg:</strong> MSME (Govt. of India)<br> &bull; <strong>Reg. No: </strong>UDYAM-DL-11-0141228</p>
-               <p>New Delhi, India</p>
-           </div>
-       </section>
-
-        <p style="text-align: center; margin-top: 21px;"><a href="websites.html">Websites</a>  |  <a href="designs.html">Designs</a></p>
-
-        <footer>
-            <h3>Ready to start your project?</h3>
-            <p>Let's talk about your vision. We're excited to hear your ideas.</p>
-            <a href="contact.html" class="cta-button">Get in Touch</a>
-            <P>Email us at : <a href="mailto:info@utarts.in">info@utarts.in</a></P>
-            <p><a href="privacypolicy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/company/utarts" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/utarts.in/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.pinterest.com/utarts_official/" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                <a href="https://www.youtube.com/@utarts_official" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
-            <p class="copyright">
-                &copy; 2025 UT Arts. All Rights Reserved. <br> 
-                <span style="font-size: 0.8rem; opacity: 0.7;">Registered Entity (MSME) | Reg. No: UDYAM-DL-11-0141228</span><br>
-                <a href="https://utkarshtripathi.utarts.in/" target="_blank" style="color: var(--color-text-secondary); text-decoration: none; margin-top: 5px; display: inline-block;">Fine Art by Utkarsh Tripathi</a>
-            </p>
-        </footer>
+        </section>
 
-        </div>
+        <section class="px-6 py-24 bg-slate-900 text-white border-y border-slate-800">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 reveal reveal-up">
+                    <h2 class="font-display text-3xl md:text-4xl font-black uppercase tracking-tight">Why Choose Us</h2>
+                    <div class="h-1.5 w-16 bg-secondary mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 reveal reveal-up" style="transition-delay: 100ms;">
+                        <div class="w-14 h-14 bg-primary/20 rounded-2xl flex items-center justify-center mb-6 border border-primary/30">
+                            <i class="far fa-gem text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 font-display tracking-wide">Premium Quality</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">We don't just build sites; we craft highly refined digital experiences with meticulous attention to detail and flawless execution.</p>
+                    </div>
+
+                    <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 reveal reveal-up" style="transition-delay: 200ms;">
+                        <div class="w-14 h-14 bg-secondary/20 rounded-2xl flex items-center justify-center mb-6 border border-secondary/30">
+                            <i class="fas fa-rocket text-secondary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 font-display tracking-wide">Optimized Performance</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Speed is our priority. Every single line of code is optimized for the absolute fastest possible load times across all devices.</p>
+                    </div>
+
+                    <div class="bg-slate-800/50 p-8 rounded-3xl border border-slate-700 reveal reveal-up" style="transition-delay: 300ms;">
+                        <div class="w-14 h-14 bg-accent/20 rounded-2xl flex items-center justify-center mb-6 border border-accent/30">
+                            <i class="fas fa-brain text-accent text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 font-display tracking-wide">Strategic Approach</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Our solutions aren't just pretty. They are backed by hard data and psychological design principles built to drive actual conversions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-12 bg-white reveal reveal-up">
+            <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 p-8 rounded-3xl bg-slate-50 border border-slate-200 text-center md:text-left">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md shrink-0 border border-slate-100">
+                    <i class="fas fa-stamp text-slate-800 text-2xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-lg text-slate-900 mb-1">Government Registered MSME</h3>
+                    <p class="text-slate-500 text-sm mb-1">UT Arts is an officially registered Micro, Small & Medium Enterprise under the Government of India.</p>
+                    <p class="text-xs font-bold font-display text-slate-400 tracking-widest uppercase">Reg. No: UDYAM-DL-11-0141228</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-24 bg-slate-900 text-white rounded-t-[3rem] mt-10 reveal">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-display text-4xl md:text-5xl font-black mb-6 uppercase tracking-tight">Ready to Lead?</h2>
+                <p class="text-slate-400 mb-12 max-w-md mx-auto text-sm md:text-base leading-relaxed font-light">
+                    Join industry leaders who have already transformed their legacy systems into digital powerhouses with UT Arts.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-20">
+                    <a href="contact.html" class="bg-white text-slate-900 font-black py-4 px-10 rounded-2xl text-base uppercase tracking-widest font-display shadow-2xl hover:bg-gray-100 hover:scale-105 transition-all">
+                        Book Strategy Call
+                    </a>
+                    <a href="solutions.html" class="border border-slate-700 text-white font-black py-4 px-10 rounded-2xl text-base uppercase tracking-widest font-display hover:border-slate-500 transition-colors">
+                        View Pricing
+                    </a>
+                </div>
+
+                <div class="pt-12 border-t border-slate-800 grid md:grid-cols-3 gap-8 text-left">
+                    <div>
+                        <div class="w-11 h-11 items-center justify-center transform scale-150 ml-2">
+                            <img src="images/UTartsLogo.webp" alt="UT Arts Logo" class="w-full h-full object-contain">
+                        </div>
+                        
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="font-display font-bold text-xl tracking-wide text-white">UT Arts Digital Solutions</span>
+                        </div>
+                        <p class="text-slate-500 text-xs leading-relaxed mb-4">Enterprise-grade technology for schools and modern businesses.</p>
+                        <div class="flex gap-4">
+                            <a href="https://www.linkedin.com/company/utarts" class="text-slate-500 hover:text-secondary transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                            <a href="https://www.instagram.com/utarts.in/" class="text-slate-500 hover:text-secondary transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                            <a href="https://www.youtube.com/@utarts_official" class="text-slate-500 hover:text-secondary transition-colors"><i class="fab fa-youtube text-xl"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-white font-display font-bold text-sm uppercase mb-4 tracking-wider">Contact</h4>
+                        <ul class="text-slate-500 text-xs space-y-3">
+                            <li><strong class="text-slate-400">Head Office:</strong> New Delhi, India</li>
+                            <li><strong class="text-slate-400">Regional:</strong> Pratapgarh, UP</li>
+                            <li>info@utarts.in</li>
+                            <li>+91 8595881108</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-display font-bold text-sm uppercase mb-4 tracking-wider">Legal</h4>
+                        <ul class="text-slate-500 text-xs space-y-3">
+                            <li><a href="privacypolicy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                            <li><a href="terms.html" class="hover:text-white transition">Terms & Conditions</a></li>
+                            <li class="pt-4 text-[10px] text-slate-600">Registered Entity (MSME)<br>Reg. No: UDYAM-DL-11-0141228</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-slate-600 text-[10px] font-bold uppercase tracking-widest">© 2026 UT Arts Digital Solutions. All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="h-16 lg:h-0 w-full"></div> 
+        </section>
     </main>
     <script src="script.js"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const stats = document.querySelectorAll('.stat-counter');
+            
+            const observerOptions = {
+                threshold: 0.5 // Trigger when 50% of the element is visible
+            };
+
+            const statsObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseInt(entry.target.getAttribute('data-target'));
+                        animateValue(entry.target, 0, target, 2000); // 2000ms = 2 seconds
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            stats.forEach(stat => {
+                statsObserver.observe(stat);
+            });
+
+            function animateValue(obj, start, end, duration) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    // Update the number and append the "+" sign
+                    obj.innerHTML = Math.floor(progress * (end - start) + start) + "+";
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+        });
+    </script>
 </body>
 </html>

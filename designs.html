@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand & Visual Design Services | UT Arts</title>
-    <meta name="description" content="Elevate your brand with professional visual design. We create social media graphics, posters, and cohesive brand assets that capture attention.">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Design Portfolio & Masterpieces | UT Arts</title>
+    <meta name="description" content="Explore our curated collection of digital transformations, enterprise ecosystems, and premium brand identities. See the work of UT Arts Digital Solutions.">
     
+    <meta name="google-site-verification" content="GZ6Izp-Qbnmy47BiaAsfTNoGqKaL2X046-CAG6CJ-go" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-90LQKXD1DG"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-90LQKXD1DG');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-90LQKXD1DG');
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.utarts.in/designs.html">
+    <meta property="og:title" content="Design Portfolio & Masterpieces | UT Arts">
+    <meta property="og:image" content="https://utarts.in/images/banner.design.webp">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
     <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/my-favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/my-favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/my-favicon/site.webmanifest" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: "#F59E0B", secondary: "#6366F1", accent: "#4F46E5" },
+                    fontFamily: { 
+                        display: ["Orbitron", "sans-serif"], 
+                        body: ["Poppins", "sans-serif"],
+                        premium: ["Cinzel", "serif"] 
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "UT Arts",
-          "url": "https://utarts.in/",
-          "logo": "https://utarts.in/images/UTartsLogo.webp",
+          "name": "UT Arts Digital Solutions",
+          "alternateName": "UT Arts",
+          "url": "https://www.utarts.in/",
+          "logo": "https://www.utarts.in/images/UTArt_Logo.webp",
+          "description": "A premier digital transformation agency providing enterprise-grade web development, app development, and brand design solutions.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "New Delhi",
+            "addressRegion": "Delhi",
+            "addressCountry": "IN"
+          },
           "sameAs": [
             "https://www.linkedin.com/company/utarts",
             "https://www.instagram.com/utarts.in/",
@@ -38,193 +68,477 @@
             "https://www.youtube.com/@utarts_official"
           ]
         }
-    </script>
-    <link rel="preload" as="image" href="images/banner.design.webp" media="(min-width: 768px)">
-    <link rel="preload" as="image" href="images/banner.design.mob.webp" media="(max-width: 767px)">
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "UT Arts Digital Solutions",
+          "alternateName": "UT Arts",
+          "url": "https://www.utarts.in/"
+        }
+        </script>
 </head>
-<body>
+<body class="bg-[#F8FAFC] text-slate-900 font-body antialiased flex flex-col min-h-screen">
 
-    <header id="main-header">
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="images/UTartsLogo.webp" alt="UT Arts Logo">
+    <header class="glass-navbar sticky top-0 z-50 px-5 py-0 lg:py-3 w-full border-b border-slate-200/50 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full overflow-hidden border border-slate-200 shadow-sm bg-white flex items-center justify-center">
+                    <img src="images/UTArt_Logo.webp" onerror="this.src='images/UTartsLogo.webp'" alt="UT Arts Logo" class="w-full h-full object-cover">
+                </div>
+                <span class="font-display font-bold text-lg tracking-tighter">UT Arts</span>
             </a>
-            <label class="theme-toggle-switch" for="theme-toggle-checkbox">
-                <input type="checkbox" id="theme-toggle-checkbox" class="theme-toggle-checkbox">
-                <span class="slider-knob">
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                </span>
-            </label>
-            <ul class="nav-links">
-                <li><a href="websites.html">Websites</a></li>
-                <li><a href="designs.html" class="active">Designs</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="cta-button">CONTACT US</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+            
+            <nav class="hidden lg:flex items-center gap-8 font-body text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-secondary transition-colors">Home</a>
+                <a href="solutions.html" class="hover:text-secondary transition-colors">Solutions</a>
+                <a href="designs.html" class="text-secondary font-bold">Portfolio</a>
+                <a href="about.html" class="hover:text-secondary transition-colors">Company</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="hidden lg:inline-block bg-slate-900 text-white px-6 py-2.5 rounded-full text-xs font-bold font-display uppercase tracking-wider shadow-lg hover:bg-slate-800 transition-colors">
+                    Consult
+                </a>
+                <button id="menu-toggle" class="lg:hidden text-slate-900 p-2 focus:outline-none hover:text-secondary transition-colors">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <main class="page-frame">
-        <div class="page-content">
-            <section class="page-hero design-page-hero">
-                <div class="hero-content">
-                    <h1>DESIGNS</h1>
-                    <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; opacity: 0.8;">Visuals That Stop The Scroll.</p>
-                </div>
-            </section>
+    <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-xl z-[60] flex flex-col items-center justify-center hidden">
+        <button id="menu-close" class="absolute top-6 right-6 text-slate-900 p-2 hover:text-red-500 transition-colors">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <nav class="flex flex-col gap-8 text-center font-display text-2xl font-bold uppercase tracking-widest">
+            <a href="index.html" class="hover:text-secondary transition">Home</a>
+            <a href="solutions.html" class="hover:text-secondary transition">Solutions</a>
+            <a href="designs.html" class="text-secondary transition">Portfolio</a>
+            <a href="about.html" class="hover:text-secondary transition">Company</a>
+            <a href="contact.html" class="text-accent mt-4">Contact Us</a>
+        </nav>
+    </div>
 
-        <section class="price-bar">
-            <p>Affordable, Custom Visual Design for every budget. **No project is too small!**</p>
-        </section>
-
-        <section id="gallery" class="scrolling-gallery">
-            <h2 class="section-title">Design Portfolio</h2>
-        
-            <div class="marquee desktop-marquee" data-direction="left">
-                <div class="marquee-content">
-                    <img src="images/design.p1.webp" alt="Social media design" loading="lazy" decoding="async">
-                    <img src="images/design.l1.webp" alt="Event poster design" loading="lazy" decoding="async">
-                    <img src="images/design.p2.webp" alt="YouTube thumbnail" loading="lazy" decoding="async">
-                    <img src="images/design.p4.webp" alt="YouTube thumbnail" loading="lazy" decoding="async">
-                    <img src="images/design.l3.webp" alt="Brand banner" loading="lazy" decoding="async">
-                    <img src="images/design.p3.webp" alt="Social media design" loading="lazy" decoding="async">
-                    <img src="images/design.l4.webp" alt="Event poster design" loading="lazy" decoding="async">
-                    <img src="images/design.p8.webp" alt="YouTube thumbnail" loading="lazy" decoding="async">
-                    <img src="images/design.l1.webp" alt="Brand banner" loading="lazy" decoding="async">
-                    <img src="images/design.p9.webp" alt="Brand banner" loading="lazy" decoding="async">
-                    <img src="images/design.p13.webp" alt="Flyer design" loading="lazy" decoding="async">
-                </div>
-            </div>
-        
-            <div class="marquee desktop-marquee" data-direction="right">
-                <div class="marquee-content">
-                    <img src="images/design.l4.webp" alt="Short video edit" loading="lazy" decoding="async">
-                    <img src="images/design.p5.webp" alt="Logo design concept" loading="lazy" decoding="async">
-                    <img src="images/design.l5.webp" alt="App UI design" loading="lazy" decoding="async">
-                    <img src="images/design.p12.webp" alt="Flyer design" loading="lazy" decoding="async">
-                    <img src="images/design.l2.webp" alt="Short video edit" loading="lazy" decoding="async">
-                    <img src="images/design.p7.webp" alt="Logo design concept" loading="lazy" decoding="async">
-                    <img src="images/design.p6.webp" alt="Logo design concept" loading="lazy" decoding="async">
-                    <img src="images/design.l6.webp" alt="App UI design" loading="lazy" decoding="async">
-                    <img src="images/design.p11.webp" alt="Flyer design" loading="lazy" decoding="async">
-                    <img src="images/design.l7.webp" alt="Flyer design" loading="lazy" decoding="async">
-                    <img src="images/design.p10.webp" alt="Flyer design" loading="lazy" decoding="async">
-                </div>
-            </div>
-
-            <div class="marquee mobile-marquee" data-direction="left">
-                <div class="marquee-content">
-                    <img src="images/design.p1.webp" alt="Social media design" loading="lazy" decoding="async">
-                    <img src="images/design.l2.webp" alt="Event poster design" loading="lazy" decoding="async">
-                    <img src="images/design.p2.webp" alt="YouTube thumbnail" loading="lazy" decoding="async">
-                    <img src="images/design.p9.webp" alt="YouTube thumbnail" loading="lazy" decoding="async">
-                    <img src="images/design.l3.webp" alt="Brand banner" loading="lazy" decoding="async">
-                    <img src="images/design.p8.webp" alt="Social media design" loading="lazy" decoding="async">
-                    <img src="images/design.l1.webp" alt="Event poster design" loading="lazy" decoding="async">
-                    <img src="images/design.p2.webp" alt="YouTube thumbnail" loading="lazy" decoding="async">
-                    <img src="images/design.p4.webp" alt="YouTube thumbnail" loading="lazy" decoding="async">
-                    <img src="images/design.l3.webp" alt="Brand banner" loading="lazy" decoding="async">
-                </div>
-            </div>
-            <div class="marquee mobile-marquee" data-direction="right">
-                <div class="marquee-content">
-                    <img src="images/design.p9.webp" alt="Social media design" loading="lazy" decoding="async">
-                    <img src="images/design.l4.webp" alt="Event poster design" loading="lazy" decoding="async">
-                    <img src="images/design.p10.webp" alt="YouTube thumbnail" loading="lazy" decoding="async">
-                    <img src="images/design.l1.webp" alt="Brand banner" loading="lazy" decoding="async">
-                    <img src="images/design.p2.webp" alt="Brand banner" loading="lazy" decoding="async">
-                    <img src="images/design.p11.webp" alt="Social media design" loading="lazy" decoding="async">
-                    <img src="images/design.l4.webp" alt="Event poster design" loading="lazy" decoding="async">
-                    <img src="images/design.p12.webp" alt="YouTube thumbnail" loading="lazy" decoding="async">
-                    <img src="images/design.l1.webp" alt="Brand banner" loading="lazy" decoding="async">
-                    <img src="images/design.p2.webp" alt="Brand banner" loading="lazy" decoding="async">
-                </div>
-            </div>
-            <div class="marquee mobile-marquee" data-direction="left">
-                <div class="marquee-content">
-                    <img src="images/design.p2.webp" alt="Short video edit" loading="lazy" decoding="async">
-                    <img src="images/design.p12.webp" alt="Logo design concept" loading="lazy" decoding="async">
-                    <img src="images/design.p8.webp" alt="App UI design" loading="lazy" decoding="async">
-                    <img src="images/design.p6.webp" alt="Flyer design" loading="lazy" decoding="async">
-                    <img src="images/design.p13.webp" alt="Short video edit" loading="lazy" decoding="async">
-                    <img src="images/design.l4.webp" alt="Short video edit" loading="lazy" decoding="async">
-                    <img src="images/design.p8.webp" alt="Logo design concept" loading="lazy" decoding="async">
-                    <img src="images/design.l5.webp" alt="App UI design" loading="lazy" decoding="async">
-                    <img src="images/design.p6.webp" alt="Flyer design" loading="lazy" decoding="async">
-                    <img src="images/design.l2.webp" alt="Short video edit" loading="lazy" decoding="async">
-                </div>
-            </div>
-            <div class="marquee mobile-marquee" data-direction="right">
-                <div class="marquee-content">
-                    <img src="images/design.p7.webp" alt="Logo design concept" loading="lazy" decoding="async">
-                    <img src="images/design.p11.webp" alt="Logo design concept" loading="lazy" decoding="async">
-                    <img src="images/design.l6.webp" alt="App UI design" loading="lazy" decoding="async">
-                    <img src="images/design.p5.webp" alt="Flyer design" loading="lazy" decoding="async">
-                    <img src="images/design.l7.webp" alt="Flyer design" loading="lazy" decoding="async">
-                    <img src="images/design.p11.webp" alt="Logo design concept" loading="lazy" decoding="async">
-                    <img src="images/design.p6.webp" alt="Logo design concept" loading="lazy" decoding="async">
-                    <img src="images/design.l6.webp" alt="App UI design" loading="lazy" decoding="async">
-                    <img src="images/design.p12.webp" alt="Flyer design" loading="lazy" decoding="async">
-                    <img src="images/design.l7.webp" alt="Flyer design" loading="lazy" decoding="async">
-                </div>
-            </div>
-            
-        </section>
-
-        <section id="pricing" class="pricing">
-            <h2 class="section-title">Design Packages</h2>
-            <div class="pricing-table">
-                <div class="price-card featured" style="max-width: 500px;">
-                    <h3>Visual Design Pack</h3>
-        
-                    <div class="price">
-                        <span class="price-new" style="font-size: 2rem;">Let's Talk</span>
-                    </div>
-        
-                    <p style="text-align: center; color: var(--color-text-secondary);">Custom quotes based on your project needs.</p>
-                    <br>
-                    <ul>
-                        <li>Social Media Graphics</li>
-                        <li>Posters & Flyers</li>
-                        <li>YouTube Thumbnails</li>
-                        <li>Short Form Video (Reels, Shorts)</li>
-                        <li>Brand Banners</li>
-                        <li>...and more!</li>
-                    </ul>
-                    <a href="contact.html?service=design" class="cta-button">Get a Design Quote</a>
-                </div>
-            </div>
-        </section>
-
-        <p style="text-align: center; margin-top: 21px;"><a href="websites.html">Websites</a>  |  <a href="designs.html">Designs</a></p>
-
-        <footer>
-            <h3>Ready to make an impression?</h3>
-            <p>Let's talk about your project. We're excited to hear your ideas.</p>
-            <a href="contact.html" class="cta-button">Get in Touch</a>
-            <P>Email us at : <a href="mailto:info@utarts.in">info@utarts.in</a></P>
-            <p><a href="privacypolicy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/company/utarts" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/utarts.in/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.pinterest.com/utarts_official/" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                <a href="https://www.youtube.com/@utarts_official" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
-            <p class="copyright">
-                &copy; 2025 UT Arts. All Rights Reserved. <br> 
-                <span style="font-size: 0.8rem; opacity: 0.7;">Registered Entity (MSME) | Reg. No: UDYAM-DL-11-0141228</span><br>
-                <a href="https://utkarshtripathi.utarts.in/" target="_blank" style="color: var(--color-text-secondary); text-decoration: none; margin-top: 5px; display: inline-block;">Fine Art by Utkarsh Tripathi</a>
-            </p>
-        </footer>
+    <nav class="mobile-bottom-nav custom-gradient-pill lg:hidden">
+        <div class="mobile-nav-items">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home text-lg mb-1"></i>
+                <span>Home</span>
+            </a>
+            <a href="solutions.html" class="nav-item">
+                <i class="fas fa-laptop-code text-lg mb-1"></i>
+                <span>Solutions</span>
+            </a>
+            <a href="designs.html" class="nav-item active">
+                <i class="fas fa-palette text-lg mb-1"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="about.html" class="nav-item">
+                <i class="fas fa-building text-lg mb-1"></i>
+                <span>Company</span>
+            </a>
+            <a href="contact.html" class="nav-item">
+                <i class="fas fa-paper-plane text-lg mb-1"></i>
+                <span>Contact</span>
+            </a>
         </div>
+    </nav>
+
+    <main class="flex-grow">
+        
+        <header class="px-6 pt-20 pb-12 text-center max-w-4xl mx-auto reveal reveal-up">
+            <h1 class="text-4xl md:text-6xl font-display font-black mb-6 leading-tight text-slate-900">
+                Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">Masterpieces</span>
+            </h1>
+            <p class="text-slate-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                Explore our curated collection of digital transformations, enterprise ecosystems, and premium brand identities.
+            </p>
+            
+            <div class="flex space-x-3 mt-10 overflow-x-auto pb-4 justify-start md:justify-center scrollbar-hide no-scrollbar px-4" id="portfolio-tabs">
+                <button onclick="switchTab('web')" id="btn-web" class="px-6 py-2.5 bg-slate-900 text-white rounded-full font-display font-bold text-xs uppercase tracking-wider whitespace-nowrap shadow-lg transition-transform active:scale-95">Web Design</button>
+                <button onclick="switchTab('app')" id="btn-app" class="px-6 py-2.5 bg-white text-slate-600 rounded-full font-display font-bold text-xs uppercase tracking-wider whitespace-nowrap border border-slate-200 shadow-sm hover:border-primary hover:text-primary transition-colors active:scale-95">App UI/UX</button>
+                <button onclick="switchTab('graphics')" id="btn-graphics" class="px-6 py-2.5 bg-white text-slate-600 rounded-full font-display font-bold text-xs uppercase tracking-wider whitespace-nowrap border border-slate-200 shadow-sm hover:border-primary hover:text-primary transition-colors active:scale-95">Brand Graphics</button>
+            </div>
+        </header>
+
+        <section class="px-6 pb-24 max-w-7xl mx-auto">
+            
+            <div id="section-web" class="portfolio-section active">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-[250px]">
+                    
+                    <div onclick="openModal('pathshala')" class="col-span-1 md:col-span-2 group relative overflow-hidden rounded-3xl bg-slate-200 shadow-md border border-slate-200/50 cursor-pointer">
+                        <img alt="Pathshala EdTech Portal" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-[1.03]" src="images/Pathshala.webp" loading="lazy"/>
+                        <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-2 block font-display">EdTech Platform</span>
+                            <h3 class="text-2xl font-bold font-display text-white mb-1">Pathshala Pro</h3>
+                            <p class="text-xs text-slate-300">Click to view details <i class="fas fa-arrow-right ml-1"></i></p>
+                        </div>
+                    </div>
+
+                    <div onclick="openModal('nrj')" class="col-span-1 group relative overflow-hidden rounded-3xl bg-slate-200 shadow-md border border-slate-200/50 cursor-pointer">
+                        <img alt="Nrj Path Lab Dashboard" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-[1.03]" src="images/nrjpathlab.webp" loading="lazy"/>
+                        <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-2 block font-display">Medical UI</span>
+                            <h3 class="text-2xl font-bold font-display text-white mb-1">Nrj Path Lab</h3>
+                            <p class="text-xs text-slate-300">Click to view details <i class="fas fa-arrow-right ml-1"></i></p>
+                        </div>
+                    </div>
+
+                    <div onclick="openModal('govind')" class="col-span-1 group relative overflow-hidden rounded-3xl bg-slate-200 shadow-md border border-slate-200/50 cursor-pointer">
+                        <img alt="Govind Madhav School Portal" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-[1.03]" src="images/gmps.webp" loading="lazy"/>
+                        <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-secondary mb-2 block font-display">School ERP</span>
+                            <h3 class="text-2xl font-bold font-display text-white mb-1">Govind Madhav</h3>
+                            <p class="text-xs text-slate-300">Click to view details <i class="fas fa-arrow-right ml-1"></i></p>
+                        </div>
+                    </div>
+
+                    <div onclick="openModal('campaign')" class="col-span-1 md:col-span-2 group relative overflow-hidden rounded-3xl bg-slate-200 shadow-md border border-slate-200/50 cursor-pointer">
+                        <img alt="Political Campaign Website" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-[1.03]" src="images/bt.supporters.webp" loading="lazy"/>
+                        <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-red-400 mb-2 block font-display">Personal Brand</span>
+                            <h3 class="text-2xl font-bold font-display text-white mb-1">Brijesh Tiwari</h3>
+                            <p class="text-xs text-slate-300">Click to view details <i class="fas fa-arrow-right ml-1"></i></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="section-app" class="portfolio-section">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[140px] md:auto-rows-[200px]">
+                    
+                    <div onclick="openModal('app1')" class="row-span-2 group relative overflow-hidden rounded-3xl bg-slate-200 shadow-md border border-slate-200/50 cursor-pointer">
+                        <img alt="Mobile App Interface" class="w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-[1.03]" src="images/design.l1.webp" loading="lazy"/>
+                        <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-accent mb-1 block font-display">App UI/UX</span>
+                            <h3 class="text-lg font-bold font-display text-white mb-2">Retail Dashboard</h3>
+                            <p class="text-[10px] text-slate-300 uppercase tracking-widest border border-white/30 rounded-full px-3 py-1 inline-block w-max">View Details</p>
+                        </div>
+                    </div>
+
+                    <div onclick="openModal('app2')" class="row-span-2 group relative overflow-hidden rounded-3xl bg-slate-200 shadow-md border border-slate-200/50 cursor-pointer">
+                        <img alt="Mobile App Interface" class="w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-[1.03]" src="images/design.l5.webp" loading="lazy"/>
+                        <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-accent mb-1 block font-display">App UI/UX</span>
+                            <h3 class="text-lg font-bold font-display text-white mb-2">Fintech Wallet</h3>
+                            <p class="text-[10px] text-slate-300 uppercase tracking-widest border border-white/30 rounded-full px-3 py-1 inline-block w-max">View Details</p>
+                        </div>
+                    </div>
+
+                    <div onclick="openModal('app3')" class="row-span-2 group relative overflow-hidden rounded-3xl bg-slate-200 shadow-md border border-slate-200/50 cursor-pointer">
+                        <img alt="Mobile App Interface" class="w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-[1.03]" src="images/design.l6.webp" loading="lazy"/>
+                        <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-accent mb-1 block font-display">App UI/UX</span>
+                            <h3 class="text-lg font-bold font-display text-white mb-2">Health Tracker</h3>
+                            <p class="text-[10px] text-slate-300 uppercase tracking-widest border border-white/30 rounded-full px-3 py-1 inline-block w-max">View Details</p>
+                        </div>
+                    </div>
+
+                    <div onclick="openModal('app4')" class="row-span-2 group relative overflow-hidden rounded-3xl bg-slate-200 shadow-md border border-slate-200/50 cursor-pointer">
+                        <img alt="Mobile App Interface" class="w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-[1.03]" src="images/master.webp" loading="lazy"/>
+                        <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-accent mb-1 block font-display">App UI/UX</span>
+                            <h3 class="text-lg font-bold font-display text-white mb-2">School ERP App</h3>
+                            <p class="text-[10px] text-slate-300 uppercase tracking-widest border border-white/30 rounded-full px-3 py-1 inline-block w-max">View Details</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="section-graphics" class="portfolio-section">
+                <div class="masonry">
+                    
+                    <div class="masonry-item group relative overflow-hidden rounded-3xl bg-slate-200 shadow-md border border-slate-200/50">
+                        <img alt="Brand Graphic Design" class="w-full object-cover transform transition-transform duration-700 group-hover:scale-[1.03]" src="images/design.p1.webp" loading="lazy"/>
+                        <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-orange-400 mb-1 block font-display">Social Media Ad</span>
+                            <h3 class="text-lg font-bold font-display text-white">Real Estate Campaign</h3>
+                        </div>
+                    </div>
+
+                    <div class="masonry-item group relative overflow-hidden rounded-3xl bg-slate-200 shadow-md border border-slate-200/50">
+                        <img alt="Event Poster Design" class="w-full object-cover transform transition-transform duration-700 group-hover:scale-[1.03]" src="images/design.p7.webp" loading="lazy"/>
+                        <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-1 block font-display">Brand Graphics</span>
+                            <h3 class="text-lg font-bold font-display text-white">Corporate Identity</h3>
+                        </div>
+                    </div>
+
+                    <div class="masonry-item group relative overflow-hidden rounded-3xl bg-slate-200 shadow-md border border-slate-200/50">
+                        <img alt="Thumbnail Design" class="w-full object-cover transform transition-transform duration-700 group-hover:scale-[1.03]" src="images/design.l3.webp" loading="lazy"/>
+                        <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-secondary mb-1 block font-display">Digital Asset</span>
+                            <h3 class="text-lg font-bold font-display text-white">Promotional Banner</h3>
+                        </div>
+                    </div>
+
+                    <div class="masonry-item group relative overflow-hidden rounded-3xl bg-slate-200 shadow-md border border-slate-200/50">
+                        <img alt="Social Media Post" class="w-full object-cover transform transition-transform duration-700 group-hover:scale-[1.03]" src="images/design.p2.webp" loading="lazy"/>
+                        <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-pink-400 mb-1 block font-display">Social Graphic</span>
+                            <h3 class="text-lg font-bold font-display text-white">Product Launch</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="masonry-item group relative overflow-hidden rounded-3xl bg-slate-200 shadow-md border border-slate-200/50">
+                        <img alt="Social Media Post" class="w-full object-cover transform transition-transform duration-700 group-hover:scale-[1.03]" src="images/design.p12.webp" loading="lazy"/>
+                        <div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 mb-1 block font-display">Flyer Design</span>
+                            <h3 class="text-lg font-bold font-display text-white">Event Marketing</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-8 mb-20 px-6 max-w-5xl mx-auto reveal reveal-up">
+            <div class="p-10 md:p-16 rounded-[3rem] bg-gradient-to-br from-slate-900 to-slate-800 text-white relative overflow-hidden text-center border border-slate-700">
+                <div class="absolute top-0 right-0 w-48 h-48 bg-primary/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 w-48 h-48 bg-secondary/20 rounded-full blur-3xl -ml-16 -mb-16 pointer-events-none"></div>
+                
+                <h2 class="font-display font-bold text-3xl md:text-4xl mb-4 relative z-10">Start Your Project</h2>
+                <p class="text-slate-300 text-sm md:text-base mb-8 relative z-10 font-light max-w-md mx-auto">
+                    We transform vision into reality. Let's build your next digital masterpiece together.
+                </p>
+                <a href="contact.html" class="inline-block bg-white text-slate-900 font-display font-bold py-4 px-8 rounded-full hover:shadow-xl hover:scale-105 transition-all active:scale-95 z-10 relative">
+                    Get a Quote <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="px-6 py-24 bg-slate-900 text-white rounded-t-[3rem] mt-10 reveal">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-display text-4xl md:text-5xl font-black mb-6 uppercase tracking-tight">Ready to Lead?</h2>
+                <p class="text-slate-400 mb-12 max-w-md mx-auto text-sm md:text-base leading-relaxed font-light">
+                    Join industry leaders who have already transformed their legacy systems into digital powerhouses with UT Arts.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-20">
+                    <a href="contact.html" class="bg-white text-slate-900 font-black py-4 px-10 rounded-2xl text-base uppercase tracking-widest font-display shadow-2xl hover:bg-gray-100 hover:scale-105 transition-all">
+                        Book Strategy Call
+                    </a>
+                    <a href="solutions.html" class="border border-slate-700 text-white font-black py-4 px-10 rounded-2xl text-base uppercase tracking-widest font-display hover:border-slate-500 transition-colors">
+                        View Pricing
+                    </a>
+                </div>
+
+                <div class="pt-12 border-t border-slate-800 grid md:grid-cols-3 gap-8 text-left">
+                    <div>
+                        <div class="w-11 h-11 items-center justify-center transform scale-150 ml-2">
+                            <img src="images/UTartsLogo.webp" alt="UT Arts Logo" class="w-full h-full object-contain">
+                        </div>
+                        
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="font-display font-bold text-xl tracking-wide text-white">UT Arts Digital Solutions</span>
+                        </div>
+                        <p class="text-slate-500 text-xs leading-relaxed mb-4">Enterprise-grade technology for schools and modern businesses.</p>
+                        <div class="flex gap-4">
+                            <a href="https://www.linkedin.com/company/utarts" class="text-slate-500 hover:text-secondary transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                            <a href="https://www.instagram.com/utarts.in/" class="text-slate-500 hover:text-secondary transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                            <a href="https://www.youtube.com/@utarts_official" class="text-slate-500 hover:text-secondary transition-colors"><i class="fab fa-youtube text-xl"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-white font-display font-bold text-sm uppercase mb-4 tracking-wider">Contact</h4>
+                        <ul class="text-slate-500 text-xs space-y-3">
+                            <li><strong class="text-slate-400">Head Office:</strong> New Delhi, India</li>
+                            <li><strong class="text-slate-400">Regional:</strong> Pratapgarh, UP</li>
+                            <li>info@utarts.in</li>
+                            <li>+91 8595881108</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-display font-bold text-sm uppercase mb-4 tracking-wider">Legal</h4>
+                        <ul class="text-slate-500 text-xs space-y-3">
+                            <li><a href="privacypolicy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                            <li><a href="terms.html" class="hover:text-white transition">Terms & Conditions</a></li>
+                            <li class="pt-4 text-[10px] text-slate-600">Registered Entity (MSME)<br>Reg. No: UDYAM-DL-11-0141228</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-slate-600 text-[10px] font-bold uppercase tracking-widest">© 2026 UT Arts Digital Solutions. All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="h-16 lg:h-0 w-full"></div> 
+        </section>
     </main>
+
+    <div id="project-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
+        <div id="modal-content" class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row">
+            
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-10 h-10 bg-black/10 hover:bg-black/20 text-slate-900 rounded-full flex items-center justify-center transition-colors z-10">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+
+            <div class="w-full md:w-1/2 h-64 md:h-auto bg-slate-100">
+                <img id="modal-img" src="" alt="Project Preview" class="w-full h-full object-cover object-top">
+            </div>
+
+            <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                <span id="modal-tag" class="text-[10px] font-bold uppercase tracking-widest text-secondary mb-3 block font-display">Category</span>
+                <h2 id="modal-title" class="text-3xl font-black font-display text-slate-900 mb-4">Project Title</h2>
+                
+                <div class="mb-6">
+                    <p class="text-[10px] font-bold uppercase text-slate-400 mb-2">Tech Stack / Tools</p>
+                    <p id="modal-tech" class="text-sm font-medium text-slate-700">React • Tailwind • Node.js</p>
+                </div>
+
+                <p id="modal-desc" class="text-slate-500 text-sm leading-relaxed mb-8">
+                    Detailed project description goes here explaining the challenge and the solution provided by UT Arts.
+                </p>
+
+                <div class="mt-auto">
+                    <a id="modal-link" href="#" target="_blank" class="inline-flex items-center justify-center gap-2 bg-slate-900 text-white font-bold py-3 px-8 rounded-xl hover:bg-slate-800 transition-colors shadow-lg">
+                        <span id="modal-link-text">Visit Live Site</span> <i class="fas fa-external-link-alt text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 
-    </body>
+    <script>
+        // --- TAB SWITCHING LOGIC ---
+        function switchTab(tabId) {
+            // Update Tab Buttons Styling
+            const tabs = ['web', 'app', 'graphics'];
+            tabs.forEach(t => {
+                const btn = document.getElementById('btn-' + t);
+                if(t === tabId) {
+                    btn.className = "px-6 py-2.5 bg-slate-900 text-white rounded-full font-display font-bold text-xs uppercase tracking-wider whitespace-nowrap shadow-lg transition-transform active:scale-95";
+                } else {
+                    btn.className = "px-6 py-2.5 bg-white text-slate-600 rounded-full font-display font-bold text-xs uppercase tracking-wider whitespace-nowrap border border-slate-200 shadow-sm hover:border-primary hover:text-primary transition-colors active:scale-95";
+                }
+            });
+
+            // Update Section Visibility
+            const sections = ['section-web', 'section-app', 'section-graphics'];
+            sections.forEach(s => {
+                document.getElementById(s).classList.remove('active');
+            });
+            document.getElementById('section-' + tabId).classList.add('active');
+        }
+
+        // --- MODAL LOGIC & PROJECT DATA ---
+        // This acts as a mini-database for your projects. You can easily edit text and links here.
+        const projectsData = {
+            'pathshala': {
+                tag: 'EdTech Platform',
+                title: 'Pathshala Pro',
+                tech: 'React • Tailwind CSS • AI Integration',
+                desc: 'A sleek, distraction-free website for a modern self-study center. Includes an AI-powered Daily Current Affairs section to keep students engaged and informed daily.',
+                img: 'images/Pathshala.webp',
+                link: 'https://pathshala.pages.dev/',
+                linkText: 'Visit Live Site'
+            },
+            'nrj': {
+                tag: 'Medical UI',
+                title: 'Nrj Path Lab',
+                tech: 'Next.js • Framer Motion • Advanced SEO',
+                desc: 'A high-performance diagnostic lab website with an advanced test search engine and seamless home collection booking system. Optimized heavily for mobile-first users.',
+                img: 'images/nrjpathlab.webp',
+                link: 'https://nrjpathlab.pages.dev/',
+                linkText: 'Visit Live Site'
+            },
+            'govind': {
+                tag: 'School ERP',
+                title: 'Govind Madhav',
+                tech: 'PHP • MySQL • Bootstrap 5',
+                desc: 'A full-stack school management portal featuring student dashboards, assignment submissions, and highly secure teacher access. Built to digitize the entire academic workflow.',
+                img: 'images/gmps.webp',
+                link: 'https://govindmadhav.com/',
+                linkText: 'Visit Live Site'
+            },
+            'campaign': {
+                tag: 'Personal Brand',
+                title: 'Brijesh Tiwari',
+                tech: 'JavaScript • Canvas API • Node Backend',
+                desc: 'A viral campaign site allowing thousands of supporters to generate, customize, and download personalized "Supporter ID Cards", driving massive community engagement.',
+                img: 'images/bt.supporters.webp',
+                link: 'https://brijeshtiwari.in/',
+                linkText: 'Visit Live Site'
+            },
+            'app1': {
+                tag: 'App UI/UX',
+                title: 'Retail Dashboard',
+                tech: 'Figma • UI Animation • User Testing',
+                desc: 'A comprehensive mobile application interface designed for retail managers to track inventory, sales metrics, and employee shifts on the go with zero friction.',
+                img: 'images/design.l1.webp',
+                link: 'contact.html',
+                linkText: 'Inquire About App Design'
+            },
+            'app2': {
+                tag: 'App UI/UX',
+                title: 'Fintech Wallet',
+                tech: 'Figma • Wireframing • Prototyping',
+                desc: 'A highly secure, visually stunning digital wallet interface focused on ease-of-use for peer-to-peer transfers and personal finance tracking.',
+                img: 'images/design.l5.webp',
+                link: 'contact.html',
+                linkText: 'Inquire About App Design'
+            },
+            'app3': {
+                tag: 'App UI/UX',
+                title: 'Health Tracker',
+                tech: 'Figma • Material Design 3',
+                desc: 'A wellness companion app UI focusing on clean typography, soothing color palettes, and intuitive data visualization for daily health metrics.',
+                img: 'images/design.l6.webp',
+                link: 'contact.html',
+                linkText: 'Inquire About App Design'
+            },
+            'app4': {
+                tag: 'App UI/UX',
+                title: 'School ERP App',
+                tech: 'Figma • React Native Ready',
+                desc: 'The mobile counterpart to our Enterprise School Automation system, providing parents with real-time GPS bus tracking, fee payment alerts, and attendance notifications.',
+                img: 'images/master.webp',
+                link: 'contact.html',
+                linkText: 'Inquire About App Design'
+            }
+        };
+
+        const modal = document.getElementById('project-modal');
+        
+        function openModal(projectId) {
+            const data = projectsData[projectId];
+            if(!data) return;
+
+            // Populate Modal Content
+            document.getElementById('modal-tag').textContent = data.tag;
+            document.getElementById('modal-title').textContent = data.title;
+            document.getElementById('modal-tech').textContent = data.tech;
+            document.getElementById('modal-desc').textContent = data.desc;
+            document.getElementById('modal-img').src = data.img;
+            
+            const linkBtn = document.getElementById('modal-link');
+            linkBtn.href = data.link;
+            document.getElementById('modal-link-text').textContent = data.linkText;
+
+            // Show Modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal if user clicks outside the content box
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
 </html>
