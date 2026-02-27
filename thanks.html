@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Thank You | UT Arts Digital Solutions</title>
+    <meta name="robots" content="noindex, nofollow"> <script async src="https://www.googletagmanager.com/gtag/js?id=G-90LQKXD1DG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-90LQKXD1DG');
+    </script>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: "#F59E0B", secondary: "#6366F1", accent: "#4F46E5" },
+                    fontFamily: { 
+                        display: ["Orbitron", "sans-serif"], 
+                        body: ["Poppins", "sans-serif"],
+                        premium: ["Cinzel", "serif"] 
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#F8FAFC] text-slate-900 font-body antialiased flex flex-col min-h-screen">
+
+    <header class="glass-navbar sticky top-0 z-50 px-5 py-2 lg:py-3 w-full border-b border-slate-200/50 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 flex items-center justify-center">
+                    <img src="images/UTartsLogo.webp" alt="UT Arts Logo" class="w-full h-full object-contain">
+                </div>
+                <span class="font-premium font-bold text-lg md:text-xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-600">UT Arts Digital Solutions</span>
+            </a>
+            
+            <nav class="hidden lg:flex items-center gap-8 font-body text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-secondary transition-colors">Home</a>
+                <a href="solutions.html" class="hover:text-secondary transition-colors">Solutions</a>
+                <a href="designs.html" class="hover:text-secondary transition-colors">Portfolio</a>
+                <a href="about.html" class="hover:text-secondary transition-colors">Company</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="hidden lg:inline-block bg-slate-900 text-white px-6 py-2.5 rounded-full text-xs font-bold font-display uppercase tracking-wider shadow-lg hover:bg-slate-800 transition-colors">
+                    Consult
+                </a>
+                <button id="menu-toggle" class="lg:hidden text-slate-900 p-2 focus:outline-none hover:text-secondary transition-colors">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-xl z-[60] flex flex-col items-center justify-center hidden">
+        <button id="menu-close" class="absolute top-6 right-6 text-slate-900 p-2 hover:text-red-500 transition-colors">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <nav class="flex flex-col gap-8 text-center font-display text-2xl font-bold uppercase tracking-widest">
+            <a href="index.html" class="hover:text-secondary transition">Home</a>
+            <a href="solutions.html" class="hover:text-secondary transition">Solutions</a>
+            <a href="designs.html" class="hover:text-secondary transition">Portfolio</a>
+            <a href="about.html" class="hover:text-secondary transition">Company</a>
+            <a href="contact.html" class="text-accent mt-4">Contact Us</a>
+        </nav>
+    </div>
+
+    <nav class="mobile-bottom-nav custom-gradient-pill lg:hidden">
+        <div class="mobile-nav-items">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home text-lg mb-1"></i>
+                <span>Home</span>
+            </a>
+            <a href="solutions.html" class="nav-item">
+                <i class="fas fa-laptop-code text-lg mb-1"></i>
+                <span>Solutions</span>
+            </a>
+            <a href="designs.html" class="nav-item">
+                <i class="fas fa-palette text-lg mb-1"></i>
+                <span>Portfolio</span>
+            </a>
+            <a href="about.html" class="nav-item">
+                <i class="fas fa-building text-lg mb-1"></i>
+                <span>Company</span>
+            </a>
+            <a href="contact.html" class="nav-item">
+                <i class="fas fa-paper-plane text-lg mb-1"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center px-6 py-24 relative overflow-hidden">
+        
+        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-lg w-full bg-white/80 backdrop-blur-xl p-10 md:p-16 rounded-[3rem] border border-white shadow-2xl text-center relative z-10 reveal reveal-up">
+            
+            <div class="w-20 h-20 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg shadow-emerald-500/30">
+                <i class="fas fa-check text-white text-3xl"></i>
+            </div>
+            
+            <h1 class="font-premium font-black text-4xl text-slate-900 mb-4">Inquiry Sent!</h1>
+            
+            <p class="text-slate-500 leading-relaxed mb-10">
+                Thank you for reaching out. We have successfully received your project details. Our creative team will review your requirements and get back to you within 24 hours.
+            </p>
+
+            <a href="index.html" class="inline-flex items-center justify-center gap-2 bg-slate-900 text-white font-bold font-display uppercase tracking-widest py-4 px-8 rounded-full hover:bg-slate-800 transition-transform active:scale-95 shadow-xl">
+                <i class="fas fa-arrow-left text-sm"></i> Return to Home
+            </a>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+    <script src="footer.js"></script>
+
+</body>
+</html>
